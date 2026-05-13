@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "generated_at": "2026-05-13T15:34:44Z",
+    "model_version": "2026-05-12",
+    "model_id": "xgboost",
+    "data_as_of": "2026-05-13"
+  },
+  "current": {
+    "price": 79269.99,
+    "fng_score": -0.16,
+    "fng_label": "Neutral",
+    "nlp_sentiment": -0.4,
+    "nlp_status": "live"
+  },
+  "predictions": {
+    "y1": {
+      "target_date": "2026-05-14",
+      "predicted_log_return": 0.001005,
+      "predicted_price": 79349.67,
+      "price_change_pct": 0.1005,
+      "direction": "UP",
+      "confidence": 0.5104,
+      "range_low": 78204.95,
+      "range_high": 80511.15
+    },
+    "y7": {
+      "target_date": "2026-05-20",
+      "predicted_log_return": 0.005175,
+      "predicted_price": 79681.3,
+      "price_change_pct": 0.5175,
+      "direction": "UP",
+      "confidence": 0.5534,
+      "range_low": 76675.98,
+      "range_high": 82804.41
+    },
+    "y30": {
+      "target_date": "2026-06-12",
+      "predicted_log_return": 0.015952,
+      "predicted_price": 80544.62,
+      "price_change_pct": 1.5952,
+      "direction": "UP",
+      "confidence": 0.6647,
+      "range_low": 74382.43,
+      "range_high": 87217.33
+    }
+  },
+  "signal": {
+    "action": "HOLD",
+    "strength": "LOW_CONFIDENCE",
+    "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+  },
+  "key_drivers": [
+    {
+      "feature": "pca_components",
+      "importance": 0.0,
+      "label": "Technical Pattern (PCA)"
+    },
+    {
+      "feature": "fng_score",
+      "importance": 0.0,
+      "label": "Fear & Greed Score"
+    },
+    {
+      "feature": "fng_7d_avg",
+      "importance": 0.0,
+      "label": "Sentiment 7-Day Avg"
+    },
+    {
+      "feature": "fng_30d_avg",
+      "importance": 0.0,
+      "label": "Sentiment 30-Day Avg"
+    },
+    {
+      "feature": "fng_momentum",
+      "importance": 0.0,
+      "label": "Sentiment Momentum"
+    }
+  ],
+  "model_health": {
+    "rolling_da_14d": null,
+    "status": "insufficient_data"
+  }
+}
