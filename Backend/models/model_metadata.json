@@ -1,0 +1,136 @@
+{
+  "created_at": "2026-05-12T20:29:22.324596",
+  "config": {
+    "start_date": "2017-01-01",
+    "symbol": "BTC/USDT",
+    "sequence_length": 30,
+    "n_pca_components": 11,
+    "train_ratio": 0.8,
+    "targets": [
+      "target_y1",
+      "target_y7",
+      "target_y30"
+    ]
+  },
+  "features": {
+    "tech_features": [
+      "log_return",
+      "high_low_ratio",
+      "open_close_ratio",
+      "body_size",
+      "upper_shadow",
+      "lower_shadow",
+      "rsi_7",
+      "rsi_14",
+      "rsi_21",
+      "macd",
+      "macd_signal",
+      "macd_hist",
+      "stoch_k",
+      "stoch_d",
+      "willr",
+      "price_to_ema21",
+      "price_to_ema50",
+      "price_to_sma200",
+      "ema7_ema21_ratio",
+      "bb_pct_b",
+      "bb_width",
+      "atr_pct",
+      "volatility_7",
+      "volatility_30",
+      "vol_ratio",
+      "vol_momentum",
+      "days_since_last_halving",
+      "days_to_next_halving",
+      "halving_cycle_phase",
+      "post_halving_180d",
+      "month_sin",
+      "month_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "sentiment_features": [
+      "fng_score",
+      "fng_7d_avg",
+      "fng_30d_avg",
+      "fng_momentum",
+      "nlp_sentiment_score"
+    ],
+    "n_tech_features": 34,
+    "n_sentiment_features": 5,
+    "n_pca_components": 11,
+    "total_model_features": 16
+  },
+  "halving_dates": [
+    "2012-11-28",
+    "2016-07-09",
+    "2020-05-11",
+    "2024-04-20"
+  ],
+  "results": [
+    {
+      "model": "XGBoost",
+      "target": "target_y1",
+      "rmse": 0.02505764772330853,
+      "mae": 0.0171259976517405,
+      "da": 52.15311004784689,
+      "da_weighted": 57.09697400433462
+    },
+    {
+      "model": "XGBoost",
+      "target": "target_y7",
+      "rmse": 0.07498930397903078,
+      "mae": 0.05306506797084673,
+      "da": 58.85167464114832,
+      "da_weighted": 70.0262269576223
+    },
+    {
+      "model": "XGBoost",
+      "target": "target_y30",
+      "rmse": 0.14702598143867412,
+      "mae": 0.11597450948109023,
+      "da": 61.48325358851675,
+      "da_weighted": 78.66698662435539
+    },
+    {
+      "model": "LSTM_conv_lstm",
+      "target": "target_y1",
+      "rmse": 0.03588564254681905,
+      "mae": 0.026458725989999158,
+      "da": 49.04306220095694,
+      "da_weighted": 48.779272353673505
+    },
+    {
+      "model": "LSTM_conv_lstm",
+      "target": "target_y7",
+      "rmse": 0.1256396016357642,
+      "mae": 0.0997266690729995,
+      "da": 42.58373205741627,
+      "da_weighted": 37.09665453600753
+    },
+    {
+      "model": "LSTM_conv_lstm",
+      "target": "target_y30",
+      "rmse": 0.1714881150112793,
+      "mae": 0.14245089939940755,
+      "da": 52.39234449760766,
+      "da_weighted": 68.14049184127742
+    },
+    {
+      "model": "TFT",
+      "target": "target_y1",
+      "rmse": 0.016540922357269457,
+      "mae": 0.016540922224521637,
+      "da": 100.0,
+      "da_weighted": 100.0
+    },
+    {
+      "model": "TFT",
+      "target": "target_y1",
+      "rmse": 0.01365796567333929,
+      "mae": 0.013657965697348118,
+      "da": 100.0,
+      "da_weighted": 100.0
+    }
+  ]
+}
