@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexTide Analytics — Bitcoin Prediction Dashboard</title>
+<style>
+:root {
+  --bg-main:     #0F172A;
+  --bg-surface:  #1E293B;
+  --bg-elevated: #334155;
+  --color-primary:      #3B82F6;
+  --color-success:      #10B981;
+  --color-success-bg:   rgba(16,185,129,.1);
+  --color-danger:       #EF4444;
+  --color-danger-bg:    rgba(239,68,68,.1);
+  --color-warning:      #F59E0B;
+  --color-warning-bg:   rgba(245,158,11,.1);
+  --text-primary:   #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted:     #64748B;
+  --border:         #334155;
+  --border-light:   #475569;
+  --chart-actual:    #3B82F6;
+  --chart-predicted: #8B5CF6;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg-main);color:var(--text-primary);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+/* ── Layout ─────────────────────────────────────────── */
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px;}
+header{background:var(--bg-surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;}
+header .wrap{display:flex;align-items:center;gap:12px;padding-top:16px;padding-bottom:16px;}
+.logo{background:var(--color-primary);border-radius:8px;padding:8px;display:flex;align-items:center;justify-content:center;}
+.logo svg{display:block;}
+.hd-title{font-size:20px;font-weight:700;}
+.hd-sub{font-size:12px;color:var(--text-secondary);}
+
+main{padding:32px 0;}
+main .wrap{display:flex;flex-direction:column;gap:24px;}
+
+footer{background:var(--bg-surface);border-top:1px solid var(--border);margin-top:48px;}
+footer .wrap{display:flex;justify-content:space-between;padding-top:24px;padding-bottom:24px;font-size:14px;color:var(--text-secondary);}
+
+/* ── Card ────────────────────────────────────────────── */
+.card{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+.card-h{padding:20px 24px 0;}
+.card-b{padding:20px 24px;}
+.card-title{font-size:16px;font-weight:600;}
+.card-desc{font-size:14px;color:var(--text-secondary);margin-top:4px;}
+
+/* ── Badge ───────────────────────────────────────────── */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:9999px;font-size:12px;font-weight:600;border:1px solid;white-space:nowrap;}
+.badge-lg{font-size:14px;padding:6px 14px;}
+.success{background:var(--color-success-bg);color:var(--color-success);border-color:var(--color-success);}
+.danger {background:var(--color-danger-bg); color:var(--color-danger); border-color:var(--color-danger);}
+.warning{background:var(--color-warning-bg);color:var(--color-warning);border-color:var(--color-warning);}
+.neutral{background:var(--bg-elevated);color:var(--text-secondary);border-color:var(--border);}
+
+/* ── Utility ─────────────────────────────────────────── */
+.row{display:flex;align-items:center;}
+.between{justify-content:space-between;}
+.gap8{gap:8px;}
+.gap12{gap:12px;}
+.c-success{color:var(--color-success);}
+.c-danger {color:var(--color-danger);}
+.c-warning{color:var(--color-warning);}
+.c-muted  {color:var(--text-muted);}
+.c-sec    {color:var(--text-secondary);}
+.small{font-size:12px;}
+.tiny{font-size:10px;letter-spacing:.05em;text-transform:uppercase;}
+
+/* ── Bar track ───────────────────────────────────────── */
+.track{height:8px;background:var(--bg-elevated);border-radius:9999px;overflow:hidden;}
+.track.sm{height:6px;}
+.track.md{height:10px;}
+.fill{height:100%;border-radius:9999px;transition:width .7s;}
+
+/* ── Page header row ─────────────────────────────────── */
+.pg-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;}
+.pg-title{font-size:30px;font-weight:700;}
+.pg-sub{font-size:14px;color:var(--text-secondary);margin-top:4px;}
+.pg-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+
+/* ── Model health pill ───────────────────────────────── */
+.health-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9999px;font-size:12px;font-weight:600;border:1px solid rgba(16,185,129,.3);background:var(--color-success-bg);color:var(--color-success);}
+
+/* ── Button ──────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border-light);background:var(--bg-elevated);color:var(--text-primary);transition:background .15s;}
+.btn:hover{background:var(--border);}
+
+/* ── Signal Widget ───────────────────────────────────── */
+.signal-card{border:2px solid var(--color-success);box-shadow:0 0 28px -5px rgba(16,185,129,.4);}
+.sig-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;}
+.sig-icon{padding:12px;border-radius:9999px;background:var(--color-success-bg);}
+.sig-label{font-size:36px;font-weight:700;letter-spacing:-.02em;color:var(--color-success);}
+.sig-strength{font-size:14px;color:var(--text-secondary);}
+.sig-conf-group{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+.conv-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--text-secondary);margin-bottom:4px;}
+.sig-reasoning{font-size:14px;margin-bottom:20px;line-height:1.6;}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.price-cell{padding:16px;border-radius:8px;background:var(--color-success-bg);}
+.price-lbl{font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.price-val{font-size:24px;font-weight:700;}
+.price-chg{font-size:14px;font-weight:600;margin-top:2px;color:var(--color-success);}
+.sig-disc{font-size:10px;color:var(--text-muted);text-align:center;margin-top:20px;}
+
+/* ── Horizon Grid ────────────────────────────────────── */
+.h-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.hcard-lbl{font-size:11px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
+.hcard-price{font-size:26px;font-weight:700;margin:6px 0 2px;}
+.hcard-chg{font-size:14px;font-weight:600;margin-bottom:12px;}
+.hcard-div{height:1px;background:var(--border);margin:12px 0;}
+.hcard-range{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;}
+.hcard-range .lbl{color:var(--text-muted);font-size:11px;}
+.hcard-range .val{font-weight:600;}
+.hcard-target{font-size:10px;color:var(--text-muted);margin-top:6px;}
+
+/* ── Two-col layout ──────────────────────────────────── */
+.two-col{display:grid;gap:24px;grid-template-columns:1fr;}
+@media(min-width:900px){.two-col{grid-template-columns:1fr 1fr;}}
+
+/* ── Gauge ───────────────────────────────────────────── */
+.gauge{position:relative;height:28px;border-radius:9999px;overflow:hidden;margin-bottom:6px;}
+.gauge-grad{position:absolute;inset:0;background:linear-gradient(to right,#EF4444 0%,#F59E0B 25%,#64748B 50%,#10B981 75%,#10B981 100%);}
+.gauge-pin{position:absolute;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 5px rgba(255,255,255,.9);}
+.gauge-lbls{display:flex;justify-content:space-between;font-size:11px;color:var(--text-secondary);margin-bottom:20px;}
+
+/* ── NLP reasoning ───────────────────────────────────── */
+.nlp-box{margin-top:12px;padding:12px;background:var(--bg-elevated);border:1px solid var(--border);border-radius:8px;font-size:14px;color:var(--text-secondary);}
+.nlp-lbl{font-size:12px;font-weight:600;color:var(--text-primary);margin-bottom:3px;}
+
+/* ── Driver bars ─────────────────────────────────────── */
+.driver{margin-bottom:14px;}
+.driver-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.driver-name{display:flex;align-items:center;gap:8px;}
+.driver-rank{font-size:11px;color:var(--text-muted);font-family:monospace;width:16px;text-align:right;}
+.driver-lbl{font-size:14px;font-weight:600;}
+.driver-pct{font-size:14px;font-weight:600;color:var(--color-primary);}
+
+/* ── Info box ────────────────────────────────────────── */
+.info-box{margin-top:18px;padding:12px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);border-radius:8px;display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--text-secondary);line-height:1.6;}
+
+/* ── Backtest ────────────────────────────────────────── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
+.stat{padding:16px;background:var(--bg-elevated);border-radius:8px;}
+.stat-lbl{font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.stat-val{font-size:24px;font-weight:700;}
+.stat-sub{font-size:12px;color:var(--text-muted);margin-top:2px;}
+.bt-bars{display:flex;align-items:flex-end;gap:2px;height:56px;margin-bottom:8px;}
+.bt-bar{flex:1;min-width:4px;border-radius:2px 2px 0 0;opacity:.85;}
+.bt-legend{display:flex;gap:16px;justify-content:flex-end;font-size:12px;color:var(--text-secondary);}
+
+/* ── Disclaimer ──────────────────────────────────────── */
+.disc{padding:16px;background:var(--bg-surface);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text-secondary);text-align:center;line-height:1.7;}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar{width:8px;height:8px;}
+::-webkit-scrollbar-track{background:var(--bg-surface);}
+::-webkit-scrollbar-thumb{background:var(--border-light);border-radius:4px;}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════ -->
+<header>
+  <div class="wrap">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    </div>
+    <div>
+      <div class="hd-title">NexTide Analytics</div>
+      <div class="hd-sub">AI-Powered Bitcoin Trading Insights</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ MAIN ════════════════════════════════════════════════════════ -->
+<main>
+ <div class="wrap">
+
+  <!-- Page header -->
+  <div class="pg-head">
+    <div>
+      <h2 class="pg-title">Bitcoin Prediction Dashboard</h2>
+      <p class="pg-sub">Data as of 2026-05-11 · Model v2026-05-12</p>
+    </div>
+    <div class="pg-right">
+      <div class="health-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Model Healthy
+        <span class="c-muted" style="font-weight:400">57% DA-14d</span>
+      </div>
+      <button class="btn" onclick="location.reload()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        Updated 05:25 AM
+      </button>
+    </div>
+  </div>
+
+  <!-- ── SIGNAL WIDGET ─────────────────────────────────────────── -->
+  <div class="card signal-card">
+    <div class="card-b">
+      <div class="sig-header">
+        <div class="row gap12">
+          <div class="sig-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div>
+            <div class="sig-label">BUY</div>
+            <div class="sig-strength">Moderate conviction</div>
+          </div>
+        </div>
+        <div class="sig-conf-group">
+          <span class="badge success badge-lg">67% Confidence</span>
+          <span class="tiny c-muted">MODEL ONLY SIGNALS WHEN CONFIDENCE ≥ 60%</span>
+        </div>
+      </div>
+
+      <!-- Conviction bar -->
+      <div style="margin-bottom:20px">
+        <div class="conv-labels"><span>Weak</span><span>Moderate</span><span>Strong</span></div>
+        <div class="track"><div class="fill" style="width:60%;background:var(--color-success)"></div></div>
+      </div>
+
+      <p class="sig-reasoning">Model predicts +1.5% with bullish sentiment momentum.</p>
+
+      <div class="price-grid">
+        <div class="price-cell">
+          <div class="price-lbl">Current Price</div>
+          <div class="price-val">$82,210.07</div>
+        </div>
+        <div class="price-cell">
+          <div class="price-lbl">Tomorrow Target</div>
+          <div class="price-val">$83,470.32</div>
+          <div class="price-chg">+1.53% (+$1,260.25)</div>
+        </div>
+      </div>
+      <p class="sig-disc">For informational purposes only. Not financial advice.</p>
+    </div>
+  </div>
+
+  <!-- ── MULTI-HORIZON CARDS ───────────────────────────────────── -->
+  <div class="h-grid" id="horizonGrid"></div>
+
+  <!-- ── SENTIMENT + FEATURE INSIGHTS ─────────────────────────── -->
+  <div class="two-col">
+
+    <!-- Sentiment Gauge -->
+    <div class="card">
+      <div class="card-h" style="margin-bottom:16px">
+        <div class="row between">
+          <span class="card-title">Market Sentiment</span>
+          <span class="badge danger">Greed</span>
+        </div>
+      </div>
+      <div class="card-b" style="padding-top:0">
+        <!-- FNG -->
+        <div style="margin-bottom:20px">
+          <div class="row between" style="margin-bottom:8px">
+            <span class="small c-sec">Fear &amp; Greed Index</span>
+            <span style="font-size:24px;font-weight:700;color:var(--color-danger)">24</span>
+          </div>
+          <div class="gauge">
+            <div class="gauge-grad"></div>
+            <div class="gauge-pin" style="left:24%"></div>
+          </div>
+          <div class="gauge-lbls">
+            <span>Extreme Fear</span><span>Neutral</span><span>Extreme Greed</span>
+          </div>
+        </div>
+        <!-- NLP -->
+        <div>
+          <div class="row between" style="margin-bottom:8px;flex-wrap:wrap;gap:6px">
+            <div class="row gap8">
+              <span class="small c-sec">NLP Sentiment</span>
+              <span class="badge success" style="font-size:10px;padding:2px 8px">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                Live NLP
+              </span>
+            </div>
+            <span style="font-size:20px;font-weight:700;color:var(--color-success)">+0.45</span>
+          </div>
+          <div class="track md" style="margin-bottom:6px">
+            <div class="fill" style="width:72.5%;background:var(--color-success)"></div>
+          </div>
+          <div class="row between small c-sec">
+            <span>Negative (−1)</span><span>Neutral (0)</span><span>Positive (+1)</span>
+          </div>
+          <div class="nlp-box">
+            <div class="nlp-lbl">NLP Signal</div>
+            ETF inflows positive; Fed commentary neutral.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Insights -->
+    <div class="card">
+      <div class="card-h" style="margin-bottom:16px">
+        <div class="row gap8">
+          <span class="card-title">Key Prediction Drivers</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <p class="card-desc">Top features influencing today's model output</p>
+      </div>
+      <div class="card-b" style="padding-top:0">
+        <div id="drivers"></div>
+        <div class="info-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Importance is the XGBoost feature gain — how much each feature reduces prediction error relative to others.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── PRICE CHART ───────────────────────────────────────────── -->
+  <div class="card">
+    <div class="card-h" style="margin-bottom:8px">
+      <h3 class="card-title">Price Trend &amp; Prediction</h3>
+      <p class="card-desc">Historical prices with 1-day prediction range</p>
+    </div>
+    <div class="card-b" style="padding-top:8px">
+      <canvas id="chart" style="display:block;max-width:100%;"></canvas>
+    </div>
+  </div>
+
+  <!-- ── BACKTEST ──────────────────────────────────────────────── -->
+  <div class="card">
+    <div class="card-h" style="margin-bottom:16px">
+      <div class="row gap8">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <h3 class="card-title">Model Backtest</h3>
+      </div>
+      <p class="card-desc">Historical prediction performance on resolved calls</p>
+    </div>
+    <div class="card-b" style="padding-top:0">
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-lbl">Directional Accuracy</div>
+          <div class="stat-val c-success" id="daVal">–</div>
+          <div class="stat-sub" id="daSub">– calls</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Avg Price Error</div>
+          <div class="stat-val">1.83%</div>
+          <div class="stat-sub">Mean absolute error</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Period</div>
+          <div class="stat-val">30d</div>
+          <div class="stat-sub">Resolved predictions</div>
+        </div>
+      </div>
+      <p class="tiny c-sec" style="margin-bottom:10px">Direction accuracy — last 30 resolved predictions</p>
+      <div class="bt-bars" id="btBars"></div>
+      <div class="bt-legend">
+        <span style="color:var(--color-success)">✓ Correct</span>
+        <span style="color:var(--color-danger)">✗ Wrong</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disc">
+    <strong style="color:var(--color-warning)">Disclaimer:</strong>
+    This dashboard provides AI-generated predictions for informational purposes only.
+    Cryptocurrency trading involves substantial risk. Always conduct your own research
+    and consult a financial advisor before making investment decisions.
+  </div>
+
+ </div><!-- /wrap -->
+</main>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <span>© 2026 NexTide Analytics. Powered by XGBoost &amp; NLP.</span>
+    <span style="color:var(--color-warning)">Not financial advice.</span>
+  </div>
+</footer>
+
+<script>
+// ── Mock Data ─────────────────────────────────────────────────────
+const PRICE = 82210.07;
+
+const HORIZONS = [
+  { label:'1-Day Target',  price:83470,  chg:'+$1,260', pct:'+1.53%', conf:67, low:'$80,850', high:'$85,200',  date:'2026-05-13', dir:'up' },
+  { label:'7-Day Target',  price:85742,  chg:'+$3,532', pct:'+4.30%', conf:71, low:'$79,100', high:'$92,800',  date:'2026-05-19', dir:'up' },
+  { label:'30-Day Target', price:90091,  chg:'+$7,881', pct:'+9.59%', conf:74, low:'$75,500', high:'$108,200', date:'2026-06-11', dir:'up' },
+];
+
+const DRIVERS = [
+  { label:'Technical Pattern (PCA)', imp:0.482 },
+  { label:'Sentiment Momentum',      imp:0.118 },
+  { label:'News Sentiment (NLP)',     imp:0.097 },
+  { label:'Fear & Greed Score',       imp:0.089 },
+  { label:'Sentiment 7-Day Avg',      imp:0.076 },
+];
+
+// Deterministic history — seeded drift
+function buildHistory() {
+  const rows = [];
+  let price = 78000, seed = 42;
+  function rand() { seed = (seed * 1664525 + 1013904223) & 0xffffffff; return (seed >>> 0) / 0xffffffff; }
+  const base = new Date('2026-04-11');
+  for (let i = 0; i < 30; i++) {
+    const d = new Date(base); d.setDate(base.getDate() + i);
+    const drift = (rand() - 0.45) * 0.025;
+    const next  = price * Math.exp(drift);
+    const actUp = drift > 0;
+    const predUp = rand() > 0.4 ? actUp : !actUp;
+    rows.push({
+      date: d.toISOString().slice(0,10),
+      actual: price,
+      predicted: price * (1 + (predUp ? 0.015 : -0.015)),
+      rangeLow:  price * 0.982,
+      rangeHigh: price * 1.035,
+      correct: predUp === actUp,
+    });
+    price = next;
+  }
+  rows.push({ date:'2026-05-13', actual:null, predicted:83470, rangeLow:80850, rangeHigh:85200, correct:null });
+  return rows;
+}
+const HISTORY = buildHistory();
+
+// ── Render Horizon Cards ──────────────────────────────────────────
+const hg = document.getElementById('horizonGrid');
+HORIZONS.forEach(h => {
+  const c = h.dir === 'up' ? 'var(--color-success)' : 'var(--color-danger)';
+  const bc = h.dir === 'up' ? 'success' : 'danger';
+  hg.insertAdjacentHTML('beforeend', `
+    <div class="card">
+      <div class="card-b">
+        <div class="row between" style="margin-bottom:10px">
+          <span class="hcard-lbl">${h.label}</span>
+          <span class="badge ${bc}">▲ ${h.pct}</span>
+        </div>
+        <div class="hcard-price">$${h.price.toLocaleString()}</div>
+        <div class="hcard-chg" style="color:${c}">${h.chg}</div>
+        <div class="row between small c-sec" style="margin-bottom:4px">
+          <span>Confidence</span><strong style="color:var(--text-primary)">${h.conf}%</strong>
+        </div>
+        <div class="track sm" style="margin-bottom:12px">
+          <div class="fill" style="width:${h.conf}%;background:${c}"></div>
+        </div>
+        <div style="height:1px;background:var(--border);margin-bottom:10px"></div>
+        <div class="hcard-range">
+          <div><div class="lbl">Range Low</div><div class="val">${h.low}</div></div>
+          <div style="text-align:right"><div class="lbl">Range High</div><div class="val">${h.high}</div></div>
+        </div>
+        <div class="hcard-target">Target: ${h.date}</div>
+      </div>
+    </div>`);
+});
+
+// ── Render Feature Drivers ────────────────────────────────────────
+const maxImp = DRIVERS[0].imp;
+const drEl = document.getElementById('drivers');
+DRIVERS.forEach((d,i) => {
+  const w = (d.imp / maxImp * 100).toFixed(1);
+  const op = (1 - i * 0.12).toFixed(2);
+  drEl.insertAdjacentHTML('beforeend', `
+    <div class="driver">
+      <div class="driver-hd">
+        <div class="driver-name">
+          <span class="driver-rank">${i+1}</span>
+          <span class="driver-lbl">${d.label}</span>
+        </div>
+        <span class="driver-pct">${(d.imp*100).toFixed(1)}%</span>
+      </div>
+      <div style="margin-left:24px">
+        <div class="track"><div class="fill" style="width:${w}%;background:var(--color-primary);opacity:${op}"></div></div>
+      </div>
+    </div>`);
+});
+
+// ── Backtest Bars ─────────────────────────────────────────────────
+const resolved = HISTORY.filter(r => r.correct !== null);
+const btEl = document.getElementById('btBars');
+resolved.forEach(r => {
+  const d = document.createElement('div');
+  d.className = 'bt-bar';
+  d.style.background = r.correct ? 'var(--color-success)' : 'var(--color-danger)';
+  btEl.appendChild(d);
+});
+const ok = resolved.filter(r => r.correct).length;
+document.getElementById('daVal').textContent = (ok / resolved.length * 100).toFixed(1) + '%';
+document.getElementById('daSub').textContent  = `${ok} / ${resolved.length} calls`;
+
+// ── Price Chart (Canvas 2D) ───────────────────────────────────────
+function drawChart() {
+  const canvas = document.getElementById('chart');
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.parentElement.clientWidth - 48;
+  const H = 280;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width  = W + 'px';
+  canvas.style.height = H + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const allVals = HISTORY.flatMap(h => [h.actual, h.predicted, h.rangeLow, h.rangeHigh].filter(Boolean));
+  const minV = Math.min(...allVals) * 0.9975;
+  const maxV = Math.max(...allVals) * 1.0025;
+  const N = HISTORY.length;
+
+  const PL = 52, PR = 36, PT = 12, PB = 32;
+  const CW = W - PL - PR, CH = H - PT - PB;
+
+  const px = i  => PL + (i / (N-1)) * CW;
+  const py = v  => PT + (1 - (v - minV) / (maxV - minV)) * CH;
+
+  // Gridlines + Y labels
+  ctx.font = '10px sans-serif';
+  for (let t = 0; t <= 4; t++) {
+    const v = minV + (t/4) * (maxV - minV);
+    const y = py(v);
+    ctx.strokeStyle = '#334155'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(PL, y); ctx.lineTo(W-PR, y); ctx.stroke();
+    ctx.fillStyle = '#64748B'; ctx.textAlign = 'right';
+    ctx.fillText('$'+(v/1000).toFixed(0)+'k', PL-6, y+3);
+  }
+
+  // X axis date ticks (every 5 days)
+  HISTORY.forEach((h, i) => {
+    if (i % 5 !== 0) return;
+    ctx.fillStyle = '#64748B'; ctx.textAlign = 'center';
+    ctx.fillText(h.date.slice(5), px(i), H - PB + 18);
+  });
+
+  // Prediction range band (fill between rangeLow and rangeHigh)
+  ctx.beginPath();
+  HISTORY.forEach((h, i) => {
+    if (!h.rangeHigh) return;
+    i === 0 ? ctx.moveTo(px(i), py(h.rangeHigh)) : ctx.lineTo(px(i), py(h.rangeHigh));
+  });
+  for (let i = N-1; i >= 0; i--) {
+    if (!HISTORY[i].rangeLow) continue;
+    ctx.lineTo(px(i), py(HISTORY[i].rangeLow));
+  }
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(139,92,246,.13)';
+  ctx.fill();
+
+  // Actual price line
+  ctx.beginPath(); ctx.lineWidth = 2; ctx.strokeStyle = '#3B82F6';
+  let first = true;
+  HISTORY.forEach((h,i) => {
+    if (!h.actual) return;
+    first ? ctx.moveTo(px(i), py(h.actual)) : ctx.lineTo(px(i), py(h.actual));
+    first = false;
+  });
+  ctx.stroke();
+
+  // Predicted line (dashed)
+  ctx.beginPath(); ctx.setLineDash([5,4]); ctx.lineWidth = 2; ctx.strokeStyle = '#8B5CF6';
+  first = true;
+  HISTORY.forEach((h,i) => {
+    if (!h.predicted) return;
+    first ? ctx.moveTo(px(i), py(h.predicted)) : ctx.lineTo(px(i), py(h.predicted));
+    first = false;
+  });
+  ctx.stroke(); ctx.setLineDash([]);
+
+  // "Now" reference line
+  const ny = py(PRICE);
+  ctx.beginPath(); ctx.setLineDash([6,4]); ctx.lineWidth = 1; ctx.strokeStyle = '#64748B';
+  ctx.moveTo(PL, ny); ctx.lineTo(W-PR, ny); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle = '#64748B'; ctx.textAlign = 'left'; ctx.font = '10px sans-serif';
+  ctx.fillText('Now', W-PR+4, ny+3);
+
+  // Legend
+  const LY = H - 4;
+  ctx.fillStyle = '#3B82F6'; ctx.fillRect(PL, LY-8, 20, 2);
+  ctx.fillStyle = '#94A3B8'; ctx.textAlign = 'left'; ctx.font = '11px sans-serif';
+  ctx.fillText('Actual Price', PL+26, LY);
+  ctx.strokeStyle = '#8B5CF6'; ctx.lineWidth = 2; ctx.setLineDash([5,4]);
+  ctx.beginPath(); ctx.moveTo(PL+140, LY-7); ctx.lineTo(PL+160, LY-7); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#94A3B8';
+  ctx.fillText('Predicted Price', PL+166, LY);
+}
+
+// Draw after layout is ready
+requestAnimationFrame(() => setTimeout(drawChart, 30));
+window.addEventListener('resize', drawChart);
+</script>
+</body>
+</html>
