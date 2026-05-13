@@ -1,0 +1,52 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables (NEVER commit real keys)
+.env
+.env.*
+!.env.example
+
+# ML / training artifacts
+lightning_logs/
+mlruns/
+*.ckpt
+*.pth
+tensorboard_logs/
+
+# ─── Data & generated files (runtime artifacts, not source) ──────────────────
+# Uncomment if you don't want to commit history/predictions:
+# Backend/data/
+# Backend/latest_prediction*.json
+
+# ─── Node.js / Next.js ────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+
+# ─── IDE & OS ─────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+.claude/
