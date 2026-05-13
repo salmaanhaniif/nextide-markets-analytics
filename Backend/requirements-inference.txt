@@ -1,0 +1,14 @@
+pandas
+pandas_ta
+numpy
+scikit-learn
+xgboost
+ccxt
+tensorflow-cpu
+joblib
+feedparser
+google-generativeai
+groq
+python-dotenv
+fastapi
+uvicorn[standard]

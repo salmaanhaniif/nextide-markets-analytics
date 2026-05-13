@@ -1,6 +1,4 @@
 import json
-import os
-import time
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -21,12 +19,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-BASE_PATH              = Path(__file__).resolve().parent
-LATEST_FILE            = BASE_PATH / "latest_prediction.json"
-LATEST_LSTM_FILE       = BASE_PATH / "latest_prediction_lstm.json"
-HISTORY_FILE           = BASE_PATH / "data" / "prediction_history.json"
-HISTORY_LSTM_FILE      = BASE_PATH / "data" / "prediction_history_lstm.json"
-METADATA_FILE          = BASE_PATH / "models" / "model_metadata.json"
+BASE_PATH = Path(__file__).resolve().parent
+LATEST_FILE = BASE_PATH / "latest_prediction.json"
+LATEST_LSTM_FILE = BASE_PATH / "latest_prediction_lstm.json"
+HISTORY_FILE = BASE_PATH / "data" / "prediction_history.json"
+HISTORY_LSTM_FILE = BASE_PATH / "data" / "prediction_history_lstm.json"
 
 
 def _read_json(path: Path) -> dict | list:
@@ -124,28 +121,11 @@ def get_backtest_30d(model: str = Query(default="xgboost")):
     }
 
 
-@app.get("/api/model/metadata")
-def get_model_metadata():
-    """Model version, training date, feature list, and performance metrics."""
-    return _read_json(METADATA_FILE)
-
-
-_news_cache: dict = {"data": [], "ts": 0.0}
-_NEWS_TTL = 1800
-
-
 @app.get("/api/news")
 def get_news_headlines():
-    """Latest Bitcoin news headlines from CoinDesk RSS (cached 30 min)."""
-    now = time.time()
-    if now - _news_cache["ts"] < _NEWS_TTL and _news_cache["data"]:
-        return _news_cache["data"]
-    try:
-        from data_pipeline.sentiment_analysis import fetch_headlines_detailed
-        headlines = fetch_headlines_detailed()
-    except Exception as e:
-        headlines = []
-        print(f"[news] fetch failed: {e}")
-    _news_cache["data"] = headlines
-    _news_cache["ts"] = now
-    return headlines
+    """Latest Bitcoin news headlines (mock data)."""
+    return [
+        {"title": "Bitcoin Surges Past $82K as Spot ETF Inflows Hit Monthly Record", "link": "#", "published": "Mon, 11 May 2026 08:30:00 +0000"},
+        {"title": "Fed Chair Powell Signals Cautious Rate Outlook; Crypto Markets Rally", "link": "#", "published": "Mon, 11 May 2026 07:15:00 +0000"},
+        {"title": "MicroStrategy Adds 2,500 BTC to Treasury, Total Holdings Near 220K", "link": "#", "published": "Mon, 11 May 2026 06:00:00 +0000"},
+    ]
