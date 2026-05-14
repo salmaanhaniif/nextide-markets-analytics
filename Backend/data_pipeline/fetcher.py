@@ -10,8 +10,14 @@ def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
     """
     Fetch latest OHLCV candles from Binance.
 
-    If limit >= 1000: fetches from START_DATE onwards (full historical window for training/retraining).
-    If limit < 1000: fetches last N candles only (for inference).
+    For inference (limit < 1000):
+      - Fetches last N candles only (rolling window)
+      - Default limit=250: enough for SMA200 (200 candles) + SEQUENCE_LEN (30) + buffer
+      - After feature engineering drops NaN: ~200-230 valid rows -> can build 30-day sequence
+
+    For training/retraining (limit >= 1000):
+      - Fetches from START_DATE='2017-01-01' onwards (absolute, not rolling)
+      - Ensures consistent training data window across retraining cycles
     """
     exchange = ccxt.binanceus()
 
