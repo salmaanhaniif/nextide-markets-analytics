@@ -77,11 +77,11 @@ Weekly retraining (Sundays 02:00 UTC) expands the training window with new data,
 - **Railway** *(optional)* — FastAPI fallback server for non-public repos
 
 **Why Serverless?**
-- ✅ Zero infrastructure cost (GitHub Actions + Vercel free tier)
-- ✅ No database needed (JSON in git = version control + audit log)
-- ✅ No API server runtime overhead (data served via CDN)
-- ✅ Fully automated (cron-driven, no manual deployment)
-- ✅ Scalable (CDN handles traffic spikes)
+- Zero infrastructure cost (GitHub Actions + Vercel)
+- No database needed (JSON in git = version control + audit log)
+- No API server runtime overhead (data served via CDN)
+- Fully automated (cron-driven, no manual deployment)
+- Scalable (CDN handles traffic spikes)
 
 ---
 
@@ -116,13 +116,13 @@ Bitcoin-MLOps-dashboard/
 │   │   ├── feature_scaler.pkl               # MinMaxScaler for features
 │   │   ├── pca_transformer.pkl              # PCA (11 components)
 │   │   ├── target_scaler_target_y*.pkl      # Target value scalers
-│   │   └── model_metadata.json              # Training metadata (start_date, row counts)
-│   ├── latest_prediction.json               # Latest XGBoost prediction (daily)
-│   ├── latest_prediction_lstm.json          # Latest LSTM prediction (daily)
+│   │   ├── model_metadata.json              # Training metadata (start_date, row counts)
+│   |   ├── latest_prediction.json               # Latest XGBoost prediction (daily)
+│   |   └── latest_prediction_lstm.json          # Latest LSTM prediction (daily)
 │   ├── requirements.txt                     # FastAPI + all inference deps
 │   ├── requirements-inference.txt           # Daily inference deps
 │   ├── requirements-retrain.txt             # Weekly retrain deps
-│   ├── .env.example                        # Environment template
+│   └── .env.example                        # Environment template
 │
 ├── Frontend/                        # Next.js dashboard (Vercel)
 │   └── nextide-markets-analytics/
@@ -145,9 +145,8 @@ Bitcoin-MLOps-dashboard/
 │       └── package.json
 │
 ├── Research-Modelling/             # Jupyter notebooks (training & analysis)
-│   ├── bitcoin_research_notebook.ipynb   # Main research notebook (2017 start date)
-│
-│── README.md                    # This file
+│   └── bitcoin_research_notebook.ipynb   # Main research notebook (2017 start date)
+└── README.md                    # This file
 ```
 
 
@@ -172,7 +171,6 @@ Runs `daily-inference.py`:
 - Get live NLP sentiment from Gemini (fallback: Groq → 7-day history average → neutral)
 - Run XGBoost inference (y1 / y7 / y30 targets)
 - Run Conv-LSTM inference (y1 / y7 / y30 targets, non-fatal if TensorFlow unavailable)
-- **Resolve prior unresolved entries** — backfill actual direction/price for yesterday's prediction
 - Update `latest_prediction.json`, `latest_prediction_lstm.json`
 - Append to `prediction_history.json` and `prediction_history_lstm.json` (with deduplication)
 - Commit and push to `main`
