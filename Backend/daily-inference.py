@@ -1,7 +1,12 @@
 """
-Daily inference pipeline — runs at 00:05 UTC via GitHub Actions cron.
-Produces latest_prediction.json (XGBoost) and latest_prediction_lstm.json (LSTM).
-Both files are consumed by FastAPI main.py via the ?model= query param.
+Daily inference pipeline — runs at 00:10 UTC via GitHub Actions cron.
+Produces:
+  - data/latest_prediction.json (XGBoost predictions)
+  - data/latest_prediction_lstm.json (LSTM predictions)
+  - data/prediction_history.json (appended XGBoost history)
+  - data/prediction_history_lstm.json (appended LSTM history)
+
+All files are committed to git and served via GitHub raw CDN or optional FastAPI.
 """
 import json
 import math
@@ -24,8 +29,8 @@ DATA_PATH.mkdir(exist_ok=True)
 
 HISTORY_FILE      = DATA_PATH / "prediction_history.json"
 HISTORY_LSTM_FILE = DATA_PATH / "prediction_history_lstm.json"
-LATEST_FILE       = BASE_PATH / "latest_prediction.json"
-LATEST_LSTM_FILE  = BASE_PATH / "latest_prediction_lstm.json"
+LATEST_FILE       = DATA_PATH / "latest_prediction.json"
+LATEST_LSTM_FILE  = DATA_PATH / "latest_prediction_lstm.json"
 
 MIN_CONFIDENCE_Y1 = 0.60
 SIGNAL_THRESHOLD  = 0.008
@@ -321,6 +326,8 @@ def run_daily_inference():
 
     # ── 1. Ingest ──────────────────────────────────────────────────────────────
     print("\n[1/5] Fetching market data...")
+    # Fetch last 250 candles: 200 for SMA200 warmup + 30 for sequence building + buffer
+    # After feature engineering, ~200-230 rows remain, last 30 rows used for inference
     df_ohlcv = fetch_latest_crypto_data(limit=250)
     fng_df   = fetch_historical_fng(limit=65)
 

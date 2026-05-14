@@ -41,10 +41,11 @@ app.add_middleware(
 )
 
 BASE_PATH = Path(__file__).resolve().parent
-LATEST_FILE = BASE_PATH / "latest_prediction.json"
-LATEST_LSTM_FILE = BASE_PATH / "latest_prediction_lstm.json"
-HISTORY_FILE = BASE_PATH / "data" / "prediction_history.json"
-HISTORY_LSTM_FILE = BASE_PATH / "data" / "prediction_history_lstm.json"
+DATA_PATH = BASE_PATH / "data"
+LATEST_FILE = DATA_PATH / "latest_prediction.json"
+LATEST_LSTM_FILE = DATA_PATH / "latest_prediction_lstm.json"
+HISTORY_FILE = DATA_PATH / "prediction_history.json"
+HISTORY_LSTM_FILE = DATA_PATH / "prediction_history_lstm.json"
 
 
 def _read_json(path: Path) -> dict | list:
