@@ -149,7 +149,7 @@ function seededRand(seed: number): number {
 function buildMockHistory(base: DailyPrediction, correctThreshold: number, seedOffset: number): HistoryEntry[] {
     const entries: HistoryEntry[] = [];
     let price = 58000;
-    const today = new Date('2026-05-11');
+    const today = new Date();
 
     for (let i = 365; i >= 1; i--) {
         const d = new Date(today);
