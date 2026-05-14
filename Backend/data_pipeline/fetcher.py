@@ -3,10 +3,32 @@ import requests
 import pandas as pd
 
 
+START_DATE = '2017-01-01'  # Matches research notebook training window
+
+
 def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
-    """Fetch latest OHLCV candles from Binance. Use limit>=220 to cover SMA200 warmup."""
+    """
+    Fetch latest OHLCV candles from Binance.
+
+    If limit >= 1000: fetches from START_DATE onwards (full historical window for training/retraining).
+    If limit < 1000: fetches last N candles only (for inference).
+    """
     exchange = ccxt.binanceus()
-    ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
+
+    if limit >= 1000:
+        # Training/retraining: fetch from START_DATE onwards
+        since_ms = exchange.parse8601(START_DATE + 'T00:00:00Z')
+        all_ohlcv = []
+        while True:
+            batch = exchange.fetch_ohlcv(symbol, timeframe=timeframe, since=since_ms, limit=1000)
+            if not batch:
+                break
+            all_ohlcv.extend(batch)
+            since_ms = batch[-1][0] + 1
+        ohlcv = all_ohlcv
+    else:
+        # Inference: just get latest N candles
+        ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
 
     df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms').dt.normalize()

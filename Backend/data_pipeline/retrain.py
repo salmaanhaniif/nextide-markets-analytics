@@ -1,16 +1,13 @@
 """
-Weekly retraining pipeline — incremental data expansion.
+Weekly retraining pipeline — expands on fixed historical window from 2017-01-01.
 
-Each run adds WEEKLY_INCREMENT days of new Binance candles on top of
-whatever was fetched in the previous run. The number of days used is
-persisted in model_metadata.json so the window grows automatically.
+Fetches all data from START_DATE (2017-01-01) onwards, matching the original
+research notebook training approach. This ensures the retrained models see the
+same historical context (2017 Bull market, halvings, etc.) as the original models.
 
-First run:  fetches INITIAL_TRAINING_DAYS candles.
-Nth   run:  fetches (previous training_days + WEEKLY_INCREMENT) candles.
+Each run retrains on the full expanded dataset, not incremental windows.
 """
-import os
 import json
-import shutil
 import joblib
 import numpy as np
 import xgboost as xgb
@@ -19,7 +16,7 @@ from pathlib import Path
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import MinMaxScaler
 
-from data_pipeline.fetcher import fetch_latest_crypto_data, fetch_historical_fng
+from data_pipeline.fetcher import fetch_latest_crypto_data, fetch_historical_fng, START_DATE
 from data_pipeline.feature_engineering import engineer_features, TECH_FEATURES, SENTIMENT_FEATURES
 from data_pipeline.preprocessor import build_sequences
 
@@ -31,9 +28,7 @@ SEQUENCE_LEN = 30
 TRAIN_RATIO  = 0.80
 N_PCA        = 11
 
-INITIAL_TRAINING_DAYS = 1000   # ~2.7 years; used on the very first run
-WEEKLY_INCREMENT      = 7      # candles added per retrain cycle
-FNG_API_MAX           = 2500   # alternative.me caps at ~2500 days of history
+FNG_API_MAX  = 5000  # alternative.me caps at ~2500 days of history
 
 
 def _directional_accuracy(preds: np.ndarray, actuals: np.ndarray) -> float:
@@ -56,22 +51,24 @@ def _save_meta(meta: dict) -> None:
 
 def run_retraining():
     print("=" * 60)
-    print("NexTide Analytics — Weekly Retraining (incremental)")
+    print("NexTide Analytics — Weekly Retraining (fixed 2017 window)")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
-    # ── 0. Determine how many days to fetch ──────────────────────
-    meta      = _load_meta()
-    prev_days = meta.get("training_days", INITIAL_TRAINING_DAYS)
-    fetch_days = prev_days + WEEKLY_INCREMENT
-
-    print(f"\n[1/5] Fetching data — prev: {prev_days} days  →  new: {fetch_days} days (+{WEEKLY_INCREMENT})")
+    # ── 0. Fetch from START_DATE onwards (matches research notebook) ──
+    print(f"\n[1/5] Fetching data from {START_DATE} onwards...")
 
     # ── 1. Fetch historical data ──────────────────────────────────
-    df_ohlcv = fetch_latest_crypto_data(limit=fetch_days)
-    fng_df   = fetch_historical_fng(limit=min(fetch_days, FNG_API_MAX))
+    df_ohlcv = fetch_latest_crypto_data(limit=3000)  # >=1000 triggers START_DATE fetch
+    fng_df   = fetch_historical_fng(limit=FNG_API_MAX)
 
     print(f"      OHLCV rows: {len(df_ohlcv)}  |  FnG rows: {len(fng_df)}")
+
+    # Create target columns (log returns shifted by 1, 7, 30 days)
+    df_ohlcv['log_return'] = np.log(df_ohlcv['close'] / df_ohlcv['close'].shift(1))
+    df_ohlcv['target_y1']  = df_ohlcv['log_return'].shift(-1)
+    df_ohlcv['target_y7']  = df_ohlcv['log_return'].shift(-7).rolling(7).sum()
+    df_ohlcv['target_y30'] = df_ohlcv['log_return'].shift(-30).rolling(30).sum()
 
     # ── 2. Feature engineering ────────────────────────────────────
     print("[2/5] Engineering features...")
@@ -172,29 +169,28 @@ def run_retraining():
         print(f"   {target}: new DA={new_da:.2%}  vs  old DA={old_da:.2%}", end="  ")
 
         if new_da >= old_da:
-            old_path = MODELS_PATH / f"xgb_model_{target}.pkl"
-            if old_path.exists():
-                shutil.copy(old_path, MODELS_PATH / f"xgb_model_{target}_prev.pkl")
             joblib.dump(model,  MODELS_PATH / f"xgb_model_{target}.pkl")
             joblib.dump(scaler, MODELS_PATH / f"target_scaler_{target}.pkl")
             replaced.append(target)
-            print("→ REPLACED")
+            print("[REPLACED]")
         else:
-            print("→ kept old")
+            print("[kept old]")
 
     # Always update shared artifacts (scaler + PCA reflect the new data window)
     joblib.dump(f_scaler, MODELS_PATH / "feature_scaler.pkl")
     joblib.dump(pca_obj,  MODELS_PATH / "pca_transformer.pkl")
 
     # ── 9. Persist metadata ───────────────────────────────────────
-    meta["last_retrained"]  = datetime.now().isoformat()
-    meta["training_days"]   = fetch_days          # grow by WEEKLY_INCREMENT each run
-    meta["ohlcv_rows_used"] = len(df_ohlcv)
-    meta["processed_rows"]  = len(processed_df)
-    meta["models_replaced"] = replaced
+    meta = {
+        "last_retrained": datetime.now().isoformat(),
+        "start_date": START_DATE,
+        "ohlcv_rows_used": len(df_ohlcv),
+        "processed_rows": len(processed_df),
+        "models_replaced": replaced,
+    }
     _save_meta(meta)
 
-    print(f"\nRetraining complete. training_days: {prev_days} → {fetch_days}")
+    print(f"\nRetraining complete. Data window: {START_DATE} to today ({len(df_ohlcv)} candles)")
     print(f"Replaced models: {replaced if replaced else 'none (old models were better)'}")
 
 

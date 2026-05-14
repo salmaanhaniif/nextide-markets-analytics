@@ -1,4 +1,7 @@
 import json
+import time
+import asyncio
+import feedparser
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -121,11 +124,44 @@ def get_backtest_30d(model: str = Query(default="xgboost")):
     }
 
 
+RSS_SOURCES = [
+    "https://cointelegraph.com/rss",
+    "https://www.coindesk.com/arc/outboundfeeds/rss/",
+    "https://bitcoinmagazine.com/feed",
+]
+
+_news_cache: dict = {"data": [], "expires": 0.0}
+_NEWS_TTL = 15 * 60  # 15 minutes
+
+
+def _fetch_rss(limit: int) -> list[dict]:
+    headlines = []
+    for url in RSS_SOURCES:
+        try:
+            feed = feedparser.parse(url)
+            for entry in feed.entries[:5]:
+                headlines.append({
+                    "title":     entry.get("title", "").strip(),
+                    "link":      entry.get("link", ""),
+                    "published": entry.get("published", entry.get("updated", "")),
+                })
+        except Exception:
+            continue
+    return headlines[:limit]
+
+
 @app.get("/api/news")
-def get_news_headlines():
-    """Latest Bitcoin news headlines (mock data)."""
-    return [
-        {"title": "Bitcoin Surges Past $82K as Spot ETF Inflows Hit Monthly Record", "link": "#", "published": "Mon, 11 May 2026 08:30:00 +0000"},
-        {"title": "Fed Chair Powell Signals Cautious Rate Outlook; Crypto Markets Rally", "link": "#", "published": "Mon, 11 May 2026 07:15:00 +0000"},
-        {"title": "MicroStrategy Adds 2,500 BTC to Treasury, Total Holdings Near 220K", "link": "#", "published": "Mon, 11 May 2026 06:00:00 +0000"},
-    ]
+async def get_news_headlines(limit: int = Query(default=8, ge=1, le=20)):
+    """Latest Bitcoin news headlines from RSS feeds (cached 15 min)."""
+    now = time.time()
+    if _news_cache["expires"] > now and _news_cache["data"]:
+        return _news_cache["data"]
+
+    loop = asyncio.get_event_loop()
+    headlines = await loop.run_in_executor(None, _fetch_rss, limit)
+
+    if headlines:
+        _news_cache["data"] = headlines
+        _news_cache["expires"] = now + _NEWS_TTL
+
+    return headlines

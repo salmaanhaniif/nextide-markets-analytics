@@ -87,15 +87,6 @@ The dashboard uses a carefully selected dark theme optimized for financial data 
    ```
 
 3. **Configure environment variables**:
-   ```bash
-   cp .env.local.example .env.local
-   ```
-   
-   Edit `.env.local` and set your API URL:
-   ```env
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   ```
-
 4. **Run the development server**:
    ```bash
    npm run dev
@@ -114,62 +105,17 @@ npm run build
 npm start
 ```
 
-## 📡 API Integration
+## 📡 Data Sources
 
-The frontend expects the following API endpoints from the backend:
+The frontend reads data directly from **GitHub's raw CDN**:
 
-### GET `/api/predict/daily`
-Returns the daily prediction with AI signal.
+- **Predictions**: `raw.githubusercontent.com/.../Backend/latest_prediction.json`
+- **History**: `raw.githubusercontent.com/.../Backend/data/prediction_history.json`
+- **News**: `raw.githubusercontent.com/.../Backend/data/news.json`
 
-**Response:**
-```json
-{
-  "predicted_price": 45000.50,
-  "ai_signal": "BUY",
-  "confidence": 0.85,
-  "current_price": 43500.00,
-  "timestamp": "2026-05-11T10:30:00Z",
-  "market_sentiment": {
-    "fear_and_greed_index": 65,
-    "nlp_sentiment_score": 0.45,
-    "sentiment_label": "Greed",
-    "news_summary": "Market shows positive momentum..."
-  },
-  "feature_importance": [
-    {
-      "feature_name": "Trading Volume",
-      "importance_score": 0.35,
-      "impact": "positive",
-      "description": "High trading volume indicates strong market interest"
-    }
-  ]
-}
-```
+**No backend API required** — the dashboard is fully functional without a server. Data is refreshed automatically by GitHub Actions workflows.
 
-### GET `/api/historical?days=30`
-Returns historical price data for charts.
-
-**Response:**
-```json
-[
-  {
-    "date": "2026-05-10",
-    "actual_price": 43500.00,
-    "predicted_price": 43450.00,
-    "volume": 1234567890
-  }
-]
-```
-
-### GET `/health`
-Health check endpoint.
-
-**Response:**
-```json
-{
-  "status": "healthy"
-}
-```
+Optional: A FastAPI fallback server can be enabled if you want to serve data from a custom backend, but it's not necessary for the core dashboard functionality.
 
 ## 🎯 Component Overview
 
@@ -197,22 +143,22 @@ const interval = setInterval(() => {
 }, 5 * 60 * 1000); // 5 minutes
 ```
 
-### API Timeout
-To adjust the API timeout, edit `src/lib/api.ts`:
+### GitHub Raw CDN Timeout
+To adjust the GitHub CDN request timeout, edit `src/lib/api.ts`:
 
 ```typescript
-const apiClient = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 10000, // Change to your desired timeout in ms
+const githubClient = axios.create({ 
+  timeout: 15000 // Change to your desired timeout in ms
 });
 ```
 
 ## 🐛 Troubleshooting
 
-### API Connection Issues
-- Ensure the backend is running on the correct port
-- Check `.env.local` has the correct `NEXT_PUBLIC_API_URL`
-- Verify CORS is enabled on the backend
+### Data Not Loading
+- Check that you have internet access (GitHub raw CDN requires it)
+- Verify the GitHub repository is public
+- Check browser console for CORS or network errors
+- If GitHub is unreachable, set `NEXT_PUBLIC_USE_MOCK_DATA=true` to use fallback mock data
 
 ### Build Errors
 - Clear `.next` folder: `rm -rf .next`

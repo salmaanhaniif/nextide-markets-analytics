@@ -156,10 +156,38 @@ def _load_history(path: Path = HISTORY_FILE) -> list:
 
 
 def _save_history(history: list, new_entry: dict, path: Path = HISTORY_FILE) -> None:
+    new_date = new_entry["meta"]["data_as_of"]
+    # Drop any existing entries for the same date (idempotent re-runs)
+    history = [e for e in history if e["meta"]["data_as_of"] != new_date]
     history.append(new_entry)
     history = history[-365:]
     with open(path, "w") as f:
         json.dump(history, f, indent=2)
+
+
+def _resolve_unresolved(history: list, df_ohlcv) -> int:
+    """Back-fill actual_direction_y1 / actual_price_y1 for entries whose target_date
+    has fully closed (strictly before today UTC) and whose candle is in df_ohlcv."""
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    close_by_date = {
+        ts.strftime("%Y-%m-%d"): float(close)
+        for ts, close in zip(df_ohlcv.index, df_ohlcv["close"])
+    }
+    resolved = 0
+    for entry in history:
+        if entry.get("actual_direction_y1") is not None:
+            continue
+        target_date = entry["predictions"]["y1"]["target_date"]
+        if target_date >= today_str:  # candle still open or in the future
+            continue
+        if target_date not in close_by_date:
+            continue
+        actual_close = close_by_date[target_date]
+        entry_price  = entry["current"]["price"]
+        entry["actual_direction_y1"] = "UP" if actual_close > entry_price else "DOWN"
+        entry["actual_price_y1"]     = round(actual_close, 2)
+        resolved += 1
+    return resolved
 
 
 # ── XGBoost inference ─────────────────────────────────────────────────────────
@@ -347,16 +375,22 @@ def run_daily_inference():
             json.dump(lstm_result, f, indent=2)
         print(f"  latest_prediction_lstm.json written (LSTM).")
 
-    # Append XGBoost result to history
+    # Append XGBoost result to history, resolving any prior unresolved entries first
     xgb_entry = {**xgb_result, "actual_direction_y1": None, "actual_price_y1": None}
     xgb_history = _load_history(HISTORY_FILE)
+    xgb_resolved = _resolve_unresolved(xgb_history, df_ohlcv)
+    if xgb_resolved:
+        print(f"  Resolved {xgb_resolved} prior XGBoost entry(ies) with actual outcomes.")
     _save_history(xgb_history, xgb_entry, HISTORY_FILE)
     print(f"  prediction_history.json updated ({len(xgb_history)+1} entries).")
 
-    # Append LSTM result to its own history
+    # Append LSTM result to its own history, resolving prior entries first
     if lstm_result:
         lstm_entry = {**lstm_result, "actual_direction_y1": None, "actual_price_y1": None}
         lstm_history = _load_history(HISTORY_LSTM_FILE)
+        lstm_resolved = _resolve_unresolved(lstm_history, df_ohlcv)
+        if lstm_resolved:
+            print(f"  Resolved {lstm_resolved} prior LSTM entry(ies) with actual outcomes.")
         _save_history(lstm_history, lstm_entry, HISTORY_LSTM_FILE)
         print(f"  prediction_history_lstm.json updated ({len(lstm_history)+1} entries).")
 

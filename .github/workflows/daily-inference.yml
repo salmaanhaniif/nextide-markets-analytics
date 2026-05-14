@@ -46,10 +46,3 @@ jobs:
           git add data/prediction_history.json data/prediction_history_lstm.json
           git diff --cached --quiet || git commit -m "chore(data): daily inference $(date -u +%Y-%m-%d)"
           git push
-          
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(data): daily inference $(date -u +%Y-%m-%d)"
-            git push
-          else
-            echo "No changes to commit"
-          fi

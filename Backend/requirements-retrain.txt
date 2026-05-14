@@ -4,11 +4,5 @@ numpy
 scikit-learn
 xgboost
 ccxt
-tensorflow-cpu
 joblib
-feedparser
-google-genai
-groq
 python-dotenv
-fastapi
-uvicorn[standard]

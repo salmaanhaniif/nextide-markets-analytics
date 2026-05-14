@@ -16,16 +16,8 @@ import {
     USE_MOCK_DATA,
 } from './mockData';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-
 // GitHub raw base URL — data files are committed here by GitHub Actions daily
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/salmaanhaniif/nextide-markets-analytics/main/Backend';
-
-const apiClient = axios.create({
-    baseURL: API_BASE_URL,
-    timeout: 15000,
-    headers: { 'Content-Type': 'application/json' },
-});
 
 const githubClient = axios.create({ timeout: 15000 });
 
@@ -117,17 +109,13 @@ export function fetchBacktest(model: string = 'xgboost'): Promise<BacktestRespon
 
 export function fetchNews(): Promise<NewsHeadline[]> {
     return withFallback(
-        'GET /api/news',
-        async () => (await apiClient.get<NewsHeadline[]>('/api/news')).data,
+        `GitHub raw: data/news.json`,
+        async () => {
+            const data = (await githubClient.get<NewsHeadline[]>(`${GITHUB_RAW_BASE}/data/news.json?t=${cacheBust()}`)).data;
+            if (!Array.isArray(data)) throw new Error('News response is not an array');
+            return data;
+        },
         mockNews,
     );
 }
 
-export async function checkApiHealth(): Promise<boolean> {
-    try {
-        const response = await apiClient.get('/');
-        return response.status === 200;
-    } catch {
-        return false;
-    }
-}

@@ -1,13 +1,29 @@
 import os
 import json
 import feedparser
-import google.generativeai as genai
+from google import genai
 from groq import Groq
 from pathlib import Path
 from typing import Tuple
 
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+# Clients are lazy-initialized so importing this module never crashes
+# when API keys are absent (e.g. during local testing or retrain runs).
+_gemini_client: genai.Client | None = None
+_groq_client: Groq | None = None
+
+
+def _get_gemini_client() -> genai.Client:
+    global _gemini_client
+    if _gemini_client is None:
+        _gemini_client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY", ""))
+    return _gemini_client
+
+
+def _get_groq_client() -> Groq:
+    global _groq_client
+    if _groq_client is None:
+        _groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
+    return _groq_client
 
 _HISTORY_PATH = Path(__file__).resolve().parent.parent / "data" / "prediction_history.json"
 
@@ -109,8 +125,10 @@ def get_live_nlp_sentiment() -> Tuple[float, str]:
 
     # 1. Gemini 2.5 Flash (primary)
     try:
-        model = genai.GenerativeModel("gemini-2.5-flash")
-        response = model.generate_content(prompt)
+        response = _get_gemini_client().models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
         raw_score = _parse_llm_response(response.text)
         score = float(max(-1.0, min(1.0, raw_score)))
         print(f"  Gemini sentiment: {score:.3f}")
@@ -120,7 +138,7 @@ def get_live_nlp_sentiment() -> Tuple[float, str]:
 
     # 2. Groq Llama 3 (secondary)
     try:
-        completion = groq_client.chat.completions.create(
+        completion = _get_groq_client().chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model="llama-3.1-8b-instant",
             temperature=0.0,
