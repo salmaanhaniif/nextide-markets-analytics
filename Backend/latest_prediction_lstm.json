@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-05-13T15:34:53Z",
+    "generated_at": "2026-05-14T07:39:26Z",
     "model_version": "2026-05-12",
     "model_id": "lstm",
-    "data_as_of": "2026-05-13"
+    "data_as_of": "2026-05-14"
   },
   "current": {
-    "price": 79269.99,
-    "fng_score": -0.16,
-    "fng_label": "Neutral",
-    "nlp_sentiment": -0.4,
-    "nlp_status": "live"
+    "price": 79933.24,
+    "fng_score": -0.32,
+    "fng_label": "Fear",
+    "nlp_sentiment": -0.475,
+    "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-05-14",
-      "predicted_log_return": 0.002545,
-      "predicted_price": 79471.97,
-      "price_change_pct": 0.2545,
+      "target_date": "2026-05-15",
+      "predicted_log_return": 0.002531,
+      "predicted_price": 80135.83,
+      "price_change_pct": 0.2531,
       "direction": "UP",
-      "confidence": 0.5263,
-      "range_low": 78325.48,
-      "range_high": 80635.24
+      "confidence": 0.5261,
+      "range_low": 78978.09,
+      "range_high": 81310.55
     },
     "y7": {
-      "target_date": "2026-05-20",
-      "predicted_log_return": 0.03212,
-      "predicted_price": 81857.44,
-      "price_change_pct": 3.212,
+      "target_date": "2026-05-21",
+      "predicted_log_return": 0.03359,
+      "predicted_price": 82663.77,
+      "price_change_pct": 3.359,
       "direction": "UP",
-      "confidence": 0.8316,
-      "range_low": 78770.05,
-      "range_high": 85065.85
+      "confidence": 0.8462,
+      "range_low": 79541.49,
+      "range_high": 85908.62
     },
     "y30": {
-      "target_date": "2026-06-12",
-      "predicted_log_return": 0.050292,
-      "predicted_price": 83358.59,
-      "price_change_pct": 5.0292,
-      "direction": "UP",
-      "confidence": 0.9,
-      "range_low": 76981.11,
-      "range_high": 90264.42
+      "target_date": "2026-06-13",
+      "predicted_log_return": -0.010512,
+      "predicted_price": 79097.36,
+      "price_change_pct": -1.0512,
+      "direction": "DOWN",
+      "confidence": 0.6084,
+      "range_low": 73037.38,
+      "range_high": 85660.15
     }
   },
   "signal": {
