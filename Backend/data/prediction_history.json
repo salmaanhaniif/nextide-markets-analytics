@@ -16,33 +16,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-10",
-        "predicted_log_return": 0.005199041899186488,
-        "predicted_price": 61334.523253751075,
-        "price_change_pct": 0.5199041899186488,
+        "predicted_log_return": 0.005124567263327838,
+        "predicted_price": 61329.95555755705,
+        "price_change_pct": 0.5124567263327838,
         "direction": "UP",
-        "confidence": 0.6862973287425088,
-        "range_low": 60107.83278867605,
-        "range_high": 62561.2137188261
+        "confidence": 0.8159561162033488,
+        "range_low": 59490.05689083033,
+        "range_high": 63169.854224283765
       },
       "y7": {
         "target_date": "2026-02-16",
-        "predicted_log_return": 0.018196646647152707,
-        "predicted_price": 62136.92852132087,
-        "price_change_pct": 1.8196646647152708,
+        "predicted_log_return": 0.018546802640689072,
+        "predicted_price": 62158.68994898737,
+        "price_change_pct": 1.8546802640689073,
         "direction": "UP",
-        "confidence": 0.5862973287425088,
-        "range_low": 59030.082095254824,
-        "range_high": 65243.77494738692
+        "confidence": 0.4759962596277878,
+        "range_low": 60293.929250517744,
+        "range_high": 64023.45064745699
       },
       "y30": {
         "target_date": "2026-03-11",
-        "predicted_log_return": 0.06238850279023786,
-        "predicted_price": 64944.45268876584,
-        "price_change_pct": 6.238850279023786,
+        "predicted_log_return": 0.059116447165572274,
+        "predicted_price": 64732.298107134164,
+        "price_change_pct": 5.911644716557228,
         "direction": "UP",
-        "confidence": 0.5362973287425088,
-        "range_low": 58450.00741988926,
-        "range_high": 71438.89795764243
+        "confidence": 0.595617767336377,
+        "range_low": 62790.329163920134,
+        "range_high": 66674.2670503482
       }
     },
     "signal": {
@@ -101,33 +101,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-11",
-        "predicted_log_return": -0.0007364571948796826,
-        "predicted_price": 60514.2174546099,
-        "price_change_pct": -0.07364571948796826,
+        "predicted_log_return": -0.0007506130850980227,
+        "predicted_price": 60513.36082805413,
+        "price_change_pct": -0.07506130850980228,
         "direction": "DOWN",
-        "confidence": 0.4738563153439328,
-        "range_low": 59303.933105517695,
-        "range_high": 61724.5018037021
+        "confidence": 0.5196295617101951,
+        "range_low": 58697.9600032125,
+        "range_high": 62328.76165289576
       },
       "y7": {
         "target_date": "2026-02-17",
-        "predicted_log_return": -0.002577600182078889,
-        "predicted_price": 60402.90463037444,
-        "price_change_pct": -0.2577600182078889,
+        "predicted_log_return": -0.0026551302532301976,
+        "predicted_price": 60398.22177041429,
+        "price_change_pct": -0.26551302532301974,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 57382.75939885571,
-        "range_high": 63423.04986189317
+        "confidence": 0.39792730665341625,
+        "range_low": 58586.27511730186,
+        "range_high": 62210.16842352672
       },
       "y30": {
         "target_date": "2026-03-12",
-        "predicted_log_return": -0.008837486338556192,
-        "predicted_price": 60025.97033763189,
-        "price_change_pct": -0.8837486338556192,
+        "predicted_log_return": -0.008459356174607307,
+        "predicted_price": 60048.67225950707,
+        "price_change_pct": -0.8459356174607308,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 54023.3733038687,
-        "range_high": 66028.56737139508
+        "confidence": 0.3159815569669987,
+        "range_low": 58247.212091721856,
+        "range_high": 61850.13242729228
       }
     },
     "signal": {
@@ -186,33 +186,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-12",
-        "predicted_log_return": 0.010903911980301592,
-        "predicted_price": 61224.95503403086,
-        "price_change_pct": 1.0903911980301593,
+        "predicted_log_return": 0.011349717412137394,
+        "predicted_price": 61252.25553645292,
+        "price_change_pct": 1.1349717412137394,
         "direction": "UP",
-        "confidence": 0.582800447983727,
-        "range_low": 60000.45593335025,
-        "range_high": 62449.45413471148
+        "confidence": 0.6828351671956819,
+        "range_low": 59414.68787035933,
+        "range_high": 63089.823202546504
       },
       "y7": {
         "target_date": "2026-02-18",
-        "predicted_log_return": 0.03816369193105557,
-        "predicted_price": 62916.889951369965,
-        "price_change_pct": 3.8163691931055572,
+        "predicted_log_return": 0.039817719952093385,
+        "predicted_price": 63021.04236210389,
+        "price_change_pct": 3.9817719952093387,
         "direction": "UP",
-        "confidence": 0.482800447983727,
-        "range_low": 59771.04545380147,
-        "range_high": 66062.73444893847
+        "confidence": 0.4995319445598259,
+        "range_low": 61130.41109124078,
+        "range_high": 64911.67363296701
       },
       "y30": {
         "target_date": "2026-03-13",
-        "predicted_log_return": 0.1308469437636191,
-        "predicted_price": 69027.01158119446,
-        "price_change_pct": 13.084694376361911,
+        "predicted_log_return": 0.12046350043955842,
+        "predicted_price": 68313.98177720825,
+        "price_change_pct": 12.046350043955842,
         "direction": "UP",
-        "confidence": 0.43280044798372697,
-        "range_low": 62124.31042307501,
-        "range_high": 75929.71273931391
+        "confidence": 0.5080878865424643,
+        "range_low": 66264.562323892,
+        "range_high": 70363.4012305245
       }
     },
     "signal": {
@@ -271,33 +271,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-13",
-        "predicted_log_return": 0.00552266710752958,
-        "predicted_price": 61455.42237195464,
-        "price_change_pct": 0.552266710752958,
+        "predicted_log_return": 0.005436968862683496,
+        "predicted_price": 61450.15597578478,
+        "price_change_pct": 0.5436968862683497,
         "direction": "UP",
-        "confidence": 0.5916972438287004,
-        "range_low": 60226.31392451555,
-        "range_high": 62684.53081939374
+        "confidence": 0.5015791808873202,
+        "range_low": 59606.651296511234,
+        "range_high": 63293.660655058324
       },
       "y7": {
         "target_date": "2026-02-19",
-        "predicted_log_return": 0.01932933487635353,
-        "predicted_price": 62309.80146330958,
-        "price_change_pct": 1.932933487635353,
+        "predicted_log_return": 0.01953975329076229,
+        "predicted_price": 62322.91397244393,
+        "price_change_pct": 1.953975329076229,
         "direction": "UP",
-        "confidence": 0.4916972438287004,
-        "range_low": 59194.311390144096,
-        "range_high": 65425.291536475066
+        "confidence": 0.4588756348645544,
+        "range_low": 60453.22655327061,
+        "range_high": 64192.60139161725
       },
       "y30": {
         "target_date": "2026-03-14",
-        "predicted_log_return": 0.06627200529035496,
-        "predicted_price": 65304.5303060726,
-        "price_change_pct": 6.6272005290354965,
+        "predicted_log_return": 0.07062419623226454,
+        "predicted_price": 65589.36747460371,
+        "price_change_pct": 7.062419623226454,
         "direction": "UP",
-        "confidence": 0.44169724382870035,
-        "range_low": 58774.077275465344,
-        "range_high": 71834.98333667987
+        "confidence": 0.48363457434052065,
+        "range_low": 63621.6864503656,
+        "range_high": 67557.04849884183
       }
     },
     "signal": {
@@ -356,33 +356,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-14",
-        "predicted_log_return": -0.03179888220369513,
-        "predicted_price": 59492.32093154853,
-        "price_change_pct": -3.179888220369513,
+        "predicted_log_return": -0.03023589172607096,
+        "predicted_price": 59585.379568593366,
+        "price_change_pct": -3.023589172607096,
         "direction": "DOWN",
-        "confidence": 0.6127614208239026,
-        "range_low": 58302.47451291756,
-        "range_high": 60682.1673501795
+        "confidence": 0.6016653720381567,
+        "range_low": 57797.818181535564,
+        "range_high": 61372.94095565117
       },
       "y7": {
         "target_date": "2026-02-20",
-        "predicted_log_return": -0.11129608771293295,
-        "predicted_price": 54945.95351504144,
-        "price_change_pct": -11.129608771293295,
+        "predicted_log_return": -0.10856027023124179,
+        "predicted_price": 55096.48142977841,
+        "price_change_pct": -10.856027023124179,
         "direction": "DOWN",
-        "confidence": 0.5127614208239026,
-        "range_low": 52198.655839289364,
-        "range_high": 57693.25119079351
+        "confidence": 0.601914359928117,
+        "range_low": 53443.58698688506,
+        "range_high": 56749.375872671764
       },
       "y30": {
         "target_date": "2026-03-15",
-        "predicted_log_return": -0.38158658644434157,
-        "predicted_price": 41932.43112262251,
-        "price_change_pct": -38.158658644434155,
+        "predicted_log_return": -0.37626280018290187,
+        "predicted_price": 42156.26571844211,
+        "price_change_pct": -37.62628001829019,
         "direction": "DOWN",
-        "confidence": 0.4627614208239026,
-        "range_low": 37739.18801036026,
-        "range_high": 46125.67423488477
+        "confidence": 0.5082707450877276,
+        "range_low": 40891.57774688885,
+        "range_high": 43420.953689995375
       }
     },
     "signal": {
@@ -441,33 +441,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-15",
-        "predicted_log_return": 0.00014807657231839363,
-        "predicted_price": 62785.016301707685,
-        "price_change_pct": 0.014807657231839362,
+        "predicted_log_return": 0.00013402739776063256,
+        "predicted_price": 62784.13423025025,
+        "price_change_pct": 0.013402739776063256,
         "direction": "UP",
-        "confidence": 0.6385855428679718,
-        "range_low": 61529.31597567353,
-        "range_high": 64040.71662774184
+        "confidence": 0.6217484982802166,
+        "range_low": 60900.610203342745,
+        "range_high": 64667.65825715776
       },
       "y7": {
         "target_date": "2026-02-21",
-        "predicted_log_return": 0.0005182680031143777,
-        "predicted_price": 62808.263079338416,
-        "price_change_pct": 0.05182680031143777,
+        "predicted_log_return": 0.0005409697207205581,
+        "predicted_price": 62809.68895097498,
+        "price_change_pct": 0.054096972072055806,
         "direction": "UP",
-        "confidence": 0.5385855428679718,
-        "range_low": 59667.84992537149,
-        "range_high": 65948.67623330533
+        "confidence": 0.5492721585331132,
+        "range_low": 60925.39828244573,
+        "range_high": 64693.979619504236
       },
       "y30": {
         "target_date": "2026-03-16",
-        "predicted_log_return": 0.0017769188678207234,
-        "predicted_price": 62887.366525341306,
-        "price_change_pct": 0.17769188678207234,
+        "predicted_log_return": 0.0018212852599315372,
+        "predicted_price": 62890.156672797304,
+        "price_change_pct": 0.1821285259931537,
         "direction": "UP",
-        "confidence": 0.48858554286797173,
-        "range_low": 56598.62987280718,
-        "range_high": 69176.10317787544
+        "confidence": 0.502542657384119,
+        "range_low": 61003.45197261338,
+        "range_high": 64776.86137298123
       }
     },
     "signal": {
@@ -526,33 +526,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-16",
-        "predicted_log_return": 2.3769684597448916e-05,
-        "predicted_price": 62758.6717361038,
-        "price_change_pct": 0.0023769684597448916,
+        "predicted_log_return": 2.5381807430230928e-05,
+        "predicted_price": 62758.77291087302,
+        "price_change_pct": 0.002538180743023093,
         "direction": "UP",
-        "confidence": 0.4817530670945596,
-        "range_low": 61503.498301381725,
-        "range_high": 64013.84517082588
+        "confidence": 0.4278832780711788,
+        "range_low": 60876.00972354683,
+        "range_high": 64641.53609819921
       },
       "y7": {
         "target_date": "2026-02-22",
-        "predicted_log_return": 8.31938960910712e-05,
-        "predicted_price": 62762.40123149617,
-        "price_change_pct": 0.00831938960910712,
+        "predicted_log_return": 8.163896677474178e-05,
+        "predicted_price": 62762.30364047441,
+        "price_change_pct": 0.008163896677474178,
         "direction": "UP",
-        "confidence": 0.4,
-        "range_low": 59624.28116992136,
-        "range_high": 65900.52129307098
+        "confidence": 0.435952629812865,
+        "range_low": 60879.43453126018,
+        "range_high": 64645.172749688645
       },
       "y30": {
         "target_date": "2026-03-17",
-        "predicted_log_return": 0.000285236215169387,
-        "predicted_price": 62775.08317369327,
-        "price_change_pct": 0.0285236215169387,
+        "predicted_log_return": 0.00028408481997141557,
+        "predicted_price": 62775.01089480557,
+        "price_change_pct": 0.028408481997141556,
         "direction": "UP",
-        "confidence": 0.35,
-        "range_low": 56497.57485632394,
-        "range_high": 69052.5914910626
+        "confidence": 0.35640758662510486,
+        "range_low": 60891.7605679614,
+        "range_high": 64658.261221649744
       }
     },
     "signal": {
@@ -611,33 +611,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-17",
-        "predicted_log_return": -0.025211332599714885,
-        "predicted_price": 61330.44183474101,
-        "price_change_pct": -2.5211332599714886,
+        "predicted_log_return": -0.022175579152302345,
+        "predicted_price": 61516.90882567393,
+        "price_change_pct": -2.2175579152302345,
         "direction": "DOWN",
-        "confidence": 0.6961826629051258,
-        "range_low": 60103.832998046186,
-        "range_high": 62557.050671435834
+        "confidence": 0.64550540721537,
+        "range_low": 59671.40156090371,
+        "range_high": 63362.416090444145
       },
       "y7": {
         "target_date": "2026-02-23",
-        "predicted_log_return": -0.0882396640990021,
-        "predicted_price": 57584.186629747725,
-        "price_change_pct": -8.82396640990021,
+        "predicted_log_return": -0.0934133075277031,
+        "predicted_price": 57287.03591971168,
+        "price_change_pct": -9.341330752770311,
         "direction": "DOWN",
-        "confidence": 0.5961826629051258,
-        "range_low": 54704.97729826034,
-        "range_high": 60463.39596123511
+        "confidence": 0.5821750827070131,
+        "range_low": 55568.42484212032,
+        "range_high": 59005.64699730303
       },
       "y30": {
         "target_date": "2026-03-18",
-        "predicted_log_return": -0.3025359911965786,
-        "predicted_price": 46476.725724376374,
-        "price_change_pct": -30.253599119657864,
+        "predicted_log_return": -0.3118134044568718,
+        "predicted_price": 46047.535896918074,
+        "price_change_pct": -31.181340445687177,
         "direction": "DOWN",
-        "confidence": 0.5461826629051257,
-        "range_low": 41829.05315193874,
-        "range_high": 51124.39829681402
+        "confidence": 0.5604098386238814,
+        "range_low": 44666.10982001053,
+        "range_high": 47428.961973825615
       }
     },
     "signal": {
@@ -696,33 +696,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-18",
-        "predicted_log_return": 0.003171632753398796,
-        "predicted_price": 61483.72488209745,
-        "price_change_pct": 0.3171632753398796,
+        "predicted_log_return": 0.0032849782028107253,
+        "predicted_price": 61490.69417748722,
+        "price_change_pct": 0.32849782028107255,
         "direction": "UP",
-        "confidence": 0.7268774261145075,
-        "range_low": 60254.0503844555,
-        "range_high": 62713.3993797394
+        "confidence": 0.7673932239156708,
+        "range_low": 59645.9733521626,
+        "range_high": 63335.41500281184
       },
       "y7": {
         "target_date": "2026-02-24",
-        "predicted_log_return": 0.011100714636895785,
-        "predicted_price": 61973.172240975655,
-        "price_change_pct": 1.1100714636895785,
+        "predicted_log_return": 0.010666244480248705,
+        "predicted_price": 61946.252595438964,
+        "price_change_pct": 1.0666244480248706,
         "direction": "UP",
-        "confidence": 0.6268774261145075,
-        "range_low": 58874.51362892687,
-        "range_high": 65071.83085302444
+        "confidence": 0.512936558679729,
+        "range_low": 60087.865017575794,
+        "range_high": 63804.640173302134
       },
       "y30": {
         "target_date": "2026-03-19",
-        "predicted_log_return": 0.03805959304078555,
-        "predicted_price": 63666.62366847982,
-        "price_change_pct": 3.805959304078555,
+        "predicted_log_return": 0.035822319164688095,
+        "predicted_price": 63524.34321408633,
+        "price_change_pct": 3.5822319164688095,
         "direction": "UP",
-        "confidence": 0.5768774261145074,
-        "range_low": 57299.96130163184,
-        "range_high": 70033.28603532781
+        "confidence": 0.6160780936007103,
+        "range_low": 61618.61291766374,
+        "range_high": 65430.07351050892
       }
     },
     "signal": {
@@ -781,33 +781,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-19",
-        "predicted_log_return": -0.015814471261963205,
-        "predicted_price": 60564.2941395928,
-        "price_change_pct": -1.5814471261963206,
+        "predicted_log_return": -0.015504242775388621,
+        "predicted_price": 60583.08582361132,
+        "price_change_pct": -1.5504242775388621,
         "direction": "DOWN",
-        "confidence": 0.4751354923398827,
-        "range_low": 59353.008256800946,
-        "range_high": 61775.58002238465
+        "confidence": 0.45127508968174795,
+        "range_low": 58765.59324890298,
+        "range_high": 62400.57839831966
       },
       "y7": {
         "target_date": "2026-02-25",
-        "predicted_log_return": -0.05535064941687122,
-        "predicted_price": 58216.53003629849,
-        "price_change_pct": -5.535064941687121,
+        "predicted_log_return": -0.0598402944060479,
+        "predicted_price": 57955.744339584744,
+        "price_change_pct": -5.98402944060479,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 55305.70353448357,
-        "range_high": 61127.35653811342
+        "confidence": 0.3618943349342003,
+        "range_low": 56217.0720093972,
+        "range_high": 59694.41666977229
       },
       "y30": {
         "target_date": "2026-03-20",
-        "predicted_log_return": -0.18977365514355846,
-        "predicted_price": 50894.065730192444,
-        "price_change_pct": -18.977365514355846,
+        "predicted_log_return": -0.1969151721123618,
+        "predicted_price": 50531.89964304007,
+        "price_change_pct": -19.69151721123618,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 45804.6591571732,
-        "range_high": 55983.472303211696
+        "confidence": 0.3139126900036412,
+        "range_low": 49015.94265374887,
+        "range_high": 52047.85663233128
       }
     },
     "signal": {
@@ -866,33 +866,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-20",
-        "predicted_log_return": -0.009148120764845065,
-        "predicted_price": 59857.25626542722,
-        "price_change_pct": -0.9148120764845065,
+        "predicted_log_return": -0.010414541239747553,
+        "predicted_price": 59781.49979042171,
+        "price_change_pct": -1.0414541239747552,
         "direction": "DOWN",
-        "confidence": 0.496293228016637,
-        "range_low": 58660.11114011867,
-        "range_high": 61054.401390735766
+        "confidence": 0.5200694699006583,
+        "range_low": 57988.05479670905,
+        "range_high": 61574.944784134364
       },
       "y7": {
         "target_date": "2026-02-26",
-        "predicted_log_return": -0.03201842267695773,
-        "predicted_price": 58503.838273720496,
-        "price_change_pct": -3.2018422676957727,
+        "predicted_log_return": -0.03215776893883644,
+        "predicted_price": 58495.68655052076,
+        "price_change_pct": -3.2157768938836444,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 55578.646360034465,
-        "range_high": 61429.030187406526
+        "confidence": 0.4337155005655544,
+        "range_low": 56740.815954005135,
+        "range_high": 60250.55714703639
       },
       "y30": {
         "target_date": "2026-03-21",
-        "predicted_log_return": -0.10977744917814078,
-        "predicted_price": 54127.01082322287,
-        "price_change_pct": -10.977744917814078,
+        "predicted_log_return": -0.11229363413835326,
+        "predicted_price": 53990.98845313439,
+        "price_change_pct": -11.229363413835326,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 48714.30974090058,
-        "range_high": 59539.711905545155
+        "confidence": 0.3,
+        "range_low": 52371.25879954036,
+        "range_high": 55610.718106728425
       }
     },
     "signal": {
@@ -951,33 +951,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-21",
-        "predicted_log_return": -0.005070037832834584,
-        "predicted_price": 59487.987779772644,
-        "price_change_pct": -0.5070037832834584,
+        "predicted_log_return": -0.005335825879022863,
+        "predicted_price": 59472.17868475628,
+        "price_change_pct": -0.5335825879022863,
         "direction": "DOWN",
-        "confidence": 0.7457828207463476,
-        "range_low": 58298.22802417719,
-        "range_high": 60677.7475353681
+        "confidence": 0.7937800667916468,
+        "range_low": 57688.01332421359,
+        "range_high": 61256.344045298974
       },
       "y7": {
         "target_date": "2026-02-27",
-        "predicted_log_return": -0.017745132414921042,
-        "predicted_price": 58738.73039344237,
-        "price_change_pct": -1.7745132414921043,
+        "predicted_log_return": -0.017642504022699037,
+        "predicted_price": 58744.758964249784,
+        "price_change_pct": -1.7642504022699037,
         "direction": "DOWN",
-        "confidence": 0.6457828207463476,
-        "range_low": 55801.79387377025,
-        "range_high": 61675.66691311449
+        "confidence": 0.6422459054215952,
+        "range_low": 56982.41619532229,
+        "range_high": 60507.10173317728
       },
       "y30": {
         "target_date": "2026-03-22",
-        "predicted_log_return": -0.060840453994015005,
-        "predicted_price": 56261.13572604771,
-        "price_change_pct": -6.084045399401501,
+        "predicted_log_return": -0.060486212726883655,
+        "predicted_price": 56281.069272491484,
+        "price_change_pct": -6.048621272688366,
         "direction": "DOWN",
-        "confidence": 0.5957828207463476,
-        "range_low": 50635.02215344294,
-        "range_high": 61887.24929865248
+        "confidence": 0.5420566960644196,
+        "range_low": 54592.63719431674,
+        "range_high": 57969.50135066623
       }
     },
     "signal": {
@@ -1036,33 +1036,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-22",
-        "predicted_log_return": -0.0073864929727172676,
-        "predicted_price": 59024.34294146106,
-        "price_change_pct": -0.7386492972717268,
+        "predicted_log_return": -0.007118553020623733,
+        "predicted_price": 59040.16004000283,
+        "price_change_pct": -0.7118553020623734,
         "direction": "DOWN",
-        "confidence": 0.7185326805704739,
-        "range_low": 57843.856082631835,
-        "range_high": 60204.82980029028
+        "confidence": 0.646206200544052,
+        "range_low": 57268.955238802744,
+        "range_high": 60811.36484120292
       },
       "y7": {
         "target_date": "2026-02-28",
-        "predicted_log_return": -0.025852725404510436,
-        "predicted_price": 57944.387746105844,
-        "price_change_pct": -2.5852725404510437,
+        "predicted_log_return": -0.0257867869694617,
+        "predicted_price": 57948.208634323986,
+        "price_change_pct": -2.57867869694617,
         "direction": "DOWN",
-        "confidence": 0.618532680570474,
-        "range_low": 55047.16835880055,
-        "range_high": 60841.60713341114
+        "confidence": 0.6984290571926238,
+        "range_low": 56209.76237529427,
+        "range_high": 59686.654893353705
       },
       "y30": {
         "target_date": "2026-03-23",
-        "predicted_log_return": -0.0886379156726072,
-        "predicted_price": 54418.19301314503,
-        "price_change_pct": -8.863791567260721,
+        "predicted_log_return": -0.08502757246606318,
+        "predicted_price": 54615.01645289423,
+        "price_change_pct": -8.502757246606318,
         "direction": "DOWN",
-        "confidence": 0.5685326805704739,
-        "range_low": 48976.37371183053,
-        "range_high": 59860.012314459535
+        "confidence": 0.6607362450053231,
+        "range_low": 52976.5659593074,
+        "range_high": 56253.466946481065
       }
     },
     "signal": {
@@ -1121,33 +1121,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-23",
-        "predicted_log_return": 0.0040210612721111455,
-        "predicted_price": 60458.027315776315,
-        "price_change_pct": 0.40210612721111455,
+        "predicted_log_return": 0.004028614960911143,
+        "predicted_price": 60458.48399862494,
+        "price_change_pct": 0.4028614960911143,
         "direction": "UP",
-        "confidence": 0.7021372156140443,
-        "range_low": 59248.86676946079,
-        "range_high": 61667.18786209184
+        "confidence": 0.8125447134116743,
+        "range_low": 58644.729478666195,
+        "range_high": 62272.23851858369
       },
       "y7": {
         "target_date": "2026-03-01",
-        "predicted_log_return": 0.01407371445238901,
-        "predicted_price": 61068.855976711304,
-        "price_change_pct": 1.407371445238901,
+        "predicted_log_return": 0.014410820947623935,
+        "predicted_price": 61089.44615506406,
+        "price_change_pct": 1.4410820947623935,
         "direction": "UP",
-        "confidence": 0.6021372156140443,
-        "range_low": 58015.41317787574,
-        "range_high": 64122.29877554687
+        "confidence": 0.5670191987840549,
+        "range_low": 59256.76277041214,
+        "range_high": 62922.129539715985
       },
       "y30": {
         "target_date": "2026-03-24",
-        "predicted_log_return": 0.048252735265333746,
-        "predicted_price": 63192.21005227146,
-        "price_change_pct": 4.825273526533374,
+        "predicted_log_return": 0.04802244356222646,
+        "predicted_price": 63177.659086143096,
+        "price_change_pct": 4.802244356222646,
         "direction": "UP",
-        "confidence": 0.5521372156140443,
-        "range_low": 56872.98904704431,
-        "range_high": 69511.43105749862
+        "confidence": 0.5165386879426325,
+        "range_low": 61282.3293135588,
+        "range_high": 65072.98885872739
       }
     },
     "signal": {
@@ -1206,33 +1206,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-24",
-        "predicted_log_return": 0.0012858085806601264,
-        "predicted_price": 60467.12918971257,
-        "price_change_pct": 0.12858085806601263,
+        "predicted_log_return": 0.001353012187304259,
+        "predicted_price": 60471.192935425184,
+        "price_change_pct": 0.1353012187304259,
         "direction": "UP",
-        "confidence": 0.4936403105994154,
-        "range_low": 59257.786605918314,
-        "range_high": 61676.471773506826
+        "confidence": 0.5546532639110631,
+        "range_low": 58657.05714736243,
+        "range_high": 62285.32872348794
       },
       "y7": {
         "target_date": "2026-03-02",
-        "predicted_log_return": 0.004500330032310442,
-        "predicted_price": 60661.81481653156,
-        "price_change_pct": 0.4500330032310442,
+        "predicted_log_return": 0.004202058813839228,
+        "predicted_price": 60643.7238412543,
+        "price_change_pct": 0.4202058813839228,
         "direction": "UP",
-        "confidence": 0.4,
-        "range_low": 57628.72407570498,
-        "range_high": 63694.905557358135
+        "confidence": 0.36423584799381203,
+        "range_low": 58824.41212601667,
+        "range_high": 62463.03555649193
       },
       "y30": {
         "target_date": "2026-03-25",
-        "predicted_log_return": 0.015429702967921517,
-        "predicted_price": 61328.44671209304,
-        "price_change_pct": 1.5429702967921517,
+        "predicted_log_return": 0.014844695738638775,
+        "predicted_price": 61292.579619682874,
+        "price_change_pct": 1.4844695738638776,
         "direction": "UP",
-        "confidence": 0.35,
-        "range_low": 55195.602040883736,
-        "range_high": 67461.29138330235
+        "confidence": 0.360651769791536,
+        "range_low": 59453.802231092384,
+        "range_high": 63131.357008273364
       }
     },
     "signal": {
@@ -1291,33 +1291,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-25",
-        "predicted_log_return": -0.0030646914813197207,
-        "predicted_price": 60058.38723968519,
-        "price_change_pct": -0.30646914813197207,
+        "predicted_log_return": -0.003002468850735945,
+        "predicted_price": 60062.124346792974,
+        "price_change_pct": -0.30024688507359454,
         "direction": "DOWN",
-        "confidence": 0.4761621491754947,
-        "range_low": 58857.219494891484,
-        "range_high": 61259.55498447889
+        "confidence": 0.4424503246260194,
+        "range_low": 58260.26061638918,
+        "range_high": 61863.988077196766
       },
       "y7": {
         "target_date": "2026-03-03",
-        "predicted_log_return": -0.010726420184619022,
-        "predicted_price": 59599.99445326381,
-        "price_change_pct": -1.0726420184619023,
+        "predicted_log_return": -0.010266067551504414,
+        "predicted_price": 59627.43778396411,
+        "price_change_pct": -1.0266067551504414,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 56619.994730600614,
-        "range_high": 62579.99417592701
+        "confidence": 0.3610474592934736,
+        "range_low": 57838.61465044518,
+        "range_high": 61416.260917483036
       },
       "y30": {
         "target_date": "2026-03-26",
-        "predicted_log_return": -0.036776297775836644,
-        "predicted_price": 58067.46959855951,
-        "price_change_pct": -3.6776297775836646,
+        "predicted_log_return": -0.03739440442671901,
+        "predicted_price": 58031.588799623336,
+        "price_change_pct": -3.7394404426719015,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 52260.72263870356,
-        "range_high": 63874.216558415465
+        "confidence": 0.39442228966401705,
+        "range_low": 56290.641135634636,
+        "range_high": 59772.536463612036
       }
     },
     "signal": {
@@ -1376,33 +1376,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-26",
-        "predicted_log_return": -0.00929159117115171,
-        "predicted_price": 59268.762502371654,
-        "price_change_pct": -0.929159117115171,
+        "predicted_log_return": -0.009327213820122849,
+        "predicted_price": 59266.65122965487,
+        "price_change_pct": -0.9327213820122849,
         "direction": "DOWN",
-        "confidence": 0.5454113781785331,
-        "range_low": 58083.38725232422,
-        "range_high": 60454.13775241909
+        "confidence": 0.5427026666700042,
+        "range_low": 57488.65169276522,
+        "range_high": 61044.65076654452
       },
       "y7": {
         "target_date": "2026-03-04",
-        "predicted_log_return": -0.032520569099030984,
-        "predicted_price": 57907.87690937692,
-        "price_change_pct": -3.2520569099030983,
+        "predicted_log_return": -0.03089052316910041,
+        "predicted_price": 58002.3463823164,
+        "price_change_pct": -3.089052316910041,
         "direction": "DOWN",
-        "confidence": 0.44541137817853316,
-        "range_low": 55012.483063908076,
-        "range_high": 60803.27075484577
+        "confidence": 0.5220042267205722,
+        "range_low": 56262.2759908469,
+        "range_high": 59742.416773785895
       },
       "y30": {
         "target_date": "2026-03-27",
-        "predicted_log_return": -0.11149909405382051,
-        "predicted_price": 53510.33932873355,
-        "price_change_pct": -11.14990940538205,
+        "predicted_log_return": -0.11472639566514903,
+        "predicted_price": 53337.92369267444,
+        "price_change_pct": -11.472639566514903,
         "direction": "DOWN",
-        "confidence": 0.3954113781785331,
-        "range_low": 48159.305395860196,
-        "range_high": 58861.37326160691
+        "confidence": 0.4196235445824553,
+        "range_low": 51737.78598189421,
+        "range_high": 54938.061403454674
       }
     },
     "signal": {
@@ -1461,33 +1461,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-27",
-        "predicted_log_return": -0.0007876567407987083,
-        "predicted_price": 59222.49462716487,
-        "price_change_pct": -0.07876567407987083,
+        "predicted_log_return": -0.000778667743819745,
+        "predicted_price": 59223.02698038283,
+        "price_change_pct": -0.0778667743819745,
         "direction": "DOWN",
-        "confidence": 0.5774469722958386,
-        "range_low": 58038.04473462157,
-        "range_high": 60406.94451970817
+        "confidence": 0.5658895969102463,
+        "range_low": 57446.33617097134,
+        "range_high": 60999.71778979431
       },
       "y7": {
         "target_date": "2026-03-05",
-        "predicted_log_return": -0.002756798592795479,
-        "predicted_price": 59105.99187728034,
-        "price_change_pct": -0.2756798592795479,
+        "predicted_log_return": -0.002605087439116343,
+        "predicted_price": 59114.959595731656,
+        "price_change_pct": -0.2605087439116343,
         "direction": "DOWN",
-        "confidence": 0.47744697229583866,
-        "range_low": 56150.69228341632,
-        "range_high": 62061.29147114437
+        "confidence": 0.4102930488909405,
+        "range_low": 57341.510807859704,
+        "range_high": 60888.40838360361
       },
       "y30": {
         "target_date": "2026-03-28",
-        "predicted_log_return": -0.009451880889584499,
-        "predicted_price": 58711.59413331548,
-        "price_change_pct": -0.9451880889584499,
+        "predicted_log_return": -0.009303249018691466,
+        "predicted_price": 58720.321195938384,
+        "price_change_pct": -0.9303249018691466,
         "direction": "DOWN",
-        "confidence": 0.4274469722958386,
-        "range_low": 52840.43471998393,
-        "range_high": 64582.75354664703
+        "confidence": 0.4852757466345815,
+        "range_low": 56958.711560060234,
+        "range_high": 60481.930831816535
       }
     },
     "signal": {
@@ -1546,33 +1546,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-02-28",
-        "predicted_log_return": 0.010780689462051537,
-        "predicted_price": 59980.851844157936,
-        "price_change_pct": 1.0780689462051538,
+        "predicted_log_return": 0.010329651356772142,
+        "predicted_price": 59953.80429458539,
+        "price_change_pct": 1.0329651356772143,
         "direction": "UP",
-        "confidence": 0.6568744866192449,
-        "range_low": 58781.23480727478,
-        "range_high": 61180.468881041095
+        "confidence": 0.766751765465482,
+        "range_low": 58155.19016574782,
+        "range_high": 61752.418423422954
       },
       "y7": {
         "target_date": "2026-03-06",
-        "predicted_log_return": 0.03773241311718038,
-        "predicted_price": 61619.42113478303,
-        "price_change_pct": 3.773241311718038,
+        "predicted_log_return": 0.03758446158211348,
+        "predicted_price": 61610.30512121693,
+        "price_change_pct": 3.758446158211348,
         "direction": "UP",
-        "confidence": 0.5568744866192449,
-        "range_low": 58538.450078043876,
-        "range_high": 64700.39219152218
+        "confidence": 0.48005975843465415,
+        "range_low": 59761.99596758042,
+        "range_high": 63458.61427485344
       },
       "y30": {
         "target_date": "2026-03-29",
-        "predicted_log_return": 0.12936827354461844,
-        "predicted_price": 67532.7698573235,
-        "price_change_pct": 12.936827354461844,
+        "predicted_log_return": 0.1309620600650181,
+        "predicted_price": 67640.48849306033,
+        "price_change_pct": 13.09620600650181,
         "direction": "UP",
-        "confidence": 0.5068744866192448,
-        "range_low": 60779.492871591145,
-        "range_high": 74286.04684305585
+        "confidence": 0.5104784655779703,
+        "range_low": 65611.27383826852,
+        "range_high": 69669.70314785214
       }
     },
     "signal": {
@@ -1631,33 +1631,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-01",
-        "predicted_log_return": 0.0011643909252756185,
-        "predicted_price": 58890.65183391323,
-        "price_change_pct": 0.11643909252756185,
+        "predicted_log_return": 0.0013411816272573816,
+        "predicted_price": 58901.06407395761,
+        "price_change_pct": 0.13411816272573815,
         "direction": "UP",
-        "confidence": 0.5895573335655594,
-        "range_low": 57712.83879723497,
-        "range_high": 60068.464870591495
+        "confidence": 0.49634429312072204,
+        "range_low": 57134.03215173888,
+        "range_high": 60668.095996176344
       },
       "y7": {
         "target_date": "2026-03-07",
-        "predicted_log_return": 0.004075368238464665,
-        "predicted_price": 59062.33094112276,
-        "price_change_pct": 0.40753682384646644,
+        "predicted_log_return": 0.004266102836317801,
+        "predicted_price": 59073.59724546595,
+        "price_change_pct": 0.42661028363178016,
         "direction": "UP",
-        "confidence": 0.4895573335655594,
-        "range_low": 56109.21439406662,
-        "range_high": 62015.4474881789
+        "confidence": 0.4964374143188681,
+        "range_low": 57301.38932810197,
+        "range_high": 60845.80516282993
       },
       "y30": {
         "target_date": "2026-03-30",
-        "predicted_log_return": 0.01397269110330742,
-        "predicted_price": 59649.792251237865,
-        "price_change_pct": 1.3972691103307422,
+        "predicted_log_return": 0.013961085977606147,
+        "predicted_price": 59649.10001191749,
+        "price_change_pct": 1.3961085977606147,
         "direction": "UP",
-        "confidence": 0.43955733356555937,
-        "range_low": 53684.813026114076,
-        "range_high": 65614.77147636165
+        "confidence": 0.3869374597063109,
+        "range_low": 57859.62701155997,
+        "range_high": 61438.57301227502
       }
     },
     "signal": {
@@ -1716,33 +1716,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-02",
-        "predicted_log_return": 0.003190705875316558,
-        "predicted_price": 58934.16190276678,
-        "price_change_pct": 0.3190705875316558,
+        "predicted_log_return": 0.0032864889187928215,
+        "predicted_price": 58939.80706650972,
+        "price_change_pct": 0.32864889187928215,
         "direction": "UP",
-        "confidence": 0.569399865344235,
-        "range_low": 57755.47866471144,
-        "range_high": 60112.845140822115
+        "confidence": 0.6143802177033586,
+        "range_low": 57171.612854514424,
+        "range_high": 60708.00127850501
       },
       "y7": {
         "target_date": "2026-03-08",
-        "predicted_log_return": 0.011167470563607952,
-        "predicted_price": 59406.14579394135,
-        "price_change_pct": 1.1167470563607953,
+        "predicted_log_return": 0.0107589840129781,
+        "predicted_price": 59381.884137977206,
+        "price_change_pct": 1.0758984012978101,
         "direction": "UP",
-        "confidence": 0.46939986534423506,
-        "range_low": 56435.83850424428,
-        "range_high": 62376.45308363842
+        "confidence": 0.4347180257079911,
+        "range_low": 57600.427613837885,
+        "range_high": 61163.34066211653
       },
       "y30": {
         "target_date": "2026-03-31",
-        "predicted_log_return": 0.038288470503798695,
-        "predicted_price": 61039.34678545929,
-        "price_change_pct": 3.8288470503798693,
+        "predicted_log_return": 0.03665493292808085,
+        "predicted_price": 60939.718114631134,
+        "price_change_pct": 3.665493292808085,
         "direction": "UP",
-        "confidence": 0.419399865344235,
-        "range_low": 54935.41210691336,
-        "range_high": 67143.28146400522
+        "confidence": 0.3791750827885461,
+        "range_low": 59111.5265711922,
+        "range_high": 62767.90965807007
       }
     },
     "signal": {
@@ -1801,33 +1801,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-03",
-        "predicted_log_return": -0.0020851953350748036,
-        "predicted_price": 58420.69434461028,
-        "price_change_pct": -0.20851953350748037,
+        "predicted_log_return": -0.0020481925878488303,
+        "predicted_price": 58422.85611079128,
+        "price_change_pct": -0.20481925878488302,
         "direction": "DOWN",
-        "confidence": 0.6082459387961531,
-        "range_low": 57252.28045771807,
-        "range_high": 59589.10823150249
+        "confidence": 0.660099285921876,
+        "range_low": 56670.17042746754,
+        "range_high": 60175.54179411502
       },
       "y7": {
         "target_date": "2026-03-09",
-        "predicted_log_return": -0.007298183672761813,
-        "predicted_price": 58116.94036716538,
-        "price_change_pct": -0.7298183672761812,
+        "predicted_log_return": -0.007232853088283268,
+        "predicted_price": 58120.7373048744,
+        "price_change_pct": -0.7232853088283268,
         "direction": "DOWN",
-        "confidence": 0.5082459387961531,
-        "range_low": 55211.09334880711,
-        "range_high": 61022.78738552365
+        "confidence": 0.5327236460971593,
+        "range_low": 56377.115185728166,
+        "range_high": 59864.35942402063
       },
       "y30": {
         "target_date": "2026-04-01",
-        "predicted_log_return": -0.025022344020897643,
-        "predicted_price": 57095.94130114791,
-        "price_change_pct": -2.502234402089764,
+        "predicted_log_return": -0.025692293439794987,
+        "predicted_price": 57057.70271884004,
+        "price_change_pct": -2.5692293439794986,
         "direction": "DOWN",
-        "confidence": 0.45824593879615305,
-        "range_low": 51386.34717103312,
-        "range_high": 62805.53543126271
+        "confidence": 0.3717655687234522,
+        "range_low": 55345.97163727484,
+        "range_high": 58769.43380040524
       }
     },
     "signal": {
@@ -1886,33 +1886,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-04",
-        "predicted_log_return": 0.008396404687098217,
-        "predicted_price": 58910.40481856283,
-        "price_change_pct": 0.8396404687098217,
+        "predicted_log_return": 0.007650369656371404,
+        "predicted_price": 58866.4719826488,
+        "price_change_pct": 0.7650369656371404,
         "direction": "UP",
-        "confidence": 0.5405354188491202,
-        "range_low": 57732.19672219157,
-        "range_high": 60088.612914934085
+        "confidence": 0.6025768450970963,
+        "range_low": 57100.477823169334,
+        "range_high": 60632.466142128265
       },
       "y7": {
         "target_date": "2026-03-10",
-        "predicted_log_return": 0.02938741640484376,
-        "predicted_price": 60160.06373354664,
-        "price_change_pct": 2.9387416404843756,
+        "predicted_log_return": 0.0297145977894171,
+        "predicted_price": 60179.750206843186,
+        "price_change_pct": 2.97145977894171,
         "direction": "UP",
-        "confidence": 0.4405354188491202,
-        "range_low": 57152.0605468693,
-        "range_high": 63168.06692022397
+        "confidence": 0.45739980604434977,
+        "range_low": 58374.35770063789,
+        "range_high": 61985.14271304848
       },
       "y30": {
         "target_date": "2026-04-02",
-        "predicted_log_return": 0.1007568562451786,
-        "predicted_price": 64610.58028517371,
-        "price_change_pct": 10.07568562451786,
+        "predicted_log_return": 0.10574116391961541,
+        "predicted_price": 64933.423202179394,
+        "price_change_pct": 10.57411639196154,
         "direction": "UP",
-        "confidence": 0.39053541884912013,
-        "range_low": 58149.52225665634,
-        "range_high": 71071.63831369109
+        "confidence": 0.42262831206400703,
+        "range_low": 62985.42050611401,
+        "range_high": 66881.42589824478
       }
     },
     "signal": {
@@ -1971,33 +1971,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-05",
-        "predicted_log_return": 0.014442630762178242,
-        "predicted_price": 59872.826657863945,
-        "price_change_pct": 1.4442630762178241,
+        "predicted_log_return": 0.014404567114963709,
+        "predicted_price": 59870.54772308486,
+        "price_change_pct": 1.440456711496371,
         "direction": "UP",
-        "confidence": 0.5137263994552852,
-        "range_low": 58675.370124706664,
-        "range_high": 61070.283191021226
+        "confidence": 0.5016055202071352,
+        "range_low": 58074.43129139231,
+        "range_high": 61666.66415477741
       },
       "y7": {
         "target_date": "2026-03-11",
-        "predicted_log_return": 0.050549207667623844,
-        "predicted_price": 62074.131117088735,
-        "price_change_pct": 5.054920766762384,
+        "predicted_log_return": 0.05450022208502043,
+        "predicted_price": 62319.87204738053,
+        "price_change_pct": 5.450022208502043,
         "direction": "UP",
-        "confidence": 0.4137263994552852,
-        "range_low": 58970.42456123429,
-        "range_high": 65177.83767294318
+        "confidence": 0.4430720483968993,
+        "range_low": 60450.27588595911,
+        "range_high": 64189.46820880195
       },
       "y30": {
         "target_date": "2026-04-03",
-        "predicted_log_return": 0.1733115691461389,
-        "predicted_price": 70181.9878985104,
-        "price_change_pct": 17.331156914613892,
+        "predicted_log_return": 0.17822390037294078,
+        "predicted_price": 70527.59323819123,
+        "price_change_pct": 17.822390037294078,
         "direction": "UP",
-        "confidence": 0.3637263994552852,
-        "range_low": 63163.78910865936,
-        "range_high": 77200.18668836144
+        "confidence": 0.3322211572241073,
+        "range_low": 68411.76544104549,
+        "range_high": 72643.42103533697
       }
     },
     "signal": {
@@ -2056,33 +2056,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-06",
-        "predicted_log_return": 0.018665094890963727,
-        "predicted_price": 60962.50751510661,
-        "price_change_pct": 1.8665094890963727,
+        "predicted_log_return": 0.01746594944208175,
+        "predicted_price": 60889.448414665945,
+        "price_change_pct": 1.7465949442081752,
         "direction": "UP",
-        "confidence": 0.6329334863136635,
-        "range_low": 59743.25736480448,
-        "range_high": 62181.757665408746
+        "confidence": 0.6112346251570526,
+        "range_low": 59062.76496222596,
+        "range_high": 62716.13186710593
       },
       "y7": {
         "target_date": "2026-03-12",
-        "predicted_log_return": 0.06532783211837304,
-        "predicted_price": 63874.599697520825,
-        "price_change_pct": 6.532783211837304,
+        "predicted_log_return": 0.06945742649196786,
+        "predicted_price": 64138.921279871975,
+        "price_change_pct": 6.945742649196786,
         "direction": "UP",
-        "confidence": 0.5329334863136636,
-        "range_low": 60680.86971264478,
-        "range_high": 67068.32968239687
+        "confidence": 0.5565576762123334,
+        "range_low": 62214.753641475814,
+        "range_high": 66063.08891826814
       },
       "y30": {
         "target_date": "2026-04-04",
-        "predicted_log_return": 0.22398113869156472,
-        "predicted_price": 74856.6602431173,
-        "price_change_pct": 22.39811386915647,
+        "predicted_log_return": 0.22139634170497435,
+        "predicted_price": 74663.42082321865,
+        "price_change_pct": 22.139634170497434,
         "direction": "UP",
-        "confidence": 0.4829334863136635,
-        "range_low": 67370.99421880557,
-        "range_high": 82342.32626742903
+        "confidence": 0.4088916344600828,
+        "range_low": 72423.51819852208,
+        "range_high": 76903.32344791522
       }
     },
     "signal": {
@@ -2141,33 +2141,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-07",
-        "predicted_log_return": -0.0362634914306786,
-        "predicted_price": 58790.3396418234,
-        "price_change_pct": -3.62634914306786,
+        "predicted_log_return": -0.03591993203669062,
+        "predicted_price": 58810.54108528222,
+        "price_change_pct": -3.5919932036690616,
         "direction": "DOWN",
-        "confidence": 0.7379733651570918,
-        "range_low": 57614.53284898693,
-        "range_high": 59966.146434659866
+        "confidence": 0.7891896428844872,
+        "range_low": 57046.224852723746,
+        "range_high": 60574.85731784069
       },
       "y7": {
         "target_date": "2026-03-13",
-        "predicted_log_return": -0.1269222200073751,
-        "predicted_price": 53694.94274583615,
-        "price_change_pct": -12.692222000737509,
+        "predicted_log_return": -0.12309703311796247,
+        "predicted_price": 53900.72927189278,
+        "price_change_pct": -12.309703311796246,
         "direction": "DOWN",
-        "confidence": 0.6379733651570918,
-        "range_low": 51010.195608544345,
-        "range_high": 56379.68988312796
+        "confidence": 0.5974036604954311,
+        "range_low": 52283.707393736,
+        "range_high": 55517.75115004956
       },
       "y30": {
         "target_date": "2026-04-05",
-        "predicted_log_return": -0.4351618971681432,
-        "predicted_price": 39451.77909988595,
-        "price_change_pct": -43.51618971681432,
+        "predicted_log_return": -0.44985936338331645,
+        "predicted_price": 38876.1782082886,
+        "price_change_pct": -44.98593633833165,
         "direction": "DOWN",
-        "confidence": 0.5879733651570918,
-        "range_low": 35506.60118989735,
-        "range_high": 43396.957009874546
+        "confidence": 0.5170862109391913,
+        "range_low": 37709.89286203994,
+        "range_high": 40042.46355453726
       }
     },
     "signal": {
@@ -2226,33 +2226,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-08",
-        "predicted_log_return": 0.03484171339823571,
-        "predicted_price": 64824.84478344719,
-        "price_change_pct": 3.484171339823571,
+        "predicted_log_return": 0.036289716551352054,
+        "predicted_price": 64918.779355459315,
+        "price_change_pct": 3.6289716551352056,
         "direction": "UP",
-        "confidence": 0.726886089929949,
-        "range_low": 63528.34788777824,
-        "range_high": 66121.34167911613
+        "confidence": 0.6274788468831844,
+        "range_low": 62971.21597479554,
+        "range_high": 66866.3427361231
       },
       "y7": {
         "target_date": "2026-03-14",
-        "predicted_log_return": 0.12194599689382499,
-        "predicted_price": 70724.58295969716,
-        "price_change_pct": 12.1945996893825,
+        "predicted_log_return": 0.12578538150285212,
+        "predicted_price": 70996.64377384265,
+        "price_change_pct": 12.578538150285212,
         "direction": "UP",
-        "confidence": 0.626886089929949,
-        "range_low": 67188.3538117123,
-        "range_high": 74260.81210768202
+        "confidence": 0.6734096320419679,
+        "range_low": 68866.74446062736,
+        "range_high": 73126.54308705793
       },
       "y30": {
         "target_date": "2026-04-06",
-        "predicted_log_return": 0.4181005607788285,
-        "predicted_price": 95101.78930979999,
-        "price_change_pct": 41.810056077882855,
+        "predicted_log_return": 0.41346013513595453,
+        "predicted_price": 94661.49888557542,
+        "price_change_pct": 41.34601351359545,
         "direction": "UP",
-        "confidence": 0.5768860899299489,
-        "range_low": 85591.61037882,
-        "range_high": 104611.96824078
+        "confidence": 0.5625224081055628,
+        "range_low": 91821.65391900815,
+        "range_high": 97501.34385214269
       }
     },
     "signal": {
@@ -2311,33 +2311,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-09",
-        "predicted_log_return": -0.018006615449029574,
-        "predicted_price": 58977.63338591326,
-        "price_change_pct": -1.8006615449029575,
+        "predicted_log_return": -0.01753120871213495,
+        "predicted_price": 59005.67841602094,
+        "price_change_pct": -1.7531208712134951,
         "direction": "DOWN",
-        "confidence": 0.5524862297281317,
-        "range_low": 57798.08071819499,
-        "range_high": 60157.18605363152
+        "confidence": 0.4648849105244646,
+        "range_low": 57235.508063540314,
+        "range_high": 60775.84876850157
       },
       "y7": {
         "target_date": "2026-03-15",
-        "predicted_log_return": -0.06302315407160351,
-        "predicted_price": 56381.536520745234,
-        "price_change_pct": -6.302315407160351,
+        "predicted_log_return": -0.06335059175079731,
+        "predicted_price": 56363.07810343308,
+        "price_change_pct": -6.335059175079731,
         "direction": "DOWN",
-        "confidence": 0.4524862297281317,
-        "range_low": 53562.45969470797,
-        "range_high": 59200.6133467825
+        "confidence": 0.47658702200599906,
+        "range_low": 54672.18576033009,
+        "range_high": 58053.97044653607
       },
       "y30": {
         "target_date": "2026-04-07",
-        "predicted_log_return": -0.2160793853883549,
-        "predicted_price": 48379.951704968116,
-        "price_change_pct": -21.607938538835487,
+        "predicted_log_return": -0.24289566671350823,
+        "predicted_price": 47099.822178530456,
+        "price_change_pct": -24.289566671350823,
         "direction": "DOWN",
-        "confidence": 0.40248622972813164,
-        "range_low": 43541.956534471305,
-        "range_high": 53217.946875464935
+        "confidence": 0.3710357169405696,
+        "range_low": 45686.82751317454,
+        "range_high": 48512.81684388637
       }
     },
     "signal": {
@@ -2396,33 +2396,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-10",
-        "predicted_log_return": 0.005468633653689201,
-        "predicted_price": 62318.8890171587,
-        "price_change_pct": 0.5468633653689201,
+        "predicted_log_return": 0.005162881029656592,
+        "predicted_price": 62299.83776594835,
+        "price_change_pct": 0.5162881029656592,
         "direction": "UP",
-        "confidence": 0.6192411221011991,
-        "range_low": 61072.511236815524,
-        "range_high": 63565.26679750187
+        "confidence": 0.6618186850462489,
+        "range_low": 60430.8426329699,
+        "range_high": 64168.832898926805
       },
       "y7": {
         "target_date": "2026-03-16",
-        "predicted_log_return": 0.019140217787912205,
-        "predicted_price": 63176.73766466338,
-        "price_change_pct": 1.9140217787912204,
+        "predicted_log_return": 0.02027567436452455,
+        "predicted_price": 63248.5128480242,
+        "price_change_pct": 2.027567436452455,
         "direction": "UP",
-        "confidence": 0.5192411221011991,
-        "range_low": 60017.90078143021,
-        "range_high": 66335.57454789655
+        "confidence": 0.5045971504256752,
+        "range_low": 61351.05746258347,
+        "range_high": 65145.968233464926
       },
       "y30": {
         "target_date": "2026-04-08",
-        "predicted_log_return": 0.06562360384427042,
-        "predicted_price": 66182.72945404678,
-        "price_change_pct": 6.562360384427041,
+        "predicted_log_return": 0.06696364158397156,
+        "predicted_price": 66271.4762579847,
+        "price_change_pct": 6.696364158397156,
         "direction": "UP",
-        "confidence": 0.46924112210119906,
-        "range_low": 59564.456508642106,
-        "range_high": 72801.00239945146
+        "confidence": 0.381337150695771,
+        "range_low": 64283.331970245155,
+        "range_high": 68259.62054572425
       }
     },
     "signal": {
@@ -2481,33 +2481,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-11",
-        "predicted_log_return": -0.0029878039684569993,
-        "predicted_price": 62112.671996739235,
-        "price_change_pct": -0.2987803968456999,
+        "predicted_log_return": -0.003099283724877253,
+        "predicted_price": 62105.74807714003,
+        "price_change_pct": -0.30992837248772526,
         "direction": "DOWN",
-        "confidence": 0.4603939266792287,
-        "range_low": 60870.41855680445,
-        "range_high": 63354.92543667402
+        "confidence": 0.515042509759218,
+        "range_low": 60242.57563482583,
+        "range_high": 63968.92051945423
       },
       "y7": {
         "target_date": "2026-03-17",
-        "predicted_log_return": -0.010457313889599498,
-        "predicted_price": 61650.44921494471,
-        "price_change_pct": -1.0457313889599498,
+        "predicted_log_return": -0.010460313812636667,
+        "predicted_price": 61650.26426861927,
+        "price_change_pct": -1.0460313812636668,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 58567.92675419747,
-        "range_high": 64732.97167569195
+        "confidence": 0.3618971057912904,
+        "range_low": 59800.75634056069,
+        "range_high": 63499.77219667785
       },
       "y30": {
         "target_date": "2026-04-09",
-        "predicted_log_return": -0.03585364762148399,
-        "predicted_price": 60104.46805096788,
-        "price_change_pct": -3.5853647621483993,
+        "predicted_log_return": -0.036770723915723155,
+        "predicted_price": 60049.37293521416,
+        "price_change_pct": -3.6770723915723154,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 54094.021245871096,
-        "range_high": 66114.91485606467
+        "confidence": 0.36678254035002206,
+        "range_low": 58247.89174715774,
+        "range_high": 61850.85412327058
       }
     },
     "signal": {
@@ -2566,33 +2566,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-12",
-        "predicted_log_return": -0.0050882685514848916,
-        "predicted_price": 61973.62791224007,
-        "price_change_pct": -0.5088268551484891,
+        "predicted_log_return": -0.004864917591265485,
+        "predicted_price": 61987.47132745504,
+        "price_change_pct": -0.4864917591265485,
         "direction": "DOWN",
-        "confidence": 0.6477552423815534,
-        "range_low": 60734.155353995266,
-        "range_high": 63213.10047048487
+        "confidence": 0.5717920195636182,
+        "range_low": 60127.847187631385,
+        "range_high": 63847.09546727869
       },
       "y7": {
         "target_date": "2026-03-18",
-        "predicted_log_return": -0.01780893993019712,
-        "predicted_price": 61190.2747099462,
-        "price_change_pct": -1.780893993019712,
+        "predicted_log_return": -0.018273800447011136,
+        "predicted_price": 61161.83637766158,
+        "price_change_pct": -1.8273800447011137,
         "direction": "DOWN",
-        "confidence": 0.5477552423815534,
-        "range_low": 58130.76097444889,
-        "range_high": 64249.78844544351
+        "confidence": 0.5357003267123877,
+        "range_low": 59326.981286331735,
+        "range_high": 62996.69146899143
       },
       "y30": {
         "target_date": "2026-04-10",
-        "predicted_log_return": -0.061059222617818695,
-        "predicted_price": 58600.19265672189,
-        "price_change_pct": -6.10592226178187,
+        "predicted_log_return": -0.06272566722359973,
+        "predicted_price": 58502.62000406195,
+        "price_change_pct": -6.272566722359974,
         "direction": "DOWN",
-        "confidence": 0.49775524238155333,
-        "range_low": 52740.173391049706,
-        "range_high": 64460.21192239408
+        "confidence": 0.4995334989907437,
+        "range_low": 56747.54140394009,
+        "range_high": 60257.69860418381
       }
     },
     "signal": {
@@ -2651,33 +2651,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-13",
-        "predicted_log_return": 0.008385292638744166,
-        "predicted_price": 63419.497653995764,
-        "price_change_pct": 0.8385292638744166,
+        "predicted_log_return": 0.008563824455483529,
+        "predicted_price": 63430.821062892945,
+        "price_change_pct": 0.8563824455483529,
         "direction": "UP",
-        "confidence": 0.5548510997347329,
-        "range_low": 62151.10770091585,
-        "range_high": 64687.88760707568
+        "confidence": 0.5155509558294217,
+        "range_low": 61527.89643100616,
+        "range_high": 65333.74569477973
       },
       "y7": {
         "target_date": "2026-03-19",
-        "predicted_log_return": 0.029348524235604582,
-        "predicted_price": 64763.00823186219,
-        "price_change_pct": 2.934852423560458,
+        "predicted_log_return": 0.028637439555670875,
+        "predicted_price": 64716.97261843161,
+        "price_change_pct": 2.8637439555670876,
         "direction": "UP",
-        "confidence": 0.4548510997347329,
-        "range_low": 61524.857820269084,
-        "range_high": 68001.1586434553
+        "confidence": 0.3708859206552726,
+        "range_low": 62775.46343987866,
+        "range_high": 66658.48179698456
       },
       "y30": {
         "target_date": "2026-04-11",
-        "predicted_log_return": 0.10062351166493,
-        "predicted_price": 69547.47181969458,
-        "price_change_pct": 10.062351166492999,
+        "predicted_log_return": 0.10960002932100724,
+        "predicted_price": 70174.57632486126,
+        "price_change_pct": 10.960002932100723,
         "direction": "UP",
-        "confidence": 0.4048510997347329,
-        "range_low": 62592.72463772512,
-        "range_high": 76502.21900166404
+        "confidence": 0.43073389213907476,
+        "range_low": 68069.33903511542,
+        "range_high": 72279.8136146071
       }
     },
     "signal": {
@@ -2736,33 +2736,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-14",
-        "predicted_log_return": 0.01439506146722529,
-        "predicted_price": 64330.78218987207,
-        "price_change_pct": 1.439506146722529,
+        "predicted_log_return": 0.014861174118348561,
+        "predicted_price": 64360.77457067847,
+        "price_change_pct": 1.4861174118348561,
         "direction": "UP",
-        "confidence": 0.7450154970224281,
-        "range_low": 63044.16654607463,
-        "range_high": 65617.39783366951
+        "confidence": 0.8314700581881727,
+        "range_low": 62429.951333558114,
+        "range_high": 66291.59780779883
       },
       "y7": {
         "target_date": "2026-03-20",
-        "predicted_log_return": 0.05038271513528852,
-        "predicted_price": 66688.05810848072,
-        "price_change_pct": 5.038271513528851,
+        "predicted_log_return": 0.050913286943845455,
+        "predicted_price": 66723.45030029984,
+        "price_change_pct": 5.091328694384545,
         "direction": "UP",
-        "confidence": 0.6450154970224281,
-        "range_low": 63353.65520305668,
-        "range_high": 70022.46101390476
+        "confidence": 0.6084485617019498,
+        "range_low": 64721.74679129084,
+        "range_high": 68725.15380930883
       },
       "y30": {
         "target_date": "2026-04-12",
-        "predicted_log_return": 0.1727407376067035,
-        "predicted_price": 75368.08582640611,
-        "price_change_pct": 17.274073760670348,
+        "predicted_log_return": 0.17586407252105365,
+        "predicted_price": 75603.85359949028,
+        "price_change_pct": 17.586407252105367,
         "direction": "UP",
-        "confidence": 0.5950154970224281,
-        "range_low": 67831.27724376551,
-        "range_high": 82904.89440904673
+        "confidence": 0.5440881996146086,
+        "range_low": 73335.73799150556,
+        "range_high": 77871.96920747499
       }
     },
     "signal": {
@@ -2821,33 +2821,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-15",
-        "predicted_log_return": 0.0090053509901582,
-        "predicted_price": 64848.996340545644,
-        "price_change_pct": 0.9005350990158201,
+        "predicted_log_return": 0.008875073547271042,
+        "predicted_price": 64840.54852942017,
+        "price_change_pct": 0.8875073547271042,
         "direction": "UP",
-        "confidence": 0.7225610159945404,
-        "range_low": 63552.01641373473,
-        "range_high": 66145.97626735656
+        "confidence": 0.7763392510335356,
+        "range_low": 62895.33207353757,
+        "range_high": 66785.76498530278
       },
       "y7": {
         "target_date": "2026-03-21",
-        "predicted_log_return": 0.0315187284655537,
-        "predicted_price": 66325.52472994529,
-        "price_change_pct": 3.1518728465553703,
+        "predicted_log_return": 0.030546742275871425,
+        "predicted_price": 66261.08855649276,
+        "price_change_pct": 3.0546742275871424,
         "direction": "UP",
-        "confidence": 0.6225610159945404,
-        "range_low": 63009.24849344802,
-        "range_high": 69641.80096644256
+        "confidence": 0.6107209749328356,
+        "range_low": 64273.25589979797,
+        "range_high": 68248.92121318754
       },
       "y30": {
         "target_date": "2026-04-13",
-        "predicted_log_return": 0.10806421188189841,
-        "predicted_price": 71601.80584192224,
-        "price_change_pct": 10.80642118818984,
+        "predicted_log_return": 0.10689623008414006,
+        "predicted_price": 71518.2250559322,
+        "price_change_pct": 10.689623008414006,
         "direction": "UP",
-        "confidence": 0.5725610159945403,
-        "range_low": 64441.62525773001,
-        "range_high": 78761.98642611447
+        "confidence": 0.6073021352670808,
+        "range_low": 69372.67830425424,
+        "range_high": 73663.77180761016
       }
     },
     "signal": {
@@ -2906,33 +2906,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-16",
-        "predicted_log_return": -0.009250638228156015,
-        "predicted_price": 64239.89285401326,
-        "price_change_pct": -0.9250638228156015,
+        "predicted_log_return": -0.009600251633508123,
+        "predicted_price": 64217.437651861685,
+        "price_change_pct": -0.9600251633508123,
         "direction": "DOWN",
-        "confidence": 0.47854129503734805,
-        "range_low": 62955.094996932996,
-        "range_high": 65524.69071109353
+        "confidence": 0.3937681582268097,
+        "range_low": 62290.91452230583,
+        "range_high": 66143.96078141754
       },
       "y7": {
         "target_date": "2026-03-22",
-        "predicted_log_return": -0.032377233798546054,
-        "predicted_price": 62771.29017753671,
-        "price_change_pct": -3.2377233798546055,
+        "predicted_log_return": -0.030398778626338465,
+        "predicted_price": 62895.60329466964,
+        "price_change_pct": -3.0398778626338463,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 59632.72566865988,
-        "range_high": 65909.85468641356
+        "confidence": 0.4638242322774474,
+        "range_low": 61008.735195829555,
+        "range_high": 64782.47139350973
       },
       "y30": {
         "target_date": "2026-04-14",
-        "predicted_log_return": -0.11100765873787219,
-        "predicted_price": 58024.618722777486,
-        "price_change_pct": -11.100765873787218,
+        "predicted_log_return": -0.1171570438246759,
+        "predicted_price": 57668.897851010945,
+        "price_change_pct": -11.71570438246759,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 52222.15685049974,
-        "range_high": 63827.08059505524
+        "confidence": 0.3026160998525356,
+        "range_low": 55938.83091548061,
+        "range_high": 59398.96478654128
       }
     },
     "signal": {
@@ -2991,33 +2991,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-17",
-        "predicted_log_return": 0.005519000751052276,
-        "predicted_price": 64696.89872946365,
-        "price_change_pct": 0.5519000751052276,
+        "predicted_log_return": 0.005189952700392463,
+        "predicted_price": 64675.61384312022,
+        "price_change_pct": 0.5189952700392463,
         "direction": "UP",
-        "confidence": 0.5783883573469601,
-        "range_low": 63402.96075487438,
-        "range_high": 65990.83670405293
+        "confidence": 0.6550797055821684,
+        "range_low": 62735.345427826614,
+        "range_high": 66615.88225841383
       },
       "y7": {
         "target_date": "2026-03-23",
-        "predicted_log_return": 0.019316502628682966,
-        "predicted_price": 65595.74094028944,
-        "price_change_pct": 1.9316502628682968,
+        "predicted_log_return": 0.020848877756789175,
+        "predicted_price": 65696.33527666118,
+        "price_change_pct": 2.0848877756789177,
         "direction": "UP",
-        "confidence": 0.47838835734696017,
-        "range_low": 62315.953893274964,
-        "range_high": 68875.52798730391
+        "confidence": 0.3882765918022201,
+        "range_low": 63725.44521836134,
+        "range_high": 67667.22533496101
       },
       "y30": {
         "target_date": "2026-04-15",
-        "predicted_log_return": 0.06622800901262732,
-        "predicted_price": 68746.25590744121,
-        "price_change_pct": 6.622800901262732,
+        "predicted_log_return": 0.06603124165048076,
+        "predicted_price": 68732.73021875955,
+        "price_change_pct": 6.603124165048076,
         "direction": "UP",
-        "confidence": 0.4283883573469601,
-        "range_low": 61871.63031669709,
-        "range_high": 75620.88149818534
+        "confidence": 0.3525007521018346,
+        "range_low": 66670.74831219677,
+        "range_high": 70794.71212532233
       }
     },
     "signal": {
@@ -3076,33 +3076,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-18",
-        "predicted_log_return": 0.01311838390065611,
-        "predicted_price": 64854.82430753958,
-        "price_change_pct": 1.311838390065611,
+        "predicted_log_return": 0.01335618357309881,
+        "predicted_price": 64870.248597389094,
+        "price_change_pct": 1.335618357309881,
         "direction": "UP",
-        "confidence": 0.6106832510826395,
-        "range_low": 63557.72782138879,
-        "range_high": 66151.92079369037
+        "confidence": 0.6521802240025221,
+        "range_low": 62924.14113946742,
+        "range_high": 66816.35605531077
       },
       "y7": {
         "target_date": "2026-03-24",
-        "predicted_log_return": 0.04591434365229638,
-        "predicted_price": 67017.06306212988,
-        "price_change_pct": 4.591434365229638,
+        "predicted_log_return": 0.04625278295386737,
+        "predicted_price": 67039.7481086851,
+        "price_change_pct": 4.625278295386737,
         "direction": "UP",
-        "confidence": 0.5106832510826396,
-        "range_low": 63666.20990902338,
-        "range_high": 70367.91621523637
+        "confidence": 0.4208681222940969,
+        "range_low": 65028.55566542455,
+        "range_high": 69050.94055194566
       },
       "y30": {
         "target_date": "2026-04-16",
-        "predicted_log_return": 0.15742060680787331,
-        "predicted_price": 74922.4458120277,
-        "price_change_pct": 15.742060680787331,
+        "predicted_log_return": 0.1573445081080546,
+        "predicted_price": 74916.74452824706,
+        "price_change_pct": 15.734450810805459,
         "direction": "UP",
-        "confidence": 0.4606832510826395,
-        "range_low": 67430.20123082493,
-        "range_high": 82414.69039323047
+        "confidence": 0.5315364020506887,
+        "range_low": 72669.24219239964,
+        "range_high": 77164.24686409447
       }
     },
     "signal": {
@@ -3161,33 +3161,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-19",
-        "predicted_log_return": -0.011835921574197673,
-        "predicted_price": 62548.5319628478,
-        "price_change_pct": -1.1835921574197672,
+        "predicted_log_return": -0.011552656747881846,
+        "predicted_price": 62566.252271542166,
+        "price_change_pct": -1.1552656747881846,
         "direction": "DOWN",
-        "confidence": 0.5066986704560131,
-        "range_low": 61297.561323590846,
-        "range_high": 63799.50260210476
+        "confidence": 0.5969223706867647,
+        "range_low": 60689.2647033959,
+        "range_high": 64443.23983968843
       },
       "y7": {
         "target_date": "2026-03-25",
-        "predicted_log_return": -0.041425725509691855,
-        "predicted_price": 60724.84745869944,
-        "price_change_pct": -4.142572550969185,
+        "predicted_log_return": -0.04220532111567765,
+        "predicted_price": 60677.52508300132,
+        "price_change_pct": -4.220532111567765,
         "direction": "DOWN",
-        "confidence": 0.40669867045601316,
-        "range_low": 57688.605085764466,
-        "range_high": 63761.08983163442
+        "confidence": 0.44624177857510294,
+        "range_low": 58857.19933051128,
+        "range_high": 62497.85083549136
       },
       "y30": {
         "target_date": "2026-04-17",
-        "predicted_log_return": -0.14203105889037207,
-        "predicted_price": 54912.86353298234,
-        "price_change_pct": -14.203105889037207,
+        "predicted_log_return": -0.13918163160119018,
+        "predicted_price": 55069.55688199352,
+        "price_change_pct": -13.918163160119018,
         "direction": "DOWN",
-        "confidence": 0.3566986704560131,
-        "range_low": 49421.57717968411,
-        "range_high": 60404.149886280575
+        "confidence": 0.3934831823856342,
+        "range_low": 53417.470175533716,
+        "range_high": 56721.64358845333
       }
     },
     "signal": {
@@ -3246,33 +3246,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-20",
-        "predicted_log_return": 0.005273264359525493,
-        "predicted_price": 64167.079381727985,
-        "price_change_pct": 0.5273264359525494,
+        "predicted_log_return": 0.004884468371649635,
+        "predicted_price": 64142.13632790448,
+        "price_change_pct": 0.4884468371649635,
         "direction": "UP",
-        "confidence": 0.514133105603215,
-        "range_low": 62883.737794093424,
-        "range_high": 65450.420969362545
+        "confidence": 0.5942089994102848,
+        "range_low": 62217.87223806734,
+        "range_high": 66066.40041774162
       },
       "y7": {
         "target_date": "2026-03-26",
-        "predicted_log_return": 0.018456425258339227,
-        "predicted_price": 65018.60487986092,
-        "price_change_pct": 1.8456425258339226,
+        "predicted_log_return": 0.01940232838196914,
+        "predicted_price": 65080.13527762079,
+        "price_change_pct": 1.940232838196914,
         "direction": "UP",
-        "confidence": 0.41413310560321503,
-        "range_low": 61767.67463586787,
-        "range_high": 68269.53512385397
+        "confidence": 0.3732558338881256,
+        "range_low": 63127.73121929217,
+        "range_high": 67032.53933594942
       },
       "y30": {
         "target_date": "2026-04-18",
-        "predicted_log_return": 0.06327917231430592,
-        "predicted_price": 67999.2179868678,
-        "price_change_pct": 6.327917231430592,
+        "predicted_log_return": 0.0589548470050232,
+        "predicted_price": 67705.80211758504,
+        "price_change_pct": 5.89548470050232,
         "direction": "UP",
-        "confidence": 0.364133105603215,
-        "range_low": 61199.296188181026,
-        "range_high": 74799.1397855546
+        "confidence": 0.3,
+        "range_low": 65674.6280540575,
+        "range_high": 69736.9761811126
       }
     },
     "signal": {
@@ -3331,33 +3331,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-21",
-        "predicted_log_return": 0.012903192110637398,
-        "predicted_price": 64247.04659276844,
-        "price_change_pct": 1.2903192110637398,
+        "predicted_log_return": 0.013304703770207114,
+        "predicted_price": 64272.84771044652,
+        "price_change_pct": 1.3304703770207114,
         "direction": "UP",
-        "confidence": 0.6049976179915784,
-        "range_low": 62962.10566091307,
-        "range_high": 65531.987524623815
+        "confidence": 0.5094146376844554,
+        "range_low": 62344.662279133125,
+        "range_high": 66201.03314175992
       },
       "y7": {
         "target_date": "2026-03-27",
-        "predicted_log_return": 0.04516117238723089,
-        "predicted_price": 66353.31591013481,
-        "price_change_pct": 4.516117238723089,
+        "predicted_log_return": 0.04300906066268288,
+        "predicted_price": 66210.66971133692,
+        "price_change_pct": 4.300906066268288,
         "direction": "UP",
-        "confidence": 0.5049976179915784,
-        "range_low": 63035.65011462807,
-        "range_high": 69670.98170564156
+        "confidence": 0.4570661169079674,
+        "range_low": 64224.34961999681,
+        "range_high": 68196.98980267702
       },
       "y30": {
         "target_date": "2026-04-19",
-        "predicted_log_return": 0.15483830532764878,
-        "predicted_price": 74044.84095288886,
-        "price_change_pct": 15.483830532764877,
+        "predicted_log_return": 0.15048489821602928,
+        "predicted_price": 73723.19425321202,
+        "price_change_pct": 15.048489821602928,
         "direction": "UP",
-        "confidence": 0.45499761799157834,
-        "range_low": 66640.35685759998,
-        "range_high": 81449.32504817775
+        "confidence": 0.476801026962261,
+        "range_low": 71511.49842561566,
+        "range_high": 75934.89008080837
       }
     },
     "signal": {
@@ -3416,33 +3416,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-22",
-        "predicted_log_return": -0.014227804555856044,
-        "predicted_price": 63359.29291693048,
-        "price_change_pct": -1.4227804555856043,
+        "predicted_log_return": -0.013874633724894978,
+        "predicted_price": 63381.67352291503,
+        "price_change_pct": -1.3874633724894978,
         "direction": "DOWN",
-        "confidence": 0.4794126577221178,
-        "range_low": 62092.107058591864,
-        "range_high": 64626.47877526909
+        "confidence": 0.5621394002440382,
+        "range_low": 61480.223317227574,
+        "range_high": 65283.123728602484
       },
       "y7": {
         "target_date": "2026-03-28",
-        "predicted_log_return": -0.049797315945496155,
-        "predicted_price": 61145.243580291055,
-        "price_change_pct": -4.979731594549615,
+        "predicted_log_return": -0.05076160268336359,
+        "predicted_price": 61086.31045160669,
+        "price_change_pct": -5.076160268336359,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 58087.9814012765,
-        "range_high": 64202.50575930561
+        "confidence": 0.4735518344350837,
+        "range_low": 59253.721138058485,
+        "range_high": 62918.89976515489
       },
       "y30": {
         "target_date": "2026-04-20",
-        "predicted_log_return": -0.17073365467027252,
-        "predicted_price": 54180.211351275335,
-        "price_change_pct": -17.07336546702725,
+        "predicted_log_return": -0.16258182403390176,
+        "predicted_price": 54623.68436067026,
+        "price_change_pct": -16.258182403390176,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 48762.1902161478,
-        "range_high": 59598.23248640287
+        "confidence": 0.3,
+        "range_low": 52984.973829850154,
+        "range_high": 56262.39489149037
       }
     },
     "signal": {
@@ -3501,33 +3501,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-23",
-        "predicted_log_return": 0.01514420014559776,
-        "predicted_price": 64474.16334430448,
-        "price_change_pct": 1.514420014559776,
+        "predicted_log_return": 0.013949085949942704,
+        "predicted_price": 64397.15538225888,
+        "price_change_pct": 1.3949085949942703,
         "direction": "UP",
-        "confidence": 0.6369102168225705,
-        "range_low": 63184.68007741839,
-        "range_high": 65763.64661119056
+        "confidence": 0.702461863758204,
+        "range_low": 62465.24072079112,
+        "range_high": 66329.07004372665
       },
       "y7": {
         "target_date": "2026-03-29",
-        "predicted_log_return": 0.05300470050959216,
-        "predicted_price": 66961.98535528038,
-        "price_change_pct": 5.300470050959216,
+        "predicted_log_return": 0.050392596688389524,
+        "predicted_price": 66787.30194238703,
+        "price_change_pct": 5.039259668838953,
         "direction": "UP",
-        "confidence": 0.5369102168225706,
-        "range_low": 63613.88608751636,
-        "range_high": 70310.0846230444
+        "confidence": 0.4643194072221784,
+        "range_low": 64783.68288411541,
+        "range_high": 68790.92100065864
       },
       "y30": {
         "target_date": "2026-04-21",
-        "predicted_log_return": 0.18173040174717311,
-        "predicted_price": 76161.0956735099,
-        "price_change_pct": 18.17304017471731,
+        "predicted_log_return": 0.19896283246789973,
+        "predicted_price": 77484.90998808791,
+        "price_change_pct": 19.896283246789974,
         "direction": "UP",
-        "confidence": 0.4869102168225705,
-        "range_low": 68544.98610615892,
-        "range_high": 83777.2052408609
+        "confidence": 0.5480568830971718,
+        "range_low": 75160.36268844527,
+        "range_high": 79809.45728773055
       }
     },
     "signal": {
@@ -3586,33 +3586,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-24",
-        "predicted_log_return": -0.009480134644664219,
-        "predicted_price": 63755.485392418464,
-        "price_change_pct": -0.9480134644664219,
+        "predicted_log_return": -0.009580085642225449,
+        "predicted_price": 63749.11328650796,
+        "price_change_pct": -0.9580085642225449,
         "direction": "DOWN",
-        "confidence": 0.586187111315772,
-        "range_low": 62480.37568457009,
-        "range_high": 65030.59510026684
+        "confidence": 0.5406360191961191,
+        "range_low": 61836.63988791272,
+        "range_high": 65661.5866851032
       },
       "y7": {
         "target_date": "2026-03-30",
-        "predicted_log_return": -0.03318047125632477,
-        "predicted_price": 62262.224221135984,
-        "price_change_pct": -3.318047125632477,
+        "predicted_log_return": -0.03484508412491482,
+        "predicted_price": 62158.66793594524,
+        "price_change_pct": -3.484508412491482,
         "direction": "DOWN",
-        "confidence": 0.48618711131577197,
-        "range_low": 59149.113010079185,
-        "range_high": 65375.33543219278
+        "confidence": 0.5372644533589399,
+        "range_low": 60293.90789786688,
+        "range_high": 64023.4279740236
       },
       "y30": {
         "target_date": "2026-04-22",
-        "predicted_log_return": -0.11376161573597063,
-        "predicted_price": 57441.885204661594,
-        "price_change_pct": -11.376161573597063,
+        "predicted_log_return": -0.11385260829230225,
+        "predicted_price": 57436.65865847832,
+        "price_change_pct": -11.385260829230225,
         "direction": "DOWN",
-        "confidence": 0.4361871113157719,
-        "range_low": 51697.696684195434,
-        "range_high": 63186.07372512776
+        "confidence": 0.37398672487970047,
+        "range_low": 55713.55889872397,
+        "range_high": 59159.758418232675
       }
     },
     "signal": {
@@ -3671,33 +3671,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-25",
-        "predicted_log_return": -0.010644125709286098,
-        "predicted_price": 63247.74737685156,
-        "price_change_pct": -1.0644125709286099,
+        "predicted_log_return": -0.00969704689744413,
+        "predicted_price": 63307.67635254098,
+        "price_change_pct": -0.969704689744413,
         "direction": "DOWN",
-        "confidence": 0.6561973803164411,
-        "range_low": 61982.79242931453,
-        "range_high": 64512.70232438859
+        "confidence": 0.6185634953000276,
+        "range_low": 61408.44606196474,
+        "range_high": 65206.90664311721
       },
       "y7": {
         "target_date": "2026-03-31",
-        "predicted_log_return": -0.037254439982501344,
-        "predicted_price": 61586.90077100622,
-        "price_change_pct": -3.7254439982501344,
+        "predicted_log_return": -0.03822308555639862,
+        "predicted_price": 61527.273775539164,
+        "price_change_pct": -3.8223085556398617,
         "direction": "DOWN",
-        "confidence": 0.5561973803164412,
-        "range_low": 58507.555732455905,
-        "range_high": 64666.24580955654
+        "confidence": 0.5634636317561752,
+        "range_low": 59681.45556227299,
+        "range_high": 63373.09198880534
       },
       "y30": {
         "target_date": "2026-04-23",
-        "predicted_log_return": -0.12772950851143317,
-        "predicted_price": 56259.45577232821,
-        "price_change_pct": -12.772950851143317,
+        "predicted_log_return": -0.1282760349667015,
+        "predicted_price": 56228.716891960416,
+        "price_change_pct": -12.82760349667015,
         "direction": "DOWN",
-        "confidence": 0.5061973803164411,
-        "range_low": 50633.51019509539,
-        "range_high": 61885.40134956104
+        "confidence": 0.509710171637347,
+        "range_low": 54541.855385201605,
+        "range_high": 57915.578398719226
       }
     },
     "signal": {
@@ -3756,33 +3756,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-26",
-        "predicted_log_return": 0.008336073603408252,
-        "predicted_price": 65522.14718326213,
-        "price_change_pct": 0.8336073603408252,
+        "predicted_log_return": 0.008427882431485425,
+        "predicted_price": 65528.16297095513,
+        "price_change_pct": 0.8427882431485425,
         "direction": "UP",
-        "confidence": 0.7478640222593687,
-        "range_low": 64211.70423959689,
-        "range_high": 66832.59012692737
+        "confidence": 0.608667064468783,
+        "range_low": 63562.318081826474,
+        "range_high": 67494.00786008379
       },
       "y7": {
         "target_date": "2026-04-01",
-        "predicted_log_return": 0.02917625761192888,
-        "predicted_price": 66901.96871530276,
-        "price_change_pct": 2.917625761192888,
+        "predicted_log_return": 0.02744842197293859,
+        "predicted_price": 66786.47291704961,
+        "price_change_pct": 2.7448421972938593,
         "direction": "UP",
-        "confidence": 0.6478640222593687,
-        "range_low": 63556.87027953762,
-        "range_high": 70247.06715106791
+        "confidence": 0.7238479489932139,
+        "range_low": 64782.878729538126,
+        "range_high": 68790.06710456111
       },
       "y30": {
         "target_date": "2026-04-24",
-        "predicted_log_return": 0.10003288324089901,
-        "predicted_price": 71814.4005037269,
-        "price_change_pct": 10.003288324089901,
+        "predicted_log_return": 0.10416900399502951,
+        "predicted_price": 72112.04866613235,
+        "price_change_pct": 10.416900399502952,
         "direction": "UP",
-        "confidence": 0.5978640222593686,
-        "range_low": 64632.96045335421,
-        "range_high": 78995.84055409959
+        "confidence": 0.5697037565419729,
+        "range_low": 69948.68720614837,
+        "range_high": 74275.41012611633
       }
     },
     "signal": {
@@ -3841,33 +3841,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-27",
-        "predicted_log_return": 0.010752764333593645,
-        "predicted_price": 66276.24504606784,
-        "price_change_pct": 1.0752764333593645,
+        "predicted_log_return": 0.01144174012012804,
+        "predicted_price": 66321.92350799721,
+        "price_change_pct": 1.144174012012804,
         "direction": "UP",
-        "confidence": 0.4703907817547011,
-        "range_low": 64950.72014514648,
-        "range_high": 67601.7699469892
+        "confidence": 0.5190914525724738,
+        "range_low": 64332.2658027573,
+        "range_high": 68311.58121323714
       },
       "y7": {
         "target_date": "2026-04-02",
-        "predicted_log_return": 0.03763467516757776,
-        "predicted_price": 68082.04002234396,
-        "price_change_pct": 3.763467516757776,
+        "predicted_log_return": 0.03960276992711496,
+        "predicted_price": 68216.16386945795,
+        "price_change_pct": 3.9602769927114956,
         "direction": "UP",
-        "confidence": 0.4,
-        "range_low": 64677.938021226764,
-        "range_high": 71486.14202346117
+        "confidence": 0.41862293503492015,
+        "range_low": 66169.67895337421,
+        "range_high": 70262.64878554168
       },
       "y30": {
         "target_date": "2026-04-25",
-        "predicted_log_return": 0.12903317200312375,
-        "predicted_price": 74597.86934383771,
-        "price_change_pct": 12.903317200312374,
+        "predicted_log_return": 0.1252203180309183,
+        "predicted_price": 74313.98011939884,
+        "price_change_pct": 12.52203180309183,
         "direction": "UP",
-        "confidence": 0.35,
-        "range_low": 67138.08240945394,
-        "range_high": 82057.65627822149
+        "confidence": 0.3953360174263565,
+        "range_low": 72084.56071581687,
+        "range_high": 76543.3995229808
       }
     },
     "signal": {
@@ -3926,33 +3926,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-28",
-        "predicted_log_return": 0.0198214841952632,
-        "predicted_price": 66242.27271207437,
-        "price_change_pct": 1.98214841952632,
+        "predicted_log_return": 0.020628986921172033,
+        "predicted_price": 66295.78513066392,
+        "price_change_pct": 2.0628986921172032,
         "direction": "UP",
-        "confidence": 0.5066718965856646,
-        "range_low": 64917.427257832875,
-        "range_high": 67567.11816631585
+        "confidence": 0.5636531962907676,
+        "range_low": 64306.911576744,
+        "range_high": 68284.65868458385
       },
       "y7": {
         "target_date": "2026-04-03",
-        "predicted_log_return": 0.0693751946834212,
-        "predicted_price": 69607.51462369371,
-        "price_change_pct": 6.93751946834212,
+        "predicted_log_return": 0.06653893210945057,
+        "predicted_price": 69410.36914542974,
+        "price_change_pct": 6.653893210945057,
         "direction": "UP",
-        "confidence": 0.4066718965856646,
-        "range_low": 66127.13889250903,
-        "range_high": 73087.8903548784
+        "confidence": 0.3456632733996158,
+        "range_low": 67328.05807106684,
+        "range_high": 71492.68021979263
       },
       "y30": {
         "target_date": "2026-04-26",
-        "predicted_log_return": 0.2378578103431584,
-        "predicted_price": 82381.02620541857,
-        "price_change_pct": 23.78578103431584,
+        "predicted_log_return": 0.2144255140793687,
+        "predicted_price": 80473.09054842746,
+        "price_change_pct": 21.442551407936868,
         "direction": "UP",
-        "confidence": 0.35667189658566456,
-        "range_low": 74142.92358487671,
-        "range_high": 90619.12882596043
+        "confidence": 0.40228871837933644,
+        "range_low": 78058.89783197462,
+        "range_high": 82887.28326488029
       }
     },
     "signal": {
@@ -4011,33 +4011,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-29",
-        "predicted_log_return": 0.005021983474618734,
-        "predicted_price": 66431.52169264898,
-        "price_change_pct": 0.5021983474618734,
+        "predicted_log_return": 0.004824396309015057,
+        "predicted_price": 66418.39697325174,
+        "price_change_pct": 0.4824396309015057,
         "direction": "UP",
-        "confidence": 0.620798423492656,
-        "range_low": 65102.891258796,
-        "range_high": 67760.15212650197
+        "confidence": 0.7069539160765272,
+        "range_low": 64425.84506405419,
+        "range_high": 68410.9488824493
       },
       "y7": {
         "target_date": "2026-04-04",
-        "predicted_log_return": 0.01757694216116557,
-        "predicted_price": 67270.82438358915,
-        "price_change_pct": 1.757694216116557,
+        "predicted_log_return": 0.0173151375883187,
+        "predicted_price": 67253.2148793713,
+        "price_change_pct": 1.73151375883187,
         "direction": "UP",
-        "confidence": 0.520798423492656,
-        "range_low": 63907.28316440969,
-        "range_high": 70634.36560276861
+        "confidence": 0.5589102660101237,
+        "range_low": 65235.61843299016,
+        "range_high": 69270.81132575244
       },
       "y30": {
         "target_date": "2026-04-27",
-        "predicted_log_return": 0.06026380169542481,
-        "predicted_price": 70204.57545603125,
-        "price_change_pct": 6.026380169542481,
+        "predicted_log_return": 0.05659438133163375,
+        "predicted_price": 69947.43741951798,
+        "price_change_pct": 5.659438133163375,
         "direction": "UP",
-        "confidence": 0.470798423492656,
-        "range_low": 63184.117910428125,
-        "range_high": 77225.03300163438
+        "confidence": 0.5588293634934063,
+        "range_low": 67849.01429693244,
+        "range_high": 72045.86054210353
       }
     },
     "signal": {
@@ -4096,33 +4096,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-30",
-        "predicted_log_return": -0.006739181924561193,
-        "predicted_price": 65006.31113936843,
-        "price_change_pct": -0.6739181924561193,
+        "predicted_log_return": -0.0069617742396410305,
+        "predicted_price": 64991.84284440249,
+        "price_change_pct": -0.6961774239641031,
         "direction": "DOWN",
-        "confidence": 0.7387901591857995,
-        "range_low": 63706.18491658106,
-        "range_high": 66306.4373621558
+        "confidence": 0.7579875410807635,
+        "range_low": 63042.087559070416,
+        "range_high": 66941.59812973457
       },
       "y7": {
         "target_date": "2026-04-05",
-        "predicted_log_return": -0.023587136735964173,
-        "predicted_price": 63920.2622876082,
-        "price_change_pct": -2.3587136735964176,
+        "predicted_log_return": -0.0218657206079321,
+        "predicted_price": 64030.390418993906,
+        "price_change_pct": -2.18657206079321,
         "direction": "DOWN",
-        "confidence": 0.6387901591857995,
-        "range_low": 60724.24917322779,
-        "range_high": 67116.27540198862
+        "confidence": 0.6450080836690676,
+        "range_low": 62109.47870642409,
+        "range_high": 65951.30213156373
       },
       "y30": {
         "target_date": "2026-04-28",
-        "predicted_log_return": -0.08087018309473432,
-        "predicted_price": 60361.61311625456,
-        "price_change_pct": -8.08701830947343,
+        "predicted_log_return": -0.072328457199003,
+        "predicted_price": 60879.41377750545,
+        "price_change_pct": -7.2328457199003,
         "direction": "DOWN",
-        "confidence": 0.5887901591857995,
-        "range_low": 54325.451804629105,
-        "range_high": 66397.77442788002
+        "confidence": 0.5601810626287828,
+        "range_low": 59053.031364180286,
+        "range_high": 62705.79619083061
       }
     },
     "signal": {
@@ -4181,33 +4181,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-03-31",
-        "predicted_log_return": 0.0012652951036688073,
-        "predicted_price": 65154.54759675287,
-        "price_change_pct": 0.12652951036688073,
+        "predicted_log_return": 0.0012336311015821177,
+        "predicted_price": 65152.484575683724,
+        "price_change_pct": 0.12336311015821178,
         "direction": "UP",
-        "confidence": 0.5136578118630848,
-        "range_low": 63851.45664481781,
-        "range_high": 66457.63854868793
+        "confidence": 0.5245527962982895,
+        "range_low": 63197.91003841321,
+        "range_high": 67107.05911295424
       },
       "y7": {
         "target_date": "2026-04-06",
-        "predicted_log_return": 0.0044285328628408255,
-        "predicted_price": 65360.97323645585,
-        "price_change_pct": 0.44285328628408255,
+        "predicted_log_return": 0.004144099103056035,
+        "predicted_price": 65342.3850127795,
+        "price_change_pct": 0.41440991030560353,
         "direction": "UP",
-        "confidence": 0.4136578118630848,
-        "range_low": 62092.924574633056,
-        "range_high": 68629.02189827865
+        "confidence": 0.43942784711633504,
+        "range_low": 63382.11346239611,
+        "range_high": 67302.65656316289
       },
       "y30": {
         "target_date": "2026-04-29",
-        "predicted_log_return": 0.015183541244025687,
-        "predicted_price": 66067.72479840739,
-        "price_change_pct": 1.5183541244025687,
+        "predicted_log_return": 0.01563628674844608,
+        "predicted_price": 66097.64343605045,
+        "price_change_pct": 1.5636286748446078,
         "direction": "UP",
-        "confidence": 0.36365781186308477,
-        "range_low": 59460.952318566655,
-        "range_high": 72674.49727824813
+        "confidence": 0.31329674473762037,
+        "range_low": 64114.71413296893,
+        "range_high": 68080.57273913197
       }
     },
     "signal": {
@@ -4266,33 +4266,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-01",
-        "predicted_log_return": -0.0010444221656863044,
-        "predicted_price": 64904.11728965256,
-        "price_change_pct": -0.10444221656863044,
+        "predicted_log_return": -0.0010484957311831299,
+        "predicted_price": 64903.85289901827,
+        "price_change_pct": -0.10484957311831299,
         "direction": "DOWN",
-        "confidence": 0.6183746516961073,
-        "range_low": 63606.03494385951,
-        "range_high": 66202.1996354456
+        "confidence": 0.6367665305879909,
+        "range_low": 62956.73731204772,
+        "range_high": 66850.96848598882
       },
       "y7": {
         "target_date": "2026-04-07",
-        "predicted_log_return": -0.0036554775799020655,
-        "predicted_price": 64734.87009585448,
-        "price_change_pct": -0.36554775799020656,
+        "predicted_log_return": -0.0035868599273151517,
+        "predicted_price": 64739.312203082714,
+        "price_change_pct": -0.3586859927315152,
         "direction": "DOWN",
-        "confidence": 0.5183746516961073,
-        "range_low": 61498.12659106175,
-        "range_high": 67971.61360064721
+        "confidence": 0.5832716785804363,
+        "range_low": 62797.13283699023,
+        "range_high": 66681.4915691752
       },
       "y30": {
         "target_date": "2026-04-30",
-        "predicted_log_return": -0.012533065988235653,
-        "predicted_price": 64162.72396006795,
-        "price_change_pct": -1.2533065988235654,
+        "predicted_log_return": -0.012662104518408698,
+        "predicted_price": 64154.44503063818,
+        "price_change_pct": -1.2662104518408699,
         "direction": "DOWN",
-        "confidence": 0.46837465169610726,
-        "range_low": 57746.45156406116,
-        "range_high": 70578.99635607476
+        "confidence": 0.5528029550611833,
+        "range_low": 62229.81167971903,
+        "range_high": 66079.07838155732
       }
     },
     "signal": {
@@ -4351,33 +4351,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-02",
-        "predicted_log_return": 0.010645511061005723,
-        "predicted_price": 65606.31846481487,
-        "price_change_pct": 1.0645511061005724,
+        "predicted_log_return": 0.011678505029997758,
+        "predicted_price": 65674.12441165435,
+        "price_change_pct": 1.1678505029997759,
         "direction": "UP",
-        "confidence": 0.5334625761181824,
-        "range_low": 64294.19209551858,
-        "range_high": 66918.44483411117
+        "confidence": 0.4542873202418692,
+        "range_low": 63703.90067930472,
+        "range_high": 67644.34814400399
       },
       "y7": {
         "target_date": "2026-04-08",
-        "predicted_log_return": 0.03725928871352003,
-        "predicted_price": 67375.7921861837,
-        "price_change_pct": 3.725928871352003,
+        "predicted_log_return": 0.038907287942936415,
+        "predicted_price": 67486.91898307488,
+        "price_change_pct": 3.8907287942936417,
         "direction": "UP",
-        "confidence": 0.4334625761181824,
-        "range_low": 64007.0025768745,
-        "range_high": 70744.58179549288
+        "confidence": 0.3690274134027244,
+        "range_low": 65462.31141358263,
+        "range_high": 69511.52655256713
       },
       "y30": {
         "target_date": "2026-05-01",
-        "predicted_log_return": 0.12774613273206867,
-        "predicted_price": 73756.75845168025,
-        "price_change_pct": 12.774613273206867,
+        "predicted_log_return": 0.13391234445785008,
+        "predicted_price": 74212.96332292327,
+        "price_change_pct": 13.391234445785008,
         "direction": "UP",
-        "confidence": 0.38346257611818235,
-        "range_low": 66381.08260651222,
-        "range_high": 81132.43429684828
+        "confidence": 0.4000921442688637,
+        "range_low": 71986.57442323556,
+        "range_high": 76439.35222261098
       }
     },
     "signal": {
@@ -4436,33 +4436,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-03",
-        "predicted_log_return": -0.017745846806079893,
-        "predicted_price": 63095.43420943578,
-        "price_change_pct": -1.7745846806079892,
+        "predicted_log_return": -0.017906955887179193,
+        "predicted_price": 63085.26978082159,
+        "price_change_pct": -1.7906955887179192,
         "direction": "DOWN",
-        "confidence": 0.6970382992782886,
-        "range_low": 61833.52552524706,
-        "range_high": 64357.342893624496
+        "confidence": 0.6528420275477748,
+        "range_low": 61192.71168739694,
+        "range_high": 64977.827874246235
       },
       "y7": {
         "target_date": "2026-04-09",
-        "predicted_log_return": -0.062110463821279625,
-        "predicted_price": 60357.414112407954,
-        "price_change_pct": -6.211046382127963,
+        "predicted_log_return": -0.0686779268179179,
+        "predicted_price": 59962.31783882292,
+        "price_change_pct": -6.86779268179179,
         "direction": "DOWN",
-        "confidence": 0.5970382992782887,
-        "range_low": 57339.543406787554,
-        "range_high": 63375.284818028354
+        "confidence": 0.691382274539998,
+        "range_low": 58163.44830365823,
+        "range_high": 61761.18737398761
       },
       "y30": {
         "target_date": "2026-05-02",
-        "predicted_log_return": -0.21295016167295872,
-        "predicted_price": 51906.50367874683,
-        "price_change_pct": -21.29501616729587,
+        "predicted_log_return": -0.207564489054731,
+        "predicted_price": 52186.80925381501,
+        "price_change_pct": -20.7564489054731,
         "direction": "DOWN",
-        "confidence": 0.5470382992782886,
-        "range_low": 46715.853310872146,
-        "range_high": 57097.154046621516
+        "confidence": 0.647416306259963,
+        "range_low": 50621.204976200555,
+        "range_high": 53752.41353142946
       }
     },
     "signal": {
@@ -4521,33 +4521,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-04",
-        "predicted_log_return": -0.004994100090589721,
-        "predicted_price": 62726.364722200946,
-        "price_change_pct": -0.4994100090589721,
+        "predicted_log_return": -0.005047835741327494,
+        "predicted_price": 62722.99417073438,
+        "price_change_pct": -0.5047835741327494,
         "direction": "DOWN",
-        "confidence": 0.6086703204592827,
-        "range_low": 61471.837427756924,
-        "range_high": 63980.89201664497
+        "confidence": 0.6096521263614503,
+        "range_low": 60841.30434561235,
+        "range_high": 64604.683995856416
       },
       "y7": {
         "target_date": "2026-04-10",
-        "predicted_log_return": -0.017479350317064025,
-        "predicted_price": 61948.07901872554,
-        "price_change_pct": -1.7479350317064024,
+        "predicted_log_return": -0.01718671341118954,
+        "predicted_price": 61966.209965657166,
+        "price_change_pct": -1.718671341118954,
         "direction": "DOWN",
-        "confidence": 0.5086703204592827,
-        "range_low": 58850.67506778926,
-        "range_high": 65045.48296966182
+        "confidence": 0.5129667632754958,
+        "range_low": 60107.22366668745,
+        "range_high": 63825.19626462688
       },
       "y30": {
         "target_date": "2026-05-03",
-        "predicted_log_return": -0.05992920108707665,
-        "predicted_price": 59373.42574580843,
-        "price_change_pct": -5.992920108707665,
+        "predicted_log_return": -0.0600482748649446,
+        "predicted_price": 59366.35634859818,
+        "price_change_pct": -6.00482748649446,
         "direction": "DOWN",
-        "confidence": 0.4586703204592827,
-        "range_low": 53436.08317122759,
-        "range_high": 65310.76832038928
+        "confidence": 0.4339191797297561,
+        "range_low": 57585.36565814023,
+        "range_high": 61147.34703905613
       }
     },
     "signal": {
@@ -4606,33 +4606,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-05",
-        "predicted_log_return": -0.024945107938210403,
-        "predicted_price": 61270.82988622829,
-        "price_change_pct": -2.4945107938210405,
+        "predicted_log_return": -0.026083118043515024,
+        "predicted_price": 61201.142722526405,
+        "price_change_pct": -2.6083118043515023,
         "direction": "DOWN",
-        "confidence": 0.5371945188934677,
-        "range_low": 60045.413288503725,
-        "range_high": 62496.246483952855
+        "confidence": 0.6331857371721218,
+        "range_low": 59365.108440850614,
+        "range_high": 63037.177004202196
       },
       "y7": {
         "target_date": "2026-04-11",
-        "predicted_log_return": -0.08730787778373642,
-        "predicted_price": 57566.51728457981,
-        "price_change_pct": -8.73078777837364,
+        "predicted_log_return": -0.09135855870770164,
+        "predicted_price": 57333.805330288094,
+        "price_change_pct": -9.135855870770165,
         "direction": "DOWN",
-        "confidence": 0.4371945188934677,
-        "range_low": 54688.19142035081,
-        "range_high": 60444.8431488088
+        "confidence": 0.49026814181745126,
+        "range_low": 55613.79117037945,
+        "range_high": 59053.819490196736
       },
       "y30": {
         "target_date": "2026-05-04",
-        "predicted_log_return": -0.2993412952585248,
-        "predicted_price": 46567.72404333059,
-        "price_change_pct": -29.934129525852484,
+        "predicted_log_return": -0.29234664799878296,
+        "predicted_price": 46894.59067242459,
+        "price_change_pct": -29.234664799878296,
         "direction": "DOWN",
-        "confidence": 0.3871945188934677,
-        "range_low": 41910.95163899753,
-        "range_high": 51224.49644766365
+        "confidence": 0.40772184862492933,
+        "range_low": 45487.752952251845,
+        "range_high": 48301.42839259733
       }
     },
     "signal": {
@@ -4691,33 +4691,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-06",
-        "predicted_log_return": 0.005913723227642711,
-        "predicted_price": 64297.616207412735,
-        "price_change_pct": 0.5913723227642711,
+        "predicted_log_return": 0.0062372017969525686,
+        "predicted_price": 64318.41847267566,
+        "price_change_pct": 0.6237201796952568,
         "direction": "UP",
-        "confidence": 0.4787577238797868,
-        "range_low": 63011.66388326448,
-        "range_high": 65583.56853156099
+        "confidence": 0.4372900371168972,
+        "range_low": 62388.86591849539,
+        "range_high": 66247.97102685593
       },
       "y7": {
         "target_date": "2026-04-12",
-        "predicted_log_return": 0.020698031296749488,
-        "predicted_price": 65255.27368176569,
-        "price_change_pct": 2.069803129674949,
+        "predicted_log_return": 0.019613594908233174,
+        "predicted_price": 65184.54684475168,
+        "price_change_pct": 1.9613594908233174,
         "direction": "UP",
-        "confidence": 0.4,
-        "range_low": 61992.50999767741,
-        "range_high": 68518.03736585398
+        "confidence": 0.4658714662003585,
+        "range_low": 63229.01043940913,
+        "range_high": 67140.08325009423
       },
       "y30": {
         "target_date": "2026-05-05",
-        "predicted_log_return": 0.07096467873171253,
-        "predicted_price": 68619.27782294,
-        "price_change_pct": 7.096467873171253,
+        "predicted_log_return": 0.08064122216405825,
+        "predicted_price": 69286.49823244108,
+        "price_change_pct": 8.064122216405826,
         "direction": "UP",
-        "confidence": 0.35,
-        "range_low": 61757.350040646,
-        "range_high": 75481.205605234
+        "confidence": 0.34391593630697737,
+        "range_low": 67207.90328546785,
+        "range_high": 71365.09317941431
       }
     },
     "signal": {
@@ -4776,33 +4776,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-07",
-        "predicted_log_return": -0.007854140934016837,
-        "predicted_price": 63844.17449540531,
-        "price_change_pct": -0.7854140934016837,
+        "predicted_log_return": -0.007884693033879954,
+        "predicted_price": 63842.22395160721,
+        "price_change_pct": -0.7884693033879955,
         "direction": "DOWN",
-        "confidence": 0.6636091968543346,
-        "range_low": 62567.2910054972,
-        "range_high": 65121.05798531341
+        "confidence": 0.5870110492256685,
+        "range_low": 61926.95723305899,
+        "range_high": 65757.49067015543
       },
       "y7": {
         "target_date": "2026-04-13",
-        "predicted_log_return": -0.027489493269058928,
-        "predicted_price": 62602.798941639056,
-        "price_change_pct": -2.748949326905893,
+        "predicted_log_return": -0.029176455427895636,
+        "predicted_price": 62497.27941753365,
+        "price_change_pct": -2.917645542789564,
         "direction": "DOWN",
-        "confidence": 0.5636091968543346,
-        "range_low": 59472.6589945571,
-        "range_high": 65732.93888872101
+        "confidence": 0.647366873558417,
+        "range_low": 60622.36103500764,
+        "range_high": 64372.197800059665
       },
       "y30": {
         "target_date": "2026-05-06",
-        "predicted_log_return": -0.09424969120820204,
-        "predicted_price": 58559.87825635212,
-        "price_change_pct": -9.424969120820204,
+        "predicted_log_return": -0.09502958334802972,
+        "predicted_price": 58514.225671950546,
+        "price_change_pct": -9.502958334802972,
         "direction": "DOWN",
-        "confidence": 0.5136091968543346,
-        "range_low": 52703.890430716914,
-        "range_high": 64415.86608198734
+        "confidence": 0.4223989707426066,
+        "range_low": 56758.798901792026,
+        "range_high": 60269.652442109065
       }
     },
     "signal": {
@@ -4861,33 +4861,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-08",
-        "predicted_log_return": -0.018431912952808244,
-        "predicted_price": 63560.09245924904,
-        "price_change_pct": -1.8431912952808243,
+        "predicted_log_return": -0.020311469759190532,
+        "predicted_price": 63440.739854989566,
+        "price_change_pct": -2.0311469759190532,
         "direction": "DOWN",
-        "confidence": 0.6859537451413011,
-        "range_low": 62288.89061006406,
-        "range_high": 64831.29430843402
+        "confidence": 0.6879218622644602,
+        "range_low": 61537.51765933988,
+        "range_high": 65343.96205063925
       },
       "y7": {
         "target_date": "2026-04-14",
-        "predicted_log_return": -0.06451169533482885,
-        "predicted_price": 60697.71261802604,
-        "price_change_pct": -6.451169533482886,
+        "predicted_log_return": -0.06287935359692576,
+        "predicted_price": 60796.87293747373,
+        "price_change_pct": -6.287935359692575,
         "direction": "DOWN",
-        "confidence": 0.5859537451413012,
-        "range_low": 57662.82698712473,
-        "range_high": 63732.598248927345
+        "confidence": 0.6292366507455397,
+        "range_low": 58972.966749349514,
+        "range_high": 62620.77912559795
       },
       "y30": {
         "target_date": "2026-05-07",
-        "predicted_log_return": -0.22118295543369892,
-        "predicted_price": 51895.63869883963,
-        "price_change_pct": -22.118295543369893,
+        "predicted_log_return": -0.22352051184413335,
+        "predicted_price": 51774.47138880994,
+        "price_change_pct": -22.352051184413334,
         "direction": "DOWN",
-        "confidence": 0.5359537451413011,
-        "range_low": 46706.07482895567,
-        "range_high": 57085.2025687236
+        "confidence": 0.6091684732900283,
+        "range_low": 50221.23724714564,
+        "range_high": 53327.705530474246
       }
     },
     "signal": {
@@ -4946,33 +4946,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-09",
-        "predicted_log_return": 0.0030194866109274176,
-        "predicted_price": 65914.00628278116,
-        "price_change_pct": 0.30194866109274177,
+        "predicted_log_return": 0.003166743605105777,
+        "predicted_price": 65923.71329591588,
+        "price_change_pct": 0.31667436051057773,
         "direction": "UP",
-        "confidence": 0.5272189890988065,
-        "range_low": 64595.72615712554,
-        "range_high": 67232.28640843679
+        "confidence": 0.431821940350288,
+        "range_low": 63946.0018970384,
+        "range_high": 67901.42469479336
       },
       "y7": {
         "target_date": "2026-04-15",
-        "predicted_log_return": 0.010568203138245962,
-        "predicted_price": 66413.4551587045,
-        "price_change_pct": 1.0568203138245962,
+        "predicted_log_return": 0.010986774575990193,
+        "predicted_price": 66441.25975281434,
+        "price_change_pct": 1.0986774575990192,
         "direction": "UP",
-        "confidence": 0.4272189890988065,
-        "range_low": 63092.78240076927,
-        "range_high": 69734.12791663973
+        "confidence": 0.4287103425373801,
+        "range_low": 64448.021960229904,
+        "range_high": 68434.49754539877
       },
       "y30": {
         "target_date": "2026-05-08",
-        "predicted_log_return": 0.03623383933112901,
-        "predicted_price": 68140.06117928488,
-        "price_change_pct": 3.623383933112901,
+        "predicted_log_return": 0.035453170170697365,
+        "predicted_price": 68086.88709331737,
+        "price_change_pct": 3.5453170170697366,
         "direction": "UP",
-        "confidence": 0.37721898909880647,
-        "range_low": 61326.05506135639,
-        "range_high": 74954.06729721338
+        "confidence": 0.3729195439742822,
+        "range_low": 66044.28048051785,
+        "range_high": 70129.4937061169
       }
     },
     "signal": {
@@ -5031,33 +5031,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-10",
-        "predicted_log_return": -0.0019265884700600216,
-        "predicted_price": 65375.96601031422,
-        "price_change_pct": -0.19265884700600217,
+        "predicted_log_return": -0.0020400894307465436,
+        "predicted_price": 65368.54619645222,
+        "price_change_pct": -0.20400894307465436,
         "direction": "DOWN",
-        "confidence": 0.7003263609795436,
-        "range_low": 64068.446690107936,
-        "range_high": 66683.4853305205
+        "confidence": 0.6424418857243261,
+        "range_low": 63407.48981055865,
+        "range_high": 67329.60258234579
       },
       "y7": {
         "target_date": "2026-04-16",
-        "predicted_log_return": -0.0067430596452100755,
-        "predicted_price": 65061.84164721295,
-        "price_change_pct": -0.6743059645210076,
+        "predicted_log_return": -0.006585732745377541,
+        "predicted_price": 65072.07843029626,
+        "price_change_pct": -0.6585732745377542,
         "direction": "DOWN",
-        "confidence": 0.6003263609795436,
-        "range_low": 61808.749564852296,
-        "range_high": 68314.93372957359
+        "confidence": 0.5101128886485926,
+        "range_low": 63119.91607738737,
+        "range_high": 67024.24078320514
       },
       "y30": {
         "target_date": "2026-05-09",
-        "predicted_log_return": -0.023119061640720258,
-        "predicted_price": 64005.06530085193,
-        "price_change_pct": -2.3119061640720258,
+        "predicted_log_return": -0.024077154673579335,
+        "predicted_price": 63943.77186081708,
+        "price_change_pct": -2.4077154673579333,
         "direction": "DOWN",
-        "confidence": 0.5503263609795436,
-        "range_low": 57604.55877076674,
-        "range_high": 70405.57183093713
+        "confidence": 0.4416830239730336,
+        "range_low": 62025.45870499257,
+        "range_high": 65862.08501664159
       }
     },
     "signal": {
@@ -5116,33 +5116,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-11",
-        "predicted_log_return": 0.01634543182739052,
-        "predicted_price": 66539.86218243538,
-        "price_change_pct": 1.6345431827390522,
+        "predicted_log_return": 0.01704320937105304,
+        "predicted_price": 66586.30840670629,
+        "price_change_pct": 1.7043209371053039,
         "direction": "UP",
-        "confidence": 0.7271120744135913,
-        "range_low": 65209.064938786665,
-        "range_high": 67870.65942608408
+        "confidence": 0.5853541109824703,
+        "range_low": 64588.719154505096,
+        "range_high": 68583.89765890747
       },
       "y7": {
         "target_date": "2026-04-17",
-        "predicted_log_return": 0.05720901139586682,
-        "predicted_price": 69315.23885765405,
-        "price_change_pct": 5.720901139586682,
+        "predicted_log_return": 0.06015479979312662,
+        "predicted_price": 69519.72792692401,
+        "price_change_pct": 6.015479979312662,
         "direction": "UP",
-        "confidence": 0.6271120744135913,
-        "range_low": 65849.47691477135,
-        "range_high": 72781.00080053676
+        "confidence": 0.5661333805512593,
+        "range_low": 67434.13608911629,
+        "range_high": 71605.31976473173
       },
       "y30": {
         "target_date": "2026-05-10",
-        "predicted_log_return": 0.19614518192868624,
-        "predicted_price": 79646.72749840589,
-        "price_change_pct": 19.614518192868626,
+        "predicted_log_return": 0.2040322919756907,
+        "predicted_price": 80277.39380104336,
+        "price_change_pct": 20.40322919756907,
         "direction": "UP",
-        "confidence": 0.5771120744135912,
-        "range_low": 71682.05474856531,
-        "range_high": 87611.40024824649
+        "confidence": 0.6555265857855146,
+        "range_low": 77869.07198701207,
+        "range_high": 82685.71561507466
       }
     },
     "signal": {
@@ -5201,33 +5201,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-12",
-        "predicted_log_return": -0.012778344401796682,
-        "predicted_price": 63629.03915718434,
-        "price_change_pct": -1.2778344401796682,
+        "predicted_log_return": -0.012648442647599246,
+        "predicted_price": 63637.305217865025,
+        "price_change_pct": -1.2648442647599245,
         "direction": "DOWN",
-        "confidence": 0.5493491162846635,
-        "range_low": 62356.45837404065,
-        "range_high": 64901.61994032803
+        "confidence": 0.6511073294398395,
+        "range_low": 61728.18606132907,
+        "range_high": 65546.42437440097
       },
       "y7": {
         "target_date": "2026-04-18",
-        "predicted_log_return": -0.04472420540628839,
-        "predicted_price": 61628.47964877507,
-        "price_change_pct": -4.472420540628838,
+        "predicted_log_return": -0.04492014682868648,
+        "predicted_price": 61616.40525978756,
+        "price_change_pct": -4.492014682868648,
         "direction": "DOWN",
-        "confidence": 0.44934911628466356,
-        "range_low": 58547.05566633632,
-        "range_high": 64709.90363121383
+        "confidence": 0.48794632368669594,
+        "range_low": 59767.91310199394,
+        "range_high": 63464.89741758119
       },
       "y30": {
         "target_date": "2026-05-11",
-        "predicted_log_return": -0.15334013282156017,
-        "predicted_price": 55285.361799933446,
-        "price_change_pct": -15.334013282156018,
+        "predicted_log_return": -0.1603376017037643,
+        "predicted_price": 54899.85456156429,
+        "price_change_pct": -16.03376017037643,
         "direction": "DOWN",
-        "confidence": 0.3993491162846635,
-        "range_low": 49756.8256199401,
-        "range_high": 60813.8979799268
+        "confidence": 0.3727252792953977,
+        "range_low": 53252.85892471736,
+        "range_high": 56546.850198411215
       }
     },
     "signal": {
@@ -5286,33 +5286,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-13",
-        "predicted_log_return": -0.01039658178298472,
-        "predicted_price": 64505.96020671607,
-        "price_change_pct": -1.0396581782984722,
+        "predicted_log_return": -0.009881210691379884,
+        "predicted_price": 64539.21328194364,
+        "price_change_pct": -0.9881210691379884,
         "direction": "DOWN",
-        "confidence": 0.6125419606332686,
-        "range_low": 63215.84100258174,
-        "range_high": 65796.07941085039
+        "confidence": 0.5058292326783496,
+        "range_low": 62603.03688348533,
+        "range_high": 66475.38968040195
       },
       "y7": {
         "target_date": "2026-04-19",
-        "predicted_log_return": -0.03638803624044652,
-        "predicted_price": 62850.95761154607,
-        "price_change_pct": -3.638803624044652,
+        "predicted_log_return": -0.036027546412463626,
+        "predicted_price": 62873.6188267674,
+        "price_change_pct": -3.6027546412463627,
         "direction": "DOWN",
-        "confidence": 0.5125419606332686,
-        "range_low": 59708.409730968764,
-        "range_high": 65993.50549212338
+        "confidence": 0.5878220878625618,
+        "range_low": 60987.410261964375,
+        "range_high": 64759.82739157043
       },
       "y30": {
         "target_date": "2026-05-12",
-        "predicted_log_return": -0.12475898139581665,
-        "predicted_price": 57535.10171909022,
-        "price_change_pct": -12.475898139581664,
+        "predicted_log_return": -0.12526809367077135,
+        "predicted_price": 57505.81734771326,
+        "price_change_pct": -12.526809367077135,
         "direction": "DOWN",
-        "confidence": 0.4625419606332686,
-        "range_low": 51781.5915471812,
-        "range_high": 63288.61189099925
+        "confidence": 0.446682915676268,
+        "range_low": 55780.64282728186,
+        "range_high": 59230.99186814466
       }
     },
     "signal": {
@@ -5371,33 +5371,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-14",
-        "predicted_log_return": 0.0026131581879629984,
-        "predicted_price": 66172.32301234575,
-        "price_change_pct": 0.26131581879629984,
+        "predicted_log_return": 0.0025995825424189466,
+        "predicted_price": 66171.4246864414,
+        "price_change_pct": 0.25995825424189467,
         "direction": "UP",
-        "confidence": 0.5795653717556897,
-        "range_low": 64848.87655209883,
-        "range_high": 67495.76947259267
+        "confidence": 0.6838718104175596,
+        "range_low": 64186.28194584816,
+        "range_high": 68156.56742703465
       },
       "y7": {
         "target_date": "2026-04-20",
-        "predicted_log_return": 0.009146053657870495,
-        "predicted_price": 66606.03503672416,
-        "price_change_pct": 0.9146053657870494,
+        "predicted_log_return": 0.008994258866508894,
+        "predicted_price": 66595.92535485027,
+        "price_change_pct": 0.8994258866508894,
         "direction": "UP",
-        "confidence": 0.4795653717556897,
-        "range_low": 63275.73328488795,
-        "range_high": 69936.33678856038
+        "confidence": 0.47067007936172733,
+        "range_low": 64598.04759420476,
+        "range_high": 68593.80311549579
       },
       "y30": {
         "target_date": "2026-05-13",
-        "predicted_log_return": 0.03135789825555598,
-        "predicted_price": 68102.03084379908,
-        "price_change_pct": 3.135789825555598,
+        "predicted_log_return": 0.03290234668311413,
+        "predicted_price": 68207.29218268045,
+        "price_change_pct": 3.2902346683114128,
         "direction": "UP",
-        "confidence": 0.42956537175568965,
-        "range_low": 61291.82775941917,
-        "range_high": 74912.23392817899
+        "confidence": 0.4992886343893642,
+        "range_low": 66161.07341720004,
+        "range_high": 70253.51094816087
       }
     },
     "signal": {
@@ -5456,33 +5456,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-15",
-        "predicted_log_return": -0.0067128200693583875,
-        "predicted_price": 65732.11779218845,
-        "price_change_pct": -0.6712820069358387,
+        "predicted_log_return": -0.006816352421235841,
+        "predicted_price": 65725.31274371696,
+        "price_change_pct": -0.6816352421235841,
         "direction": "DOWN",
-        "confidence": 0.5057322682710051,
-        "range_low": 64417.475436344685,
-        "range_high": 67046.76014803222
+        "confidence": 0.545075263162019,
+        "range_low": 63753.55336140545,
+        "range_high": 67697.07212602848
       },
       "y7": {
         "target_date": "2026-04-21",
-        "predicted_log_return": -0.023494870242754356,
-        "predicted_price": 64638.202835053424,
-        "price_change_pct": -2.3494870242754358,
+        "predicted_log_return": -0.02398930183882915,
+        "predicted_price": 64606.25156476797,
+        "price_change_pct": -2.398930183882915,
         "direction": "DOWN",
-        "confidence": 0.40573226827100517,
-        "range_low": 61406.29269330075,
-        "range_high": 67870.1129768061
+        "confidence": 0.3372572196014402,
+        "range_low": 62668.06401782493,
+        "range_high": 66544.439111711
       },
       "y30": {
         "target_date": "2026-05-14",
-        "predicted_log_return": -0.08055384083230065,
-        "predicted_price": 61053.26259945327,
-        "price_change_pct": -8.055384083230065,
+        "predicted_log_return": -0.08601802741036889,
+        "predicted_price": 60720.56596743152,
+        "price_change_pct": -8.601802741036888,
         "direction": "DOWN",
-        "confidence": 0.3557322682710051,
-        "range_low": 54947.93633950795,
-        "range_high": 67158.5888593986
+        "confidence": 0.3194160624442402,
+        "range_low": 58898.94898840857,
+        "range_high": 62542.182946454464
       }
     },
     "signal": {
@@ -5541,33 +5541,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-16",
-        "predicted_log_return": 0.018802416230529796,
-        "predicted_price": 66998.34159286902,
-        "price_change_pct": 1.8802416230529795,
+        "predicted_log_return": 0.019389457185036357,
+        "predicted_price": 67037.6839099139,
+        "price_change_pct": 1.9389457185036356,
         "direction": "UP",
-        "confidence": 0.5147034248727222,
-        "range_low": 65658.37476101164,
-        "range_high": 68338.3084247264
+        "confidence": 0.5206175376670203,
+        "range_low": 65026.553392616486,
+        "range_high": 69048.81442721133
       },
       "y7": {
         "target_date": "2026-04-22",
-        "predicted_log_return": 0.06580845680685428,
-        "predicted_price": 70222.86058059084,
-        "price_change_pct": 6.580845680685428,
+        "predicted_log_return": 0.06494416103791244,
+        "predicted_price": 70162.19348024367,
+        "price_change_pct": 6.494416103791243,
         "direction": "UP",
-        "confidence": 0.41470342487272227,
-        "range_low": 66711.7175515613,
-        "range_high": 73734.00360962038
+        "confidence": 0.47219831747147384,
+        "range_low": 68057.32767583636,
+        "range_high": 72267.05928465098
       },
       "y30": {
         "target_date": "2026-05-15",
-        "predicted_log_return": 0.22562899476635756,
-        "predicted_price": 82392.50262995045,
-        "price_change_pct": 22.562899476635753,
+        "predicted_log_return": 0.19523502250931238,
+        "predicted_price": 79925.94136796918,
+        "price_change_pct": 19.523502250931237,
         "direction": "UP",
-        "confidence": 0.3647034248727222,
-        "range_low": 74153.2523669554,
-        "range_high": 90631.7528929455
+        "confidence": 0.40730262924078886,
+        "range_low": 77528.1631269301,
+        "range_high": 82323.71960900826
       }
     },
     "signal": {
@@ -5626,33 +5626,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-17",
-        "predicted_log_return": 0.012243753758351263,
-        "predicted_price": 67910.73276844453,
-        "price_change_pct": 1.2243753758351263,
+        "predicted_log_return": 0.011076535820005019,
+        "predicted_price": 67831.51238567104,
+        "price_change_pct": 1.1076535820005018,
         "direction": "UP",
-        "confidence": 0.6331117190305529,
-        "range_low": 66552.51811307564,
-        "range_high": 69268.94742381343
+        "confidence": 0.7072236247002527,
+        "range_low": 65796.5670141009,
+        "range_high": 69866.45775724118
       },
       "y7": {
         "target_date": "2026-04-23",
-        "predicted_log_return": 0.04285313815422942,
-        "predicted_price": 70021.5795447054,
-        "price_change_pct": 4.285313815422942,
+        "predicted_log_return": 0.041542782914720154,
+        "predicted_price": 69929.88648942797,
+        "price_change_pct": 4.154278291472015,
         "direction": "UP",
-        "confidence": 0.5331117190305529,
-        "range_low": 66520.50056747012,
-        "range_high": 73522.65852194067
+        "confidence": 0.5451195222294436,
+        "range_low": 67831.98989474513,
+        "range_high": 72027.78308411081
       },
       "y30": {
         "target_date": "2026-05-16",
-        "predicted_log_return": 0.14692504510021515,
-        "predicted_price": 77701.56359797202,
-        "price_change_pct": 14.692504510021516,
+        "predicted_log_return": 0.14007461023144974,
+        "predicted_price": 77171.0931484866,
+        "price_change_pct": 14.007461023144973,
         "direction": "UP",
-        "confidence": 0.48311171903055283,
-        "range_low": 69931.40723817483,
-        "range_high": 85471.71995776924
+        "confidence": 0.48523285593077786,
+        "range_low": 74855.960354032,
+        "range_high": 79486.22594294121
       }
     },
     "signal": {
@@ -5711,33 +5711,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-18",
-        "predicted_log_return": 0.02331295615768845,
-        "predicted_price": 67279.7991808831,
-        "price_change_pct": 2.3312956157688447,
+        "predicted_log_return": 0.025075604365403712,
+        "predicted_price": 67398.4943765302,
+        "price_change_pct": 2.507560436540371,
         "direction": "UP",
-        "confidence": 0.5888866620104016,
-        "range_low": 65934.20319726544,
-        "range_high": 68625.39516450076
+        "confidence": 0.483832231413665,
+        "range_low": 65376.53954523429,
+        "range_high": 69420.44920782611
       },
       "y7": {
         "target_date": "2026-04-24",
-        "predicted_log_return": 0.08159534655190957,
-        "predicted_price": 71317.54864771846,
-        "price_change_pct": 8.159534655190956,
+        "predicted_log_return": 0.07852486436837895,
+        "predicted_price": 71098.90522736423,
+        "price_change_pct": 7.8524864368378955,
         "direction": "UP",
-        "confidence": 0.48888666201040165,
-        "range_low": 67751.67121533254,
-        "range_high": 74883.42608010439
+        "confidence": 0.5197225827889648,
+        "range_low": 68965.9380705433,
+        "range_high": 73231.87238418516
       },
       "y30": {
         "target_date": "2026-05-17",
-        "predicted_log_return": 0.2797554738922614,
-        "predicted_price": 86947.33135139578,
-        "price_change_pct": 27.975547389226136,
+        "predicted_log_return": 0.29227337680654475,
+        "predicted_price": 88042.57034986769,
+        "price_change_pct": 29.227337680654475,
         "direction": "UP",
-        "confidence": 0.4388866620104016,
-        "range_low": 78252.59821625621,
-        "range_high": 95642.06448653537
+        "confidence": 0.4057958529959968,
+        "range_low": 85401.29323937166,
+        "range_high": 90683.84746036372
       }
     },
     "signal": {
@@ -5796,33 +5796,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-19",
-        "predicted_log_return": -0.01886540091721683,
-        "predicted_price": 66017.03019126382,
-        "price_change_pct": -1.886540091721683,
+        "predicted_log_return": -0.018100023958259878,
+        "predicted_price": 66067.57744645566,
+        "price_change_pct": -1.8100023958259877,
         "direction": "DOWN",
-        "confidence": 0.692241820329907,
-        "range_low": 64696.689587438545,
-        "range_high": 67337.3707950891
+        "confidence": 0.6568210289193934,
+        "range_low": 64085.550123061985,
+        "range_high": 68049.60476984933
       },
       "y7": {
         "target_date": "2026-04-25",
-        "predicted_log_return": -0.06602890321025891,
-        "predicted_price": 62975.71901555202,
-        "price_change_pct": -6.602890321025891,
+        "predicted_log_return": -0.06704298765354112,
+        "predicted_price": 62911.888688734645,
+        "price_change_pct": -6.704298765354112,
         "direction": "DOWN",
-        "confidence": 0.592241820329907,
-        "range_low": 59826.93306477442,
-        "range_high": 66124.50496632962
+        "confidence": 0.627565739560712,
+        "range_low": 61024.5320280726,
+        "range_high": 64799.24534939669
       },
       "y30": {
         "target_date": "2026-05-18",
-        "predicted_log_return": -0.22638481100660196,
-        "predicted_price": 53645.27164633207,
-        "price_change_pct": -22.638481100660197,
+        "predicted_log_return": -0.2290191021710795,
+        "predicted_price": 53504.14035329221,
+        "price_change_pct": -22.90191021710795,
         "direction": "DOWN",
-        "confidence": 0.542241820329907,
-        "range_low": 48280.744481698865,
-        "range_high": 59009.79881096528
+        "confidence": 0.62474653029718,
+        "range_low": 51899.01614269344,
+        "range_high": 55109.26456389098
       }
     },
     "signal": {
@@ -5881,33 +5881,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-20",
-        "predicted_log_return": 0.0065362893630451025,
-        "predicted_price": 66534.9736426348,
-        "price_change_pct": 0.6536289363045102,
+        "predicted_log_return": 0.006414601431521278,
+        "predicted_price": 66526.87763192164,
+        "price_change_pct": 0.6414601431521277,
         "direction": "UP",
-        "confidence": 0.617914850658915,
-        "range_low": 65204.2741697821,
-        "range_high": 67865.67311548749
+        "confidence": 0.662517846267169,
+        "range_low": 64531.07130296399,
+        "range_high": 68522.6839608793
       },
       "y7": {
         "target_date": "2026-04-26",
-        "predicted_log_return": 0.02287701277065786,
-        "predicted_price": 67631.13488647298,
-        "price_change_pct": 2.287701277065786,
+        "predicted_log_return": 0.023982583809355307,
+        "predicted_price": 67705.94725809322,
+        "price_change_pct": 2.3982583809355305,
         "direction": "UP",
-        "confidence": 0.5179148506589151,
-        "range_low": 64249.57814214933,
-        "range_high": 71012.69163079663
+        "confidence": 0.47587579818847686,
+        "range_low": 65674.76884035041,
+        "range_high": 69737.12567583603
       },
       "y30": {
         "target_date": "2026-05-19",
-        "predicted_log_return": 0.07843547235654123,
-        "predicted_price": 71494.95672133367,
-        "price_change_pct": 7.843547235654123,
+        "predicted_log_return": 0.08302613089318997,
+        "predicted_price": 71823.92015641612,
+        "price_change_pct": 8.302613089318998,
         "direction": "UP",
-        "confidence": 0.467914850658915,
-        "range_low": 64345.461049200305,
-        "range_high": 78644.45239346704
+        "confidence": 0.4512433490823726,
+        "range_low": 69669.20255172363,
+        "range_high": 73978.6377611086
       }
     },
     "signal": {
@@ -5966,33 +5966,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-21",
-        "predicted_log_return": -0.020519414250511583,
-        "predicted_price": 65454.987468648185,
-        "price_change_pct": -2.0519414250511585,
+        "predicted_log_return": -0.020309198201267465,
+        "predicted_price": 65468.748603872235,
+        "price_change_pct": -2.0309198201267464,
         "direction": "DOWN",
-        "confidence": 0.714849678828984,
-        "range_low": 64145.88771927522,
-        "range_high": 66764.08721802114
+        "confidence": 0.6494656893236023,
+        "range_low": 63504.686145756066,
+        "range_high": 67432.81106198841
       },
       "y7": {
         "target_date": "2026-04-27",
-        "predicted_log_return": -0.07181794987679055,
-        "predicted_price": 62181.91218411534,
-        "price_change_pct": -7.181794987679054,
+        "predicted_log_return": -0.06698788143064029,
+        "predicted_price": 62482.981583662695,
+        "price_change_pct": -6.698788143064029,
         "direction": "DOWN",
-        "confidence": 0.614849678828984,
-        "range_low": 59072.81657490957,
-        "range_high": 65291.00779332111
+        "confidence": 0.5901304151125104,
+        "range_low": 60608.49213615281,
+        "range_high": 64357.47103117258
       },
       "y30": {
         "target_date": "2026-05-20",
-        "predicted_log_return": -0.246232971006139,
-        "predicted_price": 52229.58701789093,
-        "price_change_pct": -24.6232971006139,
+        "predicted_log_return": -0.24931012760628005,
+        "predicted_price": 52069.11542421201,
+        "price_change_pct": -24.931012760628004,
         "direction": "DOWN",
-        "confidence": 0.564849678828984,
-        "range_low": 47006.62831610184,
-        "range_high": 57452.54571968003
+        "confidence": 0.5904398192012508,
+        "range_low": 50507.04196148565,
+        "range_high": 53631.18888693837
       }
     },
     "signal": {
@@ -6051,33 +6051,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-22",
-        "predicted_log_return": -0.009010140137751338,
-        "predicted_price": 67914.30754259783,
-        "price_change_pct": -0.9010140137751338,
+        "predicted_log_return": -0.009031355968809851,
+        "predicted_price": 67912.86669940695,
+        "price_change_pct": -0.9031355968809851,
         "direction": "DOWN",
-        "confidence": 0.5376150607353078,
-        "range_low": 66556.02139174588,
-        "range_high": 69272.59369344979
+        "confidence": 0.4418584482068441,
+        "range_low": 65875.48069842474,
+        "range_high": 69950.25270038916
       },
       "y7": {
         "target_date": "2026-04-28",
-        "predicted_log_return": -0.03153549048212968,
-        "predicted_price": 66401.61489776248,
-        "price_change_pct": -3.153549048212968,
+        "predicted_log_return": -0.0322016096359502,
+        "predicted_price": 66357.3982386512,
+        "price_change_pct": -3.22016096359502,
         "direction": "DOWN",
-        "confidence": 0.43761506073530787,
-        "range_low": 63081.53415287436,
-        "range_high": 69721.69564265061
+        "confidence": 0.40415836517752435,
+        "range_low": 64366.67629149167,
+        "range_high": 68348.12018581074
       },
       "y30": {
         "target_date": "2026-05-21",
-        "predicted_log_return": -0.10812168165301606,
-        "predicted_price": 61506.02796899094,
-        "price_change_pct": -10.812168165301605,
+        "predicted_log_return": -0.10761295261369348,
+        "predicted_price": 61537.32583190301,
+        "price_change_pct": -10.761295261369348,
         "direction": "DOWN",
-        "confidence": 0.3876150607353078,
-        "range_low": 55355.42517209185,
-        "range_high": 67656.63076589003
+        "confidence": 0.38765559773382013,
+        "range_low": 59691.20605694591,
+        "range_high": 63383.4456068601
       }
     },
     "signal": {
@@ -6136,33 +6136,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-23",
-        "predicted_log_return": 0.025255565655180744,
-        "predicted_price": 69756.22217770155,
-        "price_change_pct": 2.5255565655180745,
+        "predicted_log_return": 0.02597945544566275,
+        "predicted_price": 69806.7362758727,
+        "price_change_pct": 2.597945544566275,
         "direction": "UP",
-        "confidence": 0.7002751021277108,
-        "range_low": 68361.09773414752,
-        "range_high": 71151.34662125558
+        "confidence": 0.7458128553171485,
+        "range_low": 67712.53418759651,
+        "range_high": 71900.93836414888
       },
       "y7": {
         "target_date": "2026-04-29",
-        "predicted_log_return": 0.0883944797931326,
-        "predicted_price": 74302.56978318296,
-        "price_change_pct": 8.83944797931326,
+        "predicted_log_return": 0.08761663539772421,
+        "predicted_price": 74244.79641796977,
+        "price_change_pct": 8.761663539772421,
         "direction": "UP",
-        "confidence": 0.6002751021277108,
-        "range_low": 70587.44129402381,
-        "range_high": 78017.69827234211
+        "confidence": 0.5485178566226535,
+        "range_low": 72017.45252543068,
+        "range_high": 76472.14031050887
       },
       "y30": {
         "target_date": "2026-05-22",
-        "predicted_log_return": 0.3030667878621689,
-        "predicted_price": 92094.74147196686,
-        "price_change_pct": 30.306678786216892,
+        "predicted_log_return": 0.3261938461579538,
+        "predicted_price": 94249.4418292323,
+        "price_change_pct": 32.61938461579538,
         "direction": "UP",
-        "confidence": 0.5502751021277108,
-        "range_low": 82885.26732477018,
-        "range_high": 101304.21561916356
+        "confidence": 0.5822006161799772,
+        "range_low": 91421.95857435532,
+        "range_high": 97076.92508410927
       }
     },
     "signal": {
@@ -6221,33 +6221,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-24",
-        "predicted_log_return": 0.02142212548325676,
-        "predicted_price": 68197.05902897105,
-        "price_change_pct": 2.142212548325676,
+        "predicted_log_return": 0.020958700815651043,
+        "predicted_price": 68165.46215151057,
+        "price_change_pct": 2.0958700815651046,
         "direction": "UP",
-        "confidence": 0.5870674772790059,
-        "range_low": 66833.11784839163,
-        "range_high": 69561.00020955048
+        "confidence": 0.5350315055713173,
+        "range_low": 66120.49828696524,
+        "range_high": 70210.42601605589
       },
       "y7": {
         "target_date": "2026-04-30",
-        "predicted_log_return": 0.07497743919139867,
-        "predicted_price": 71948.9438934181,
-        "price_change_pct": 7.497743919139866,
+        "predicted_log_return": 0.07948524799553308,
+        "predicted_price": 72274.00808932005,
+        "price_change_pct": 7.948524799553308,
         "direction": "UP",
-        "confidence": 0.4870674772790059,
-        "range_low": 68351.49669874719,
-        "range_high": 75546.391088089
+        "confidence": 0.5833163185144117,
+        "range_low": 70105.78784664045,
+        "range_high": 74442.22833199965
       },
       "y30": {
         "target_date": "2026-05-23",
-        "predicted_log_return": 0.25706550579908116,
-        "predicted_price": 86318.57577863759,
-        "price_change_pct": 25.706550579908114,
+        "predicted_log_return": 0.27718068253028966,
+        "predicted_price": 88072.4699936223,
+        "price_change_pct": 27.718068253028967,
         "direction": "UP",
-        "confidence": 0.43706747727900586,
-        "range_low": 77686.71820077383,
-        "range_high": 94950.43335650135
+        "confidence": 0.4183524301095171,
+        "range_low": 85430.29589381363,
+        "range_high": 90714.64409343098
       }
     },
     "signal": {
@@ -6306,33 +6306,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-25",
-        "predicted_log_return": -0.003034826588887811,
-        "predicted_price": 64864.68791056461,
-        "price_change_pct": -0.3034826588887811,
+        "predicted_log_return": -0.0031558440117197464,
+        "predicted_price": 64856.83862816042,
+        "price_change_pct": -0.3155844011719746,
         "direction": "DOWN",
-        "confidence": 0.467817408841368,
-        "range_low": 63567.394152353314,
-        "range_high": 66161.9816687759
+        "confidence": 0.5383464331217344,
+        "range_low": 62911.1334693156,
+        "range_high": 66802.54378700523
       },
       "y7": {
         "target_date": "2026-05-01",
-        "predicted_log_return": -0.010621893061107338,
-        "predicted_price": 64374.417420892656,
-        "price_change_pct": -1.062189306110734,
+        "predicted_log_return": -0.009967794564833555,
+        "predicted_price": 64416.538404660474,
+        "price_change_pct": -0.9967794564833555,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 61155.69654984802,
-        "range_high": 67593.13829193728
+        "confidence": 0.3575272376618464,
+        "range_low": 62484.04225252066,
+        "range_high": 66349.0345568003
       },
       "y30": {
         "target_date": "2026-05-24",
-        "predicted_log_return": -0.03641791906665373,
-        "predicted_price": 62735.04877981898,
-        "price_change_pct": -3.641791906665373,
+        "predicted_log_return": -0.03644909666196891,
+        "predicted_price": 62733.09288234629,
+        "price_change_pct": -3.644909666196891,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 56461.54390183708,
-        "range_high": 69008.55365780088
+        "confidence": 0.35327097615816916,
+        "range_low": 60851.100095875896,
+        "range_high": 64615.08566881668
       }
     },
     "signal": {
@@ -6391,33 +6391,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-26",
-        "predicted_log_return": 0.014588484111295342,
-        "predicted_price": 65761.27341329532,
-        "price_change_pct": 1.4588484111295341,
+        "predicted_log_return": 0.014286434955980698,
+        "predicted_price": 65741.4132757283,
+        "price_change_pct": 1.4286434955980698,
         "direction": "UP",
-        "confidence": 0.6666001538612636,
-        "range_low": 64446.047945029415,
-        "range_high": 67076.49888156123
+        "confidence": 0.777322124829941,
+        "range_low": 63769.17087745644,
+        "range_high": 67713.65567400014
       },
       "y7": {
         "target_date": "2026-05-02",
-        "predicted_log_return": 0.05105969438953369,
-        "predicted_price": 68203.93938305201,
-        "price_change_pct": 5.10596943895337,
+        "predicted_log_return": 0.053527787548995565,
+        "predicted_price": 68372.4809618949,
+        "price_change_pct": 5.352778754899557,
         "direction": "UP",
-        "confidence": 0.5666001538612636,
-        "range_low": 64793.74241389941,
-        "range_high": 71614.13635220462
+        "confidence": 0.6291884802056557,
+        "range_low": 66321.30653303805,
+        "range_high": 70423.65539075174
       },
       "y30": {
         "target_date": "2026-05-25",
-        "predicted_log_return": 0.1750618093355441,
-        "predicted_price": 77208.1051370818,
-        "price_change_pct": 17.50618093355441,
+        "predicted_log_return": 0.16383263466008488,
+        "predicted_price": 76345.97142233902,
+        "price_change_pct": 16.383263466008486,
         "direction": "UP",
-        "confidence": 0.5166001538612636,
-        "range_low": 69487.29462337363,
-        "range_high": 84928.91565078999
+        "confidence": 0.5445889539184237,
+        "range_low": 74055.59227966884,
+        "range_high": 78636.3505650092
       }
     },
     "signal": {
@@ -6476,33 +6476,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-27",
-        "predicted_log_return": -0.008379324151473345,
-        "predicted_price": 63549.58021748707,
-        "price_change_pct": -0.8379324151473345,
+        "predicted_log_return": -0.008533916191858908,
+        "predicted_price": 63539.75671755261,
+        "price_change_pct": -0.8533916191858908,
         "direction": "DOWN",
-        "confidence": 0.6360921146941946,
-        "range_low": 62278.588613137326,
-        "range_high": 64820.57182183681
+        "confidence": 0.5657393859038102,
+        "range_low": 61633.56401602603,
+        "range_high": 65445.949419079196
       },
       "y7": {
         "target_date": "2026-05-03",
-        "predicted_log_return": -0.02932763453015671,
-        "predicted_price": 62232.170813599514,
-        "price_change_pct": -2.9327634530156708,
+        "predicted_log_return": -0.02807436361457789,
+        "predicted_price": 62310.21347737882,
+        "price_change_pct": -2.807436361457789,
         "direction": "DOWN",
-        "confidence": 0.5360921146941946,
-        "range_low": 59120.56227291954,
-        "range_high": 65343.77935427949
+        "confidence": 0.6117645343921041,
+        "range_low": 60440.90707305745,
+        "range_high": 64179.51988170019
       },
       "y30": {
         "target_date": "2026-05-26",
-        "predicted_log_return": -0.10055188981768014,
-        "predicted_price": 57953.897651889616,
-        "price_change_pct": -10.055188981768014,
+        "predicted_log_return": -0.10997215102726046,
+        "predicted_price": 57410.52019501529,
+        "price_change_pct": -10.997215102726047,
         "direction": "DOWN",
-        "confidence": 0.48609211469419455,
-        "range_low": 52158.50788670065,
-        "range_high": 63749.28741707858
+        "confidence": 0.4814902201150728,
+        "range_low": 55688.20458916483,
+        "range_high": 59132.83580086575
       }
     },
     "signal": {
@@ -6561,33 +6561,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-28",
-        "predicted_log_return": 0.01495684993725007,
-        "predicted_price": 64541.24032898049,
-        "price_change_pct": 1.495684993725007,
+        "predicted_log_return": 0.014867885028797089,
+        "predicted_price": 64535.498678849646,
+        "price_change_pct": 1.486788502879709,
         "direction": "UP",
-        "confidence": 0.7443852922835521,
-        "range_low": 63250.41552240088,
-        "range_high": 65832.0651355601
+        "confidence": 0.766772507509007,
+        "range_low": 62599.43371848416,
+        "range_high": 66471.56363921514
       },
       "y7": {
         "target_date": "2026-05-04",
-        "predicted_log_return": 0.05234897478037524,
-        "predicted_price": 67000.2619624623,
-        "price_change_pct": 5.234897478037524,
+        "predicted_log_return": 0.05766582290529943,
+        "predicted_price": 67357.44087123245,
+        "price_change_pct": 5.766582290529943,
         "direction": "UP",
-        "confidence": 0.6443852922835521,
-        "range_low": 63650.248864339184,
-        "range_high": 70350.27506058542
+        "confidence": 0.6103625105695462,
+        "range_low": 65336.71764509548,
+        "range_high": 69378.16409736943
       },
       "y30": {
         "target_date": "2026-05-27",
-        "predicted_log_return": 0.17948219924700085,
-        "predicted_price": 76083.37311963752,
-        "price_change_pct": 17.948219924700084,
+        "predicted_log_return": 0.179261123370765,
+        "predicted_price": 76066.55478039116,
+        "price_change_pct": 17.9261123370765,
         "direction": "UP",
-        "confidence": 0.5943852922835521,
-        "range_low": 68475.03580767376,
-        "range_high": 83691.71043160127
+        "confidence": 0.5169466219409821,
+        "range_low": 73784.55813697942,
+        "range_high": 78348.5514238029
       }
     },
     "signal": {
@@ -6646,33 +6646,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-29",
-        "predicted_log_return": -0.0090793352334052,
-        "predicted_price": 62337.509682849144,
-        "price_change_pct": -0.90793352334052,
+        "predicted_log_return": -0.00904286809132734,
+        "predicted_price": 62339.78299512188,
+        "price_change_pct": -0.9042868091327341,
         "direction": "DOWN",
-        "confidence": 0.6794602543460566,
-        "range_low": 61090.75948919216,
-        "range_high": 63584.25987650613
+        "confidence": 0.7049628614390009,
+        "range_low": 60469.589505268224,
+        "range_high": 64209.97648497554
       },
       "y7": {
         "target_date": "2026-05-05",
-        "predicted_log_return": -0.0317776733169182,
-        "predicted_price": 60938.48959404082,
-        "price_change_pct": -3.17776733169182,
+        "predicted_log_return": -0.03081273833196485,
+        "predicted_price": 60997.31965360692,
+        "price_change_pct": -3.081273833196485,
         "direction": "DOWN",
-        "confidence": 0.5794602543460566,
-        "range_low": 57891.56511433877,
-        "range_high": 63985.41407374286
+        "confidence": 0.6515884259122326,
+        "range_low": 59167.40006399871,
+        "range_high": 62827.23924321513
       },
       "y30": {
         "target_date": "2026-05-28",
-        "predicted_log_return": -0.10895202280086241,
-        "predicted_price": 56412.49286275272,
-        "price_change_pct": -10.89520228008624,
+        "predicted_log_return": -0.09966689183101103,
+        "predicted_price": 56938.72955489599,
+        "price_change_pct": -9.966689183101103,
         "direction": "DOWN",
-        "confidence": 0.5294602543460566,
-        "range_low": 50771.24357647745,
-        "range_high": 62053.742149027996
+        "confidence": 0.6293662128252817,
+        "range_low": 55230.56766824911,
+        "range_high": 58646.891441542866
       }
     },
     "signal": {
@@ -6731,33 +6731,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-04-30",
-        "predicted_log_return": 0.011987920317545945,
-        "predicted_price": 64296.72234201812,
-        "price_change_pct": 1.1987920317545946,
+        "predicted_log_return": 0.012456043191221369,
+        "predicted_price": 64326.82815450871,
+        "price_change_pct": 1.2456043191221369,
         "direction": "UP",
-        "confidence": 0.5777825278673974,
-        "range_low": 63010.78789517775,
-        "range_high": 65582.65678885848
+        "confidence": 0.6555551086638864,
+        "range_low": 62397.023309873446,
+        "range_high": 66256.63299914397
       },
       "y7": {
         "target_date": "2026-05-06",
-        "predicted_log_return": 0.04195772111141081,
-        "predicted_price": 66252.8482420505,
-        "price_change_pct": 4.195772111141081,
+        "predicted_log_return": 0.04029359881205626,
+        "predicted_price": 66142.68708613567,
+        "price_change_pct": 4.029359881205626,
         "direction": "UP",
-        "confidence": 0.4777825278673974,
-        "range_low": 62940.205829947976,
-        "range_high": 69565.49065415304
+        "confidence": 0.4549101205747085,
+        "range_low": 64158.4064735516,
+        "range_high": 68126.96769871975
       },
       "y30": {
         "target_date": "2026-05-29",
-        "predicted_log_return": 0.14385504381055134,
-        "predicted_price": 73359.77632760517,
-        "price_change_pct": 14.385504381055135,
+        "predicted_log_return": 0.1467169136884938,
+        "predicted_price": 73570.02316778047,
+        "price_change_pct": 14.671691368849379,
         "direction": "UP",
-        "confidence": 0.42778252786739734,
-        "range_low": 66023.79869484465,
-        "range_high": 80695.75396036569
+        "confidence": 0.4048583008225584,
+        "range_low": 71362.92247274706,
+        "range_high": 75777.12386281388
       }
     },
     "signal": {
@@ -6816,33 +6816,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-01",
-        "predicted_log_return": -0.028521753520188958,
-        "predicted_price": 61213.66223703101,
-        "price_change_pct": -2.8521753520188957,
+        "predicted_log_return": -0.03174399598281047,
+        "predicted_price": 61016.73442025416,
+        "price_change_pct": -3.174399598281047,
         "direction": "DOWN",
-        "confidence": 0.568870795418976,
-        "range_low": 59989.38899229038,
-        "range_high": 62437.93548177163
+        "confidence": 0.46703178512547777,
+        "range_low": 59186.23238764653,
+        "range_high": 62847.23645286178
       },
       "y7": {
         "target_date": "2026-05-07",
-        "predicted_log_return": -0.09982613732066135,
-        "predicted_price": 57000.84087797009,
-        "price_change_pct": -9.982613732066135,
+        "predicted_log_return": -0.09346983995054041,
+        "predicted_price": 57364.309105254266,
+        "price_change_pct": -9.34698399505404,
         "direction": "DOWN",
-        "confidence": 0.468870795418976,
-        "range_low": 54150.79883407158,
-        "range_high": 59850.8829218686
+        "confidence": 0.5155230914023475,
+        "range_low": 55643.37983209664,
+        "range_high": 59085.238378411894
       },
       "y30": {
         "target_date": "2026-05-30",
-        "predicted_log_return": -0.3422610422422675,
-        "predicted_price": 44729.404987805196,
-        "price_change_pct": -34.22610422422675,
+        "predicted_log_return": -0.3398477318989454,
+        "predicted_price": 44837.481281878456,
+        "price_change_pct": -33.98477318989454,
         "direction": "DOWN",
-        "confidence": 0.418870795418976,
-        "range_low": 40256.46448902468,
-        "range_high": 49202.34548658572
+        "confidence": 0.3497456621898193,
+        "range_low": 43492.3568434221,
+        "range_high": 46182.60572033481
       }
     },
     "signal": {
@@ -6901,33 +6901,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-02",
-        "predicted_log_return": 0.009046846124722983,
-        "predicted_price": 64852.0606767262,
-        "price_change_pct": 0.9046846124722983,
+        "predicted_log_return": 0.009122705029373226,
+        "predicted_price": 64856.98046961614,
+        "price_change_pct": 0.9122705029373226,
         "direction": "UP",
-        "confidence": 0.6562489618542927,
-        "range_low": 63555.019463191675,
-        "range_high": 66149.10189026073
+        "confidence": 0.6037989775735967,
+        "range_low": 62911.27105552765,
+        "range_high": 66802.68988370462
       },
       "y7": {
         "target_date": "2026-05-08",
-        "predicted_log_return": 0.03166396143653044,
-        "predicted_price": 66335.5399855979,
-        "price_change_pct": 3.166396143653044,
+        "predicted_log_return": 0.031555322772724964,
+        "predicted_price": 66328.33377261483,
+        "price_change_pct": 3.1555322772724965,
         "direction": "UP",
-        "confidence": 0.5562489618542927,
-        "range_low": 63018.762986318005,
-        "range_high": 69652.3169848778
+        "confidence": 0.5137407945651481,
+        "range_low": 64338.483759436385,
+        "range_high": 68318.18378579328
       },
       "y30": {
         "target_date": "2026-05-31",
-        "predicted_log_return": 0.10856215349667579,
-        "predicted_price": 71637.88066835234,
-        "price_change_pct": 10.856215349667579,
+        "predicted_log_return": 0.10361423455654532,
+        "predicted_price": 71284.29771302835,
+        "price_change_pct": 10.361423455654533,
         "direction": "UP",
-        "confidence": 0.5062489618542927,
-        "range_low": 64474.09260151711,
-        "range_high": 78801.66873518759
+        "confidence": 0.5619182512949152,
+        "range_low": 69145.7687816375,
+        "range_high": 73422.82664441921
       }
     },
     "signal": {
@@ -6986,33 +6986,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-03",
-        "predicted_log_return": -0.013619771374738783,
-        "predicted_price": 63751.97283217954,
-        "price_change_pct": -1.3619771374738783,
+        "predicted_log_return": -0.013582133736576194,
+        "predicted_price": 63754.37235102098,
+        "price_change_pct": -1.3582133736576194,
         "direction": "DOWN",
-        "confidence": 0.7269039954260454,
-        "range_low": 62476.93337553595,
-        "range_high": 65027.012288823134
+        "confidence": 0.7287884699790198,
+        "range_low": 61841.74118049035,
+        "range_high": 65667.00352155161
       },
       "y7": {
         "target_date": "2026-05-09",
-        "predicted_log_return": -0.04766919981158574,
-        "predicted_price": 61617.79455746967,
-        "price_change_pct": -4.766919981158574,
+        "predicted_log_return": -0.04643486269333108,
+        "predicted_price": 61693.89864782613,
+        "price_change_pct": -4.643486269333108,
         "direction": "DOWN",
-        "confidence": 0.6269039954260455,
-        "range_low": 58536.904829596184,
-        "range_high": 64698.68428534316
+        "confidence": 0.7318144246854267,
+        "range_low": 59843.08168839134,
+        "range_high": 63544.715607260914
       },
       "y30": {
         "target_date": "2026-06-01",
-        "predicted_log_return": -0.16343725649686539,
-        "predicted_price": 54881.847369112875,
-        "price_change_pct": -16.34372564968654,
+        "predicted_log_return": -0.15439557891174233,
+        "predicted_price": 55380.32146339238,
+        "price_change_pct": -15.439557891174232,
         "direction": "DOWN",
-        "confidence": 0.5769039954260454,
-        "range_low": 49393.66263220159,
-        "range_high": 60370.03210602417
+        "confidence": 0.6905059324800161,
+        "range_low": 53718.911819490604,
+        "range_high": 57041.73110729415
       }
     },
     "signal": {
@@ -7071,33 +7071,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-04",
-        "predicted_log_return": -0.004726071755933956,
-        "predicted_price": 63494.84856845554,
-        "price_change_pct": -0.4726071755933956,
+        "predicted_log_return": -0.004634443956054932,
+        "predicted_price": 63500.66672828204,
+        "price_change_pct": -0.46344439560549316,
         "direction": "DOWN",
-        "confidence": 0.7298886471851562,
-        "range_low": 62224.95159708643,
-        "range_high": 64764.74553982465
+        "confidence": 0.6620088766031518,
+        "range_low": 61595.64672643358,
+        "range_high": 65405.6867301305
       },
       "y7": {
         "target_date": "2026-05-10",
-        "predicted_log_return": -0.016541251145768848,
-        "predicted_price": 62749.060030859146,
-        "price_change_pct": -1.6541251145768847,
+        "predicted_log_return": -0.016378916166651738,
+        "predicted_price": 62759.24722505547,
+        "price_change_pct": -1.6378916166651738,
         "direction": "DOWN",
-        "confidence": 0.6298886471851562,
-        "range_low": 59611.60702931618,
-        "range_high": 65886.5130324021
+        "confidence": 0.7365798238875872,
+        "range_low": 60876.4698083038,
+        "range_high": 64642.02464180714
       },
       "y30": {
         "target_date": "2026-06-02",
-        "predicted_log_return": -0.056712861071207474,
-        "predicted_price": 60278.28895406407,
-        "price_change_pct": -5.671286107120747,
+        "predicted_log_return": -0.059086135461377996,
+        "predicted_price": 60135.401657054324,
+        "price_change_pct": -5.9086135461378,
         "direction": "DOWN",
-        "confidence": 0.5798886471851562,
-        "range_low": 54250.46005865766,
-        "range_high": 66306.11784947048
+        "confidence": 0.5368773972054657,
+        "range_low": 58331.33960734269,
+        "range_high": 61939.46370676596
       }
     },
     "signal": {
@@ -7156,33 +7156,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-05",
-        "predicted_log_return": -0.001770620684958204,
-        "predicted_price": 64066.08278261058,
-        "price_change_pct": -0.1770620684958204,
+        "predicted_log_return": -0.0017907419276567225,
+        "predicted_price": 64064.79370637912,
+        "price_change_pct": -0.17907419276567224,
         "direction": "DOWN",
-        "confidence": 0.6920988828086243,
-        "range_low": 62784.76112695837,
-        "range_high": 65347.40443826279
+        "confidence": 0.7519694324188634,
+        "range_low": 62142.84989518774,
+        "range_high": 65986.7375175705
       },
       "y7": {
         "target_date": "2026-05-11",
-        "predicted_log_return": -0.006197172397353714,
-        "predicted_price": 63783.11769600025,
-        "price_change_pct": -0.6197172397353714,
+        "predicted_log_return": -0.006469722483489273,
+        "predicted_price": 63765.73597058118,
+        "price_change_pct": -0.6469722483489273,
         "direction": "DOWN",
-        "confidence": 0.5920988828086243,
-        "range_low": 60593.961811200235,
-        "range_high": 66972.27358080026
+        "confidence": 0.643575470490263,
+        "range_low": 61852.76389146374,
+        "range_high": 65678.70804969862
       },
       "y30": {
         "target_date": "2026-06-03",
-        "predicted_log_return": -0.02124744821949845,
-        "predicted_price": 62830.35186043364,
-        "price_change_pct": -2.124744821949845,
+        "predicted_log_return": -0.02154960625148522,
+        "predicted_price": 62811.37003286671,
+        "price_change_pct": -2.1549606251485223,
         "direction": "DOWN",
-        "confidence": 0.5420988828086243,
-        "range_low": 56547.31667439028,
-        "range_high": 69113.38704647702
+        "confidence": 0.4766179221209131,
+        "range_low": 60927.028931880704,
+        "range_high": 64695.71113385272
       }
     },
     "signal": {
@@ -7241,33 +7241,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-06",
-        "predicted_log_return": 0.005492788463709518,
-        "predicted_price": 64470.723258983475,
-        "price_change_pct": 0.5492788463709518,
+        "predicted_log_return": 0.005199258852962908,
+        "predicted_price": 64451.801969795895,
+        "price_change_pct": 0.5199258852962908,
         "direction": "UP",
-        "confidence": 0.7175356853693908,
-        "range_low": 63181.3087938038,
-        "range_high": 65760.13772416314
+        "confidence": 0.6128562977302752,
+        "range_low": 62518.24791070202,
+        "range_high": 66385.35602888977
       },
       "y7": {
         "target_date": "2026-05-12",
-        "predicted_log_return": 0.019224759622983312,
-        "predicted_price": 65362.13981702245,
-        "price_change_pct": 1.9224759622983314,
+        "predicted_log_return": 0.018130939705150572,
+        "predicted_price": 65290.684493370885,
+        "price_change_pct": 1.8130939705150573,
         "direction": "UP",
-        "confidence": 0.6175356853693909,
-        "range_low": 62094.03282617132,
-        "range_high": 68630.24680787357
+        "confidence": 0.7015070745449733,
+        "range_low": 63331.96395856976,
+        "range_high": 67249.40502817201
       },
       "y30": {
         "target_date": "2026-06-04",
-        "predicted_log_return": 0.06591346156451422,
-        "predicted_price": 68486.17437092784,
-        "price_change_pct": 6.591346156451421,
+        "predicted_log_return": 0.06579276977821782,
+        "predicted_price": 68477.9091509885,
+        "price_change_pct": 6.579276977821783,
         "direction": "UP",
-        "confidence": 0.5675356853693908,
-        "range_low": 61637.556933835054,
-        "range_high": 75334.79180802063
+        "confidence": 0.671710717940413,
+        "range_low": 66423.57187645885,
+        "range_high": 70532.24642551815
       }
     },
     "signal": {
@@ -7326,33 +7326,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-07",
-        "predicted_log_return": 0.02011952915156414,
-        "predicted_price": 65765.7845971853,
-        "price_change_pct": 2.011952915156414,
+        "predicted_log_return": 0.021321517413000826,
+        "predicted_price": 65844.88182572223,
+        "price_change_pct": 2.1321517413000826,
         "direction": "UP",
-        "confidence": 0.6664821298554757,
-        "range_low": 64450.468905241585,
-        "range_high": 67081.100289129
+        "confidence": 0.5375504878209612,
+        "range_low": 63869.53537095056,
+        "range_high": 67820.2282804939
       },
       "y7": {
         "target_date": "2026-05-13",
-        "predicted_log_return": 0.07041835203047449,
-        "predicted_price": 69158.33148178346,
-        "price_change_pct": 7.041835203047449,
+        "predicted_log_return": 0.07329723329830298,
+        "predicted_price": 69357.71697266985,
+        "price_change_pct": 7.329723329830299,
         "direction": "UP",
-        "confidence": 0.5664821298554757,
-        "range_low": 65700.41490769428,
-        "range_high": 72616.24805587264
+        "confidence": 0.6648024099118768,
+        "range_low": 67276.98546348975,
+        "range_high": 71438.44848184995
       },
       "y30": {
         "target_date": "2026-06-05",
-        "predicted_log_return": 0.24143434981876968,
-        "predicted_price": 82057.03324145869,
-        "price_change_pct": 24.14343498187697,
+        "predicted_log_return": 0.2519200028820493,
+        "predicted_price": 82921.98167301845,
+        "price_change_pct": 25.19200028820493,
         "direction": "UP",
-        "confidence": 0.5164821298554757,
-        "range_low": 73851.32991731282,
-        "range_high": 90262.73656560456
+        "confidence": 0.5944287462775291,
+        "range_low": 80434.3222228279,
+        "range_high": 85409.641123209
       }
     },
     "signal": {
@@ -7411,33 +7411,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-08",
-        "predicted_log_return": -0.004904446330772687,
-        "predicted_price": 65411.62421961129,
-        "price_change_pct": -0.4904446330772687,
+        "predicted_log_return": -0.004648340122577167,
+        "predicted_price": 65428.37868803219,
+        "price_change_pct": -0.4648340122577167,
         "direction": "DOWN",
-        "confidence": 0.5229221518287361,
-        "range_low": 64103.39173521906,
-        "range_high": 66719.85670400351
+        "confidence": 0.48348832875404774,
+        "range_low": 63465.527327391224,
+        "range_high": 67391.23004867315
       },
       "y7": {
         "target_date": "2026-05-14",
-        "predicted_log_return": -0.017165562157704404,
-        "predicted_price": 64614.50151181048,
-        "price_change_pct": -1.7165562157704404,
+        "predicted_log_return": -0.018438298373301923,
+        "predicted_price": 64532.3166066302,
+        "price_change_pct": -1.8438298373301922,
         "direction": "DOWN",
-        "confidence": 0.42292215182873616,
-        "range_low": 61383.77643621995,
-        "range_high": 67845.226587401
+        "confidence": 0.41923436739939823,
+        "range_low": 62596.34710843129,
+        "range_high": 66468.28610482911
       },
       "y30": {
         "target_date": "2026-06-06",
-        "predicted_log_return": -0.05885335596927224,
-        "predicted_price": 61976.23923167257,
-        "price_change_pct": -5.8853355969272245,
+        "predicted_log_return": -0.05507957289125383,
+        "predicted_price": 62210.56598559784,
+        "price_change_pct": -5.5079572891253825,
         "direction": "DOWN",
-        "confidence": 0.3729221518287361,
-        "range_low": 55778.61530850531,
-        "range_high": 68173.86315483983
+        "confidence": 0.300949826929749,
+        "range_low": 60344.2490060299,
+        "range_high": 64076.88296516577
       }
     },
     "signal": {
@@ -7496,33 +7496,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-09",
-        "predicted_log_return": 0.010368961235844389,
-        "predicted_price": 66075.07004279105,
-        "price_change_pct": 1.036896123584439,
+        "predicted_log_return": 0.010210218223150153,
+        "predicted_price": 66064.58191958864,
+        "price_change_pct": 1.0210218223150154,
         "direction": "UP",
-        "confidence": 0.6274710373326938,
-        "range_low": 64753.56864193523,
-        "range_high": 67396.57144364687
+        "confidence": 0.648885511212564,
+        "range_low": 64082.64446200098,
+        "range_high": 68046.5193771763
       },
       "y7": {
         "target_date": "2026-05-15",
-        "predicted_log_return": 0.036291364325455364,
-        "predicted_price": 67810.2879851694,
-        "price_change_pct": 3.629136432545536,
+        "predicted_log_return": 0.03627178678411434,
+        "predicted_price": 67808.9604394481,
+        "price_change_pct": 3.6271786784114344,
         "direction": "UP",
-        "confidence": 0.5274710373326938,
-        "range_low": 64419.77358591093,
-        "range_high": 71200.80238442788
+        "confidence": 0.5238889249189325,
+        "range_low": 65774.69162626466,
+        "range_high": 69843.22925263154
       },
       "y30": {
         "target_date": "2026-06-07",
-        "predicted_log_return": 0.12442753483013266,
-        "predicted_price": 74058.11287514538,
-        "price_change_pct": 12.442753483013266,
+        "predicted_log_return": 0.12289806096538708,
+        "predicted_price": 73944.92950459811,
+        "price_change_pct": 12.289806096538708,
         "direction": "UP",
-        "confidence": 0.4774710373326938,
-        "range_low": 66652.30158763085,
-        "range_high": 81463.92416265993
+        "confidence": 0.5567857860544554,
+        "range_low": 71726.58161946016,
+        "range_high": 76163.27738973606
       }
     },
     "signal": {
@@ -7581,33 +7581,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-10",
-        "predicted_log_return": 0.0011289611275329989,
-        "predicted_price": 66080.84060438577,
-        "price_change_pct": 0.11289611275329989,
+        "predicted_log_return": 0.001027192263956102,
+        "predicted_price": 66074.11597451803,
+        "price_change_pct": 0.10271922639561021,
         "direction": "UP",
-        "confidence": 0.5459704824867196,
-        "range_low": 64759.22379229805,
-        "range_high": 67402.45741647348
+        "confidence": 0.5592161852810825,
+        "range_low": 64091.89249528249,
+        "range_high": 68056.33945375358
       },
       "y7": {
         "target_date": "2026-05-16",
-        "predicted_log_return": 0.003951363946365496,
-        "predicted_price": 66267.6108015603,
-        "price_change_pct": 0.3951363946365496,
+        "predicted_log_return": 0.004270227836125921,
+        "predicted_price": 66288.7445189162,
+        "price_change_pct": 0.4270227836125921,
         "direction": "UP",
-        "confidence": 0.44597048248671967,
-        "range_low": 62954.23026148228,
-        "range_high": 69580.9913416383
+        "confidence": 0.5270852043137609,
+        "range_low": 64300.082183348706,
+        "range_high": 68277.40685448368
       },
       "y30": {
         "target_date": "2026-06-08",
-        "predicted_log_return": 0.013547533530395986,
-        "predicted_price": 66906.58699126456,
-        "price_change_pct": 1.3547533530395985,
+        "predicted_log_return": 0.012510579789534564,
+        "predicted_price": 66837.24391459064,
+        "price_change_pct": 1.2510579789534564,
         "direction": "UP",
-        "confidence": 0.3959704824867196,
-        "range_low": 60215.9282921381,
-        "range_high": 73597.24569039102
+        "confidence": 0.44924116075947196,
+        "range_low": 64832.12659715292,
+        "range_high": 68842.36123202836
       }
     },
     "signal": {
@@ -7666,33 +7666,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-11",
-        "predicted_log_return": -0.011499132920104915,
-        "predicted_price": 65168.711134447985,
-        "price_change_pct": -1.1499132920104915,
+        "predicted_log_return": -0.011531293841072189,
+        "predicted_price": 65166.615282382096,
+        "price_change_pct": -1.153129384107219,
         "direction": "DOWN",
-        "confidence": 0.4543121906905107,
-        "range_low": 63865.33691175903,
-        "range_high": 66472.08535713695
+        "confidence": 0.45903462608133855,
+        "range_low": 63211.616823910634,
+        "range_high": 67121.61374085356
       },
       "y7": {
         "target_date": "2026-05-17",
-        "predicted_log_return": -0.0402469652203672,
-        "predicted_price": 63321.924695058806,
-        "price_change_pct": -4.02469652203672,
+        "predicted_log_return": -0.04062040510822186,
+        "predicted_price": 63298.28217740627,
+        "price_change_pct": -4.062040510822186,
         "direction": "DOWN",
-        "confidence": 0.4,
-        "range_low": 60155.828460305864,
-        "range_high": 66488.02092981176
+        "confidence": 0.3684228439855697,
+        "range_low": 61399.33371208408,
+        "range_high": 65197.23064272846
       },
       "y30": {
         "target_date": "2026-06-09",
-        "predicted_log_return": -0.13798959504125896,
-        "predicted_price": 57425.531325892654,
-        "price_change_pct": -13.798959504125898,
+        "predicted_log_return": -0.13840331654032734,
+        "predicted_price": 57401.77806294429,
+        "price_change_pct": -13.840331654032735,
         "direction": "DOWN",
-        "confidence": 0.35,
-        "range_low": 51682.97819330339,
-        "range_high": 63168.08445848193
+        "confidence": 0.3811935253384035,
+        "range_low": 55679.724721055965,
+        "range_high": 59123.83140483262
       }
     },
     "signal": {
@@ -7751,33 +7751,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-12",
-        "predicted_log_return": 0.005043187495359243,
-        "predicted_price": 67086.2870286125,
-        "price_change_pct": 0.5043187495359244,
+        "predicted_log_return": 0.005180861276160317,
+        "predicted_price": 67095.52368719589,
+        "price_change_pct": 0.5180861276160317,
         "direction": "UP",
-        "confidence": 0.6772631915746353,
-        "range_low": 65744.56128804025,
-        "range_high": 68428.01276918474
+        "confidence": 0.7383058004646768,
+        "range_low": 65082.65797658001,
+        "range_high": 69108.38939781177
       },
       "y7": {
         "target_date": "2026-05-18",
-        "predicted_log_return": 0.01765115623375735,
-        "predicted_price": 67937.4633652848,
-        "price_change_pct": 1.7651156233757352,
+        "predicted_log_return": 0.018468984914381387,
+        "predicted_price": 67993.0472972826,
+        "price_change_pct": 1.8468984914381388,
         "direction": "UP",
-        "confidence": 0.5772631915746353,
-        "range_low": 64540.59019702055,
-        "range_high": 71334.33653354904
+        "confidence": 0.5924747181936468,
+        "range_low": 65953.25587836411,
+        "range_high": 70032.83871620108
       },
       "y30": {
         "target_date": "2026-06-10",
-        "predicted_log_return": 0.06051824994431092,
-        "predicted_price": 70913.0670680939,
-        "price_change_pct": 6.051824994431092,
+        "predicted_log_return": 0.06094396585010731,
+        "predicted_price": 70943.2623155161,
+        "price_change_pct": 6.094396585010731,
         "direction": "UP",
-        "confidence": 0.5272631915746353,
-        "range_low": 63821.760361284505,
-        "range_high": 78004.37377490329
+        "confidence": 0.46888923555871365,
+        "range_low": 68814.96444605061,
+        "range_high": 73071.56018498159
       }
     },
     "signal": {
@@ -7836,33 +7836,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-13",
-        "predicted_log_return": 0.004693352906985453,
-        "predicted_price": 67383.43324563636,
-        "price_change_pct": 0.46933529069854535,
+        "predicted_log_return": 0.005151464455129177,
+        "predicted_price": 67414.30944639184,
+        "price_change_pct": 0.5151464455129177,
         "direction": "UP",
-        "confidence": 0.6837361762124778,
-        "range_low": 66035.76458072364,
-        "range_high": 68731.10191054909
+        "confidence": 0.6965041992341797,
+        "range_low": 65391.88016300008,
+        "range_high": 69436.7387297836
       },
       "y7": {
         "target_date": "2026-05-19",
-        "predicted_log_return": 0.016426735174449085,
-        "predicted_price": 68178.72543592456,
-        "price_change_pct": 1.6426735174449087,
+        "predicted_log_return": 0.016069347881723865,
+        "predicted_price": 68154.36357938783,
+        "price_change_pct": 1.6069347881723866,
         "direction": "UP",
-        "confidence": 0.5837361762124779,
-        "range_low": 64769.78916412833,
-        "range_high": 71587.66170772079
+        "confidence": 0.6070864679517837,
+        "range_low": 66109.7326720062,
+        "range_high": 70198.99448676947
       },
       "y30": {
         "target_date": "2026-06-11",
-        "predicted_log_return": 0.05632023488382544,
-        "predicted_price": 70953.59502352093,
-        "price_change_pct": 5.632023488382544,
+        "predicted_log_return": 0.05635924897810306,
+        "predicted_price": 70956.36326776643,
+        "price_change_pct": 5.635924897810305,
         "direction": "UP",
-        "confidence": 0.5337361762124778,
-        "range_low": 63858.23552116884,
-        "range_high": 78048.95452587304
+        "confidence": 0.5146849792180574,
+        "range_low": 68827.67236973344,
+        "range_high": 73085.05416579942
       }
     },
     "signal": {
@@ -7921,33 +7921,33 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-14",
-        "predicted_log_return": -0.012095982569132325,
-        "predicted_price": 66605.64692071512,
-        "price_change_pct": -1.2095982569132324,
+        "predicted_log_return": -0.012278334848356467,
+        "predicted_price": 66593.50233651989,
+        "price_change_pct": -1.2278334848356467,
         "direction": "DOWN",
-        "confidence": 0.5307380750774024,
-        "range_low": 65273.53398230082,
-        "range_high": 67937.75985912942
+        "confidence": 0.5859812292687954,
+        "range_low": 64595.697266424286,
+        "range_high": 68591.30740661548
       },
       "y7": {
         "target_date": "2026-05-20",
-        "predicted_log_return": -0.04233593899196313,
-        "predicted_price": 64621.644324131084,
-        "price_change_pct": -4.233593899196314,
+        "predicted_log_return": -0.040916057119277725,
+        "predicted_price": 64713.46459703425,
+        "price_change_pct": -4.091605711927772,
         "direction": "DOWN",
-        "confidence": 0.43073807507740247,
-        "range_low": 61390.562107924525,
-        "range_high": 67852.72654033764
+        "confidence": 0.36374687309892784,
+        "range_low": 62772.06065912322,
+        "range_high": 66654.86853494529
       },
       "y30": {
         "target_date": "2026-06-12",
-        "predicted_log_return": -0.1451517908295879,
-        "predicted_price": 58307.664676268236,
-        "price_change_pct": -14.51517908295879,
+        "predicted_log_return": -0.12984990981172373,
+        "predicted_price": 59206.74287436828,
+        "price_change_pct": -12.984990981172373,
         "direction": "DOWN",
-        "confidence": 0.3807380750774024,
-        "range_low": 52476.89820864141,
-        "range_high": 64138.43114389507
+        "confidence": 0.3425236737017867,
+        "range_low": 57430.540588137235,
+        "range_high": 60982.94516059933
       }
     },
     "signal": {
@@ -7987,6 +7987,91 @@
       "status": "good"
     },
     "actual_direction_y1": "UP",
-    "actual_price_y1": 68520.51
+    "actual_price_y1": 79933.24
+  },
+  {
+    "meta": {
+      "generated_at": "2026-05-14T07:39:24Z",
+      "model_version": "2026-05-12",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-14"
+    },
+    "current": {
+      "price": 79933.24,
+      "fng_score": -0.32,
+      "fng_label": "Fear",
+      "nlp_sentiment": -0.475,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-15",
+        "predicted_log_return": 0.001005,
+        "predicted_price": 80013.59,
+        "price_change_pct": 0.1005,
+        "direction": "UP",
+        "confidence": 0.5104,
+        "range_low": 78857.61,
+        "range_high": 81186.51
+      },
+      "y7": {
+        "target_date": "2026-05-21",
+        "predicted_log_return": 0.005175,
+        "predicted_price": 80347.99,
+        "price_change_pct": 0.5175,
+        "direction": "UP",
+        "confidence": 0.5533,
+        "range_low": 77313.17,
+        "range_high": 83501.93
+      },
+      "y30": {
+        "target_date": "2026-06-13",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 81218.54,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6644,
+        "range_low": 74996.04,
+        "range_high": 87957.32
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.0,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.0,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.0,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.0,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.0,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   }
 ]
