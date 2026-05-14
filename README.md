@@ -45,20 +45,12 @@ GitHub Actions (automated cron jobs)
 
 ---
 
-## Model Performance
+## Model Training
 
-Models trained on BTC/USDT daily OHLCV data from 2017-01-01, using an 80/20 train-test split.
+Models are trained on BTC/USDT daily OHLCV data from 2017-01-01 onwards, using an 80/20 train-test split.
+See [Research-Modelling notebooks](Research-Modelling/) for training methodology and evaluation details.
 
-| Model | Horizon | RMSE | MAE | Directional Accuracy |
-|-------|---------|------|-----|----------------------|
-| XGBoost | 1-day | 0.0251 | 0.0171 | 52.2% |
-| XGBoost | 7-day | 0.0750 | 0.0531 | 58.9% |
-| XGBoost | 30-day | 0.1470 | 0.1160 | 61.5% |
-| Conv-LSTM | 1-day | 0.0359 | 0.0265 | 49.0% |
-| Conv-LSTM | 7-day | 0.1256 | 0.0997 | 42.6% |
-| Conv-LSTM | 30-day | 0.1715 | 0.1425 | 52.4% |
-
-*RMSE and MAE are on log-return scale.*
+Weekly retraining (Sundays 02:00 UTC) expands the training window with new data, ensuring models adapt to market evolution while preserving historical context from 2017.
 
 ---
 
@@ -103,55 +95,68 @@ Bitcoin-MLOps-dashboard/
 │       ├── daily-news.yml           # Cron: 03:00 UTC — fetch Bitcoin news from RSS
 │       └── weekly-retrain.yml       # Cron: Sun 02:00 UTC — retrain models on expanded data
 │
-├── Backend/
-│   ├── daily-inference.py           # Main inference pipeline (entry point)
-│   ├── fetch_news.py                # News fetcher from RSS feeds (entry point)
-│   ├── main.py                      # FastAPI server (optional, serves static JSON)
-│   ├── latest_prediction.json       # Latest XGBoost prediction (auto-updated daily)
-│   ├── latest_prediction_lstm.json  # Latest Conv-LSTM prediction (auto-updated daily)
-│   ├── data/
-│   │   ├── prediction_history.json      # XGBoost prediction log (rolling 365 days)
-│   │   ├── prediction_history_lstm.json # Conv-LSTM prediction log (rolling 365 days)
-│   │   └── news.json                    # Latest Bitcoin news headlines (auto-updated daily)
-│   ├── models/
-│   │   ├── xgb_model_target_y1.pkl      # XGBoost model — 1-day target
-│   │   ├── xgb_model_target_y7.pkl      # XGBoost model — 7-day target
-│   │   ├── xgb_model_target_y30.pkl     # XGBoost model — 30-day target
-│   │   ├── lstm_target_y1.keras         # Conv-LSTM model — 1-day target
-│   │   ├── lstm_target_y7.keras         # Conv-LSTM model — 7-day target
-│   │   ├── lstm_target_y30.keras        # Conv-LSTM model — 30-day target
-│   │   └── model_metadata.json          # Training config, metrics, days expanded
+├── Backend/                         # Production ML inference & API
+│   ├── main.py                      # FastAPI server (optional backend)
+│   ├── daily-inference.py           # Daily inference pipeline (entry point)
+│   ├── fetch_news.py                # News fetcher from RSS feeds
 │   ├── data_pipeline/
-│   │   ├── __init__.py                  # Package marker (for python -m imports)
-│   │   ├── fetcher.py                   # OHLCV + FNG data ingestion
-│   │   ├── feature_engineering.py       # Technical indicators + PCA
-│   │   ├── preprocessor.py              # Inference input preparation
-│   │   ├── sentiment_analysis.py        # LLM-based NLP sentiment (Gemini/Groq)
-│   │   └── retrain.py                   # Model retraining script (weekly)
-│   ├── requirements.txt                 # FastAPI dependencies
-│   ├── requirements-inference.txt       # Inference dependencies (daily + retrain)
-│   └── requirements-retrain.txt         # Lightweight retrain-only deps (no TensorFlow)
+│   │   ├── fetcher.py               # OHLCV + FNG data fetching (2017-01-01 onwards)
+│   │   ├── feature_engineering.py   # 30+ technical indicators + PCA
+│   │   ├── preprocessor.py          # Inference input preparation
+│   │   ├── sentiment_analysis.py    # LLM-based NLP sentiment (Gemini/Groq fallback)
+│   │   └── retrain.py               # Weekly model retraining (Sunday 02:00 UTC)
+│   ├── data/
+│   │   ├── prediction_history.json           # XGBoost history (95+ days)
+│   │   ├── prediction_history_lstm.json      # LSTM history (95+ days)
+│   │   └── news.json                        # Latest news headlines
+│   ├── models/
+│   │   ├── xgb_model_target_y1.pkl          # XGBoost 1-day model
+│   │   ├── xgb_model_target_y7.pkl          # XGBoost 7-day model
+│   │   ├── xgb_model_target_y30.pkl         # XGBoost 30-day model
+│   │   ├── feature_scaler.pkl               # MinMaxScaler for features
+│   │   ├── pca_transformer.pkl              # PCA (11 components)
+│   │   ├── target_scaler_target_y*.pkl      # Target value scalers
+│   │   └── model_metadata.json              # Training metadata (start_date, row counts)
+│   ├── latest_prediction.json               # Latest XGBoost prediction (daily)
+│   ├── latest_prediction_lstm.json          # Latest LSTM prediction (daily)
+│   ├── requirements.txt                     # FastAPI + all inference deps
+│   ├── requirements-inference.txt           # Daily inference deps
+│   ├── requirements-retrain.txt             # Weekly retrain deps
+│   ├── .env.example                        # Environment template
 │
-└── Frontend/
-    └── nextide-markets-analytics/
-        ├── app/
-        │   ├── layout.tsx               # Root layout
-        │   ├── page.tsx                 # Dashboard page (data fetching + chart logic)
-        │   └── globals.css              # Design tokens + dark theme
-        ├── src/
-        │   ├── components/
-        │   │   ├── ui/                  # Reusable: Card, Button, Badge, Loading
-        │   │   └── dashboard/           # SignalWidget, PriceChart, SentimentGauge, etc.
-        │   ├── contexts/
-        │   │   └── ModelContext.tsx     # XGBoost / LSTM model switcher state
-        │   ├── lib/
-        │   │   ├── api.ts               # Data fetching (reads from GitHub raw CDN)
-        │   │   ├── mockData.ts          # Fallback mock data
-        │   │   └── utils.ts
-        │   └── types/
-        │       └── index.ts             # Shared TypeScript contracts
-        └── next.config.ts
+├── Frontend/                        # Next.js dashboard (Vercel)
+│   └── nextide-markets-analytics/
+│       ├── app/
+│       │   ├── page.tsx             # Main dashboard
+│       │   ├── layout.tsx           # Root layout
+│       │   └── globals.css          # Dark theme + design tokens
+│       ├── src/
+│       │   ├── components/
+│       │   │   ├── ui/              # Button, Card, Badge, Loading, ErrorMessage
+│       │   │   └── dashboard/       # SignalWidget, PriceChart, SentimentGauge, FeatureInsights, etc.
+│       │   ├── contexts/
+│       │   │   └── ModelContext.tsx # XGBoost/LSTM model switcher
+│       │   ├── lib/
+│       │   │   ├── api.ts           # GitHub raw CDN fetching
+│       │   │   ├── mockData.ts      # Fallback demo data
+│       │   │   └── utils.ts         # Formatting, calculations
+│       │   └── types/
+│       │       └── index.ts         # TypeScript contracts (matches Backend API)
+│       └── package.json
+│
+├── Research-Modelling/             # Jupyter notebooks (training & analysis)
+│   ├── bitcoin_research_notebook.ipynb   # Main research notebook (2017 start date)
+│
+│── README.md                    # This file
 ```
+
+
+**Data Pipeline:**
+- `fetcher.py` - Uses fixed `START_DATE='2017-01-01'` (not rolling window)
+- `retrain.py` - Direct overwrites (no `_prev` backups), tracks `start_date` metadata
+
+demo data
+- `complete_history.py` - Align LSTM history with XGBoost
 
 ---
 
@@ -192,62 +197,92 @@ All outputs are read by the frontend directly from GitHub's raw CDN — **no red
 
 ---
 
-## Data Sources
+## Data Sources & APIs
 
-The frontend reads all data directly from GitHub's raw CDN:
+### Frontend Data Flow
 
-| Data | Source | Refresh |
-|------|--------|---------|
-| Latest predictions | `https://raw.githubusercontent.com/.../main/Backend/latest_prediction.json` | Daily 00:10 UTC |
-| Prediction history | `https://raw.githubusercontent.com/.../main/Backend/data/prediction_history.json` | Daily 00:10 UTC |
-| News headlines | `https://raw.githubusercontent.com/.../main/Backend/data/news.json` | Daily 03:00 UTC |
-| Models | Git repository | Weekly Sun 02:00 UTC |
+Frontend reads predictions from **GitHub's raw CDN** (no backend required):
 
-**FastAPI Server (Optional)**
+```
+GitHub Actions (automated)
+  ├─ Daily 00:10 UTC: daily-inference.py → latest_prediction.json
+  ├─ Daily 03:00 UTC: fetch_news.py → data/news.json
+  └─ Weekly Sun 02:00 UTC: retrain.py → models/*.pkl
+       ↓
+GitHub Repository (auto-updated with latest files)
+       ↓
+GitHub raw CDN (global edge cache)
+       ↓
+Frontend (Vercel) reads via HTTPS
+  ├─ /Backend/latest_prediction.json
+  ├─ /Backend/latest_prediction_lstm.json
+  ├─ /Backend/data/prediction_history.json
+  ├─ /Backend/data/prediction_history_lstm.json
+  └─ /Backend/data/news.json
+```
 
-A lightweight FastAPI server on Railway can optionally serve these same files (useful for non-public repos or additional filtering). Endpoints:
+### Optional: FastAPI Backend
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Health check |
-| GET | `/api/predict/daily?model=xgboost` | Latest prediction (xgboost \| lstm) |
-| GET | `/api/history?days=90&model=xgboost` | Prediction history (1–365 days) |
-| GET | `/api/backtest/30d?model=xgboost` | 30-day backtest metrics |
-| GET | `/api/news` | Latest news headlines (real-time RSS, 15-min cache) |
+A self-contained FastAPI server can optionally be deployed to serve the same data:
 
-**The FastAPI server is completely optional** — the dashboard is fully functional without it.
+| Endpoint | Description |
+|----------|-------------|
+| `GET /` | Health check |
+| `GET /api/predict/daily?model=xgboost\|lstm` | Latest prediction |
+| `GET /api/history?days=90&model=xgboost\|lstm` | History (1-365 days) |
+| `GET /api/backtest/30d?model=xgboost\|lstm` | 30-day backtest metrics |
+| `GET /api/news?limit=8` | Live news from RSS (cached 15 min) |
+| `GET /api/status` | Backend status & data freshness |
+
+**Why optional?**
+- Frontend works without it (reads from GitHub raw CDN)
+- No database needed (data stored in git)
 
 ---
 
 ## Local Development
 
-**Backend**
+### Backend (FastAPI)
+
 ```bash
 cd Backend
 pip install -r requirements.txt
-python daily-inference.py          # run inference once
-uvicorn main:app --reload          # start API server at localhost:8000
+python daily-inference.py          # Run inference once
+uvicorn main:app --reload          # Start API at http://localhost:8000
+
 ```
 
-**Frontend**
+**Environment variables (.env in Backend/)**
+
+```env
+GEMINI_API_KEY=your_key_here       # Google Gemini (primary sentiment)
+GROQ_API_KEY=your_key_here         # Groq API (fallback sentiment)
+```
+
+### Frontend (Next.js)
+
 ```bash
 cd Frontend/nextide-markets-analytics
 npm install
-npm run dev                        # start dev server at localhost:3000
+npm run dev                         # Start at http://localhost:3000
 ```
 
-**Environment variables (frontend - optional)**
+**Environment variables (.env.local)**
 
-| Variable | Description |
-|----------|-------------|
-| `NEXT_PUBLIC_USE_MOCK_DATA` | Set `true` to use mock data instead of GitHub raw (useful for offline dev) |
+```env
+# Optional: use mock data offline
+NEXT_PUBLIC_USE_MOCK_DATA=true
+```
 
-**GitHub Actions secrets required**
+### GitHub Actions Secrets
 
-| Secret | Description |
-|--------|-------------|
-| `GEMINI_API_KEY` | Google Gemini API key (primary NLP sentiment) |
-| `GROQ_API_KEY` | Groq API key (fallback NLP sentiment) |
+Required for automated workflows:
+
+| Secret | Description | Source |
+|--------|-------------|--------|
+| `GEMINI_API_KEY` | Google Gemini API key | https://ai.google.dev/ |
+| `GROQ_API_KEY` | Groq API key (fallback) | https://console.groq.com/ |
+| `GITHUB_TOKEN` | Auto-generated (no action needed) | GitHub |
 
 ---
 
