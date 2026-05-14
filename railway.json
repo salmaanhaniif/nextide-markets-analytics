@@ -1,0 +1,25 @@
+{
+  "$schema": "https://railway.app/schema.json",
+  "build": {
+    "builder": "dockerfile",
+    "buildCommand": "pip install -r Backend/requirements.txt"
+  },
+  "deploy": {
+    "startCommand": "cd Backend && uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "restartPolicyCondition": "any",
+    "restartPolicyMaxRetries": 10
+  },
+  "env": {
+    "PYTHONUNBUFFERED": {
+      "description": "Python output buffering",
+      "value": "1"
+    }
+  },
+  "services": {
+    "api": {
+      "rootDirectory": ".",
+      "buildCommand": "pip install -r Backend/requirements.txt",
+      "startCommand": "cd Backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
+    }
+  }
+}

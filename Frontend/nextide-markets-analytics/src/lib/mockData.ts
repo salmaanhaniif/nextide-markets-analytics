@@ -9,12 +9,33 @@ export const USE_MOCK_DATA = process.env.NEXT_PUBLIC_USE_MOCK_DATA === 'true';
 
 const CURRENT_PRICE = 82210.07;
 
+// Generate dynamic dates relative to today
+function getTodayDate(): string {
+    const today = new Date();
+    return today.toISOString().slice(0, 10);
+}
+
+function getTomorrowDate(): string {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().slice(0, 10);
+}
+
+function getDatePlusNDays(n: number): string {
+    const date = new Date();
+    date.setDate(date.getDate() + n);
+    return date.toISOString().slice(0, 10);
+}
+
+const today = getTodayDate();
+const tomorrow = getTomorrowDate();
+
 // XGBoost mock — bullish, moderate confidence
 export const mockDailyPrediction: DailyPrediction = {
     meta: {
         generated_at: new Date().toISOString(),
         model_version: '2026-05-12',
-        data_as_of: '2026-05-11',
+        data_as_of: today,
     },
     current: {
         price: CURRENT_PRICE,
@@ -26,7 +47,7 @@ export const mockDailyPrediction: DailyPrediction = {
     },
     predictions: {
         y1: {
-            target_date: '2026-05-13',
+            target_date: tomorrow,
             predicted_log_return: 0.0152,
             predicted_price: 83470.32,
             price_change_pct: 1.53,
@@ -36,7 +57,7 @@ export const mockDailyPrediction: DailyPrediction = {
             range_high: 85200.0,
         },
         y7: {
-            target_date: '2026-05-19',
+            target_date: getDatePlusNDays(7),
             predicted_log_return: 0.0421,
             predicted_price: 85742.18,
             price_change_pct: 4.30,
@@ -46,7 +67,7 @@ export const mockDailyPrediction: DailyPrediction = {
             range_high: 92800.0,
         },
         y30: {
-            target_date: '2026-06-11',
+            target_date: getDatePlusNDays(30),
             predicted_log_return: 0.0915,
             predicted_price: 90091.4,
             price_change_pct: 9.59,
@@ -79,7 +100,7 @@ export const mockLstmDailyPrediction: DailyPrediction = {
     meta: {
         generated_at: new Date().toISOString(),
         model_version: '2026-05-12',
-        data_as_of: '2026-05-11',
+        data_as_of: today,
     },
     current: {
         price: CURRENT_PRICE,
@@ -90,7 +111,7 @@ export const mockLstmDailyPrediction: DailyPrediction = {
     },
     predictions: {
         y1: {
-            target_date: '2026-05-13',
+            target_date: tomorrow,
             predicted_log_return: -0.0041,
             predicted_price: 81872.44,
             price_change_pct: -0.41,
@@ -100,7 +121,7 @@ export const mockLstmDailyPrediction: DailyPrediction = {
             range_high: 83050.0,
         },
         y7: {
-            target_date: '2026-05-19',
+            target_date: getDatePlusNDays(7),
             predicted_log_return: 0.0280,
             predicted_price: 84556.60,
             price_change_pct: 2.80,
@@ -110,7 +131,7 @@ export const mockLstmDailyPrediction: DailyPrediction = {
             range_high: 91100.0,
         },
         y30: {
-            target_date: '2026-06-11',
+            target_date: getDatePlusNDays(30),
             predicted_log_return: -0.0044,
             predicted_price: 81847.69,
             price_change_pct: -0.44,
@@ -237,13 +258,25 @@ export const mockBacktest: BacktestResponse = buildBacktest(mockHistory, 1.83);
 export const mockLstmHistory: HistoryEntry[] = buildMockHistory(mockLstmDailyPrediction, 0.51, 1000);
 export const mockLstmBacktest: BacktestResponse = buildBacktest(mockLstmHistory, 2.64);
 
+function formatRFC2822(dateStr: string, time: string): string {
+    const date = new Date(dateStr + 'T' + time + ':00Z');
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dayName = days[date.getUTCDay()];
+    const monthName = months[date.getUTCMonth()];
+    const dayOfMonth = date.getUTCDate();
+    const year = date.getUTCFullYear();
+    const timeStr = time.split(':').slice(0, 2).join(':');
+    return `${dayName}, ${dayOfMonth} ${monthName} ${year} ${timeStr}:00 +0000`;
+}
+
 export const mockNews: NewsHeadline[] = [
-    { title: 'Bitcoin Surges Past $82K as Spot ETF Inflows Hit Monthly Record', link: '#', published: 'Mon, 11 May 2026 08:30:00 +0000' },
-    { title: 'Fed Chair Powell Signals Cautious Rate Outlook; Crypto Markets Rally', link: '#', published: 'Mon, 11 May 2026 07:15:00 +0000' },
-    { title: 'MicroStrategy Adds 2,500 BTC to Treasury, Total Holdings Near 220K', link: '#', published: 'Mon, 11 May 2026 06:00:00 +0000' },
-    { title: 'Bitcoin Halving Cycle Analysis: On-Chain Metrics Point to Continued Accumulation', link: '#', published: 'Sun, 10 May 2026 21:45:00 +0000' },
-    { title: 'Institutional Demand Drives BTC Options Open Interest to All-Time High', link: '#', published: 'Sun, 10 May 2026 18:20:00 +0000' },
-    { title: 'Regulatory Clarity in the EU Boosts Confidence in Crypto Asset Managers', link: '#', published: 'Sun, 10 May 2026 14:00:00 +0000' },
-    { title: 'Bitcoin Lightning Network Capacity Exceeds 7,500 BTC Amid Layer-2 Growth', link: '#', published: 'Sat, 09 May 2026 20:30:00 +0000' },
-    { title: 'On-Chain Analysis: Long-Term Holders Accumulating at Current Price Levels', link: '#', published: 'Sat, 09 May 2026 16:10:00 +0000' },
+    { title: 'Bitcoin Surges Past $82K as Spot ETF Inflows Hit Monthly Record', link: '#', published: formatRFC2822(today, '08:30') },
+    { title: 'Fed Chair Powell Signals Cautious Rate Outlook; Crypto Markets Rally', link: '#', published: formatRFC2822(today, '07:15') },
+    { title: 'MicroStrategy Adds 2,500 BTC to Treasury, Total Holdings Near 220K', link: '#', published: formatRFC2822(today, '06:00') },
+    { title: 'Bitcoin Halving Cycle Analysis: On-Chain Metrics Point to Continued Accumulation', link: '#', published: formatRFC2822(getDatePlusNDays(-1), '21:45') },
+    { title: 'Institutional Demand Drives BTC Options Open Interest to All-Time High', link: '#', published: formatRFC2822(getDatePlusNDays(-1), '18:20') },
+    { title: 'Regulatory Clarity in the EU Boosts Confidence in Crypto Asset Managers', link: '#', published: formatRFC2822(getDatePlusNDays(-1), '14:00') },
+    { title: 'Bitcoin Lightning Network Capacity Exceeds 7,500 BTC Amid Layer-2 Growth', link: '#', published: formatRFC2822(getDatePlusNDays(-2), '20:30') },
+    { title: 'On-Chain Analysis: Long-Term Holders Accumulating at Current Price Levels', link: '#', published: formatRFC2822(getDatePlusNDays(-2), '16:10') },
 ];
