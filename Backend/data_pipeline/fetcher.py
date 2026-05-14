@@ -5,7 +5,7 @@ import pandas as pd
 
 def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
     """Fetch latest OHLCV candles from Binance. Use limit>=220 to cover SMA200 warmup."""
-    exchange = ccxt.binance()
+    exchange = ccxt.binanceus()
     ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
 
     df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
