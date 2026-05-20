@@ -5,5 +5,20 @@
   "processed_rows": 2197,
   "models_replaced": [
     "target_y1"
-  ]
+  ],
+  "config": {
+    "n_pca_components": 11,
+    "sequence_length": 30,
+    "horizon_targets": ["y1", "y7", "y30"]
+  },
+  "features": {
+    "technical_features": 37,
+    "sentiment_features": [
+      "fng_score",
+      "fng_7d_avg",
+      "fng_30d_avg",
+      "fng_momentum",
+      "nlp_sentiment_score"
+    ]
+  }
 }
