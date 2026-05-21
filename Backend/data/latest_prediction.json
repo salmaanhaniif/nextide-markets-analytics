@@ -1,83 +1,83 @@
 {
   "meta": {
-    "generated_at": "2026-05-14T07:39:24Z",
-    "model_version": "2026-05-12",
+    "generated_at": "2026-05-21T07:31:41Z",
+    "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-05-14"
+    "data_as_of": "2026-05-21"
   },
   "current": {
-    "price": 79933.24,
-    "fng_score": -0.32,
+    "price": 77596.52,
+    "fng_score": -0.42,
     "fng_label": "Fear",
-    "nlp_sentiment": -0.475,
-    "nlp_status": "fallback_7d_avg"
+    "nlp_sentiment": 0.65,
+    "nlp_status": "live"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-05-15",
-      "predicted_log_return": 0.001005,
-      "predicted_price": 80013.59,
-      "price_change_pct": 0.1005,
+      "target_date": "2026-05-21",
+      "predicted_log_return": 0.002693,
+      "predicted_price": 77805.73,
+      "price_change_pct": 0.2693,
       "direction": "UP",
-      "confidence": 0.5104,
-      "range_low": 78857.61,
-      "range_high": 81186.51
+      "confidence": 0.5304,
+      "range_low": 76777.54,
+      "range_high": 78847.7
     },
     "y7": {
-      "target_date": "2026-05-21",
-      "predicted_log_return": 0.005175,
-      "predicted_price": 80347.99,
-      "price_change_pct": 0.5175,
+      "target_date": "2026-05-27",
+      "predicted_log_return": 0.037589,
+      "predicted_price": 80568.77,
+      "price_change_pct": 3.7589,
       "direction": "UP",
-      "confidence": 0.5533,
-      "range_low": 77313.17,
-      "range_high": 83501.93
+      "confidence": 0.9,
+      "range_low": 77782.35,
+      "range_high": 83455.01
     },
     "y30": {
-      "target_date": "2026-06-13",
+      "target_date": "2026-06-19",
       "predicted_log_return": 0.015952,
-      "predicted_price": 81218.54,
+      "predicted_price": 78844.24,
       "price_change_pct": 1.5952,
       "direction": "UP",
-      "confidence": 0.6644,
-      "range_low": 74996.04,
-      "range_high": 87957.32
+      "confidence": 0.6799,
+      "range_low": 73303.66,
+      "range_high": 84803.61
     }
   },
   "signal": {
     "action": "HOLD",
     "strength": "LOW_CONFIDENCE",
-    "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+    "reasoning": "Model confidence 53% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
       "feature": "pca_components",
-      "importance": 0.0,
+      "importance": 0.6467,
       "label": "Technical Pattern (PCA)"
     },
     {
-      "feature": "fng_score",
-      "importance": 0.0,
-      "label": "Fear & Greed Score"
-    },
-    {
-      "feature": "fng_7d_avg",
-      "importance": 0.0,
-      "label": "Sentiment 7-Day Avg"
-    },
-    {
       "feature": "fng_30d_avg",
-      "importance": 0.0,
+      "importance": 0.08447,
       "label": "Sentiment 30-Day Avg"
     },
     {
+      "feature": "fng_7d_avg",
+      "importance": 0.07685,
+      "label": "Sentiment 7-Day Avg"
+    },
+    {
+      "feature": "fng_score",
+      "importance": 0.07367,
+      "label": "Fear & Greed Score"
+    },
+    {
       "feature": "fng_momentum",
-      "importance": 0.0,
+      "importance": 0.06143,
       "label": "Sentiment Momentum"
     }
   ],
   "model_health": {
-    "rolling_da_14d": null,
-    "status": "insufficient_data"
+    "rolling_da_14d": 0.6429,
+    "status": "good"
   }
 }
