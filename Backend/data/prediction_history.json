@@ -1,7 +1,7 @@
 [
   {
     "meta": {
-      "generated_at": "2026-05-21T09:26:31Z",
+      "generated_at": "2026-05-21T13:42:29Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-15"
@@ -10,29 +10,29 @@
       "price": 75154.29,
       "fng_score": -0.54,
       "fng_label": "Fear",
-      "nlp_sentiment": 0.45,
+      "nlp_sentiment": 0.85,
       "nlp_status": "live"
     },
     "predictions": {
       "y1": {
         "target_date": "2026-04-16",
-        "predicted_log_return": -0.012901,
-        "predicted_price": 74190.92,
-        "price_change_pct": -1.2901,
+        "predicted_log_return": -0.024665,
+        "predicted_price": 73323.28,
+        "price_change_pct": -2.4665,
         "direction": "DOWN",
-        "confidence": 0.5853,
-        "range_low": 72525.82,
-        "range_high": 75894.24
+        "confidence": 0.663,
+        "range_low": 71677.66,
+        "range_high": 75006.68
       },
       "y7": {
         "target_date": "2026-04-22",
-        "predicted_log_return": -0.072594,
-        "predicted_price": 69891.87,
-        "price_change_pct": -7.2594,
+        "predicted_log_return": -0.078562,
+        "predicted_price": 69475.97,
+        "price_change_pct": -7.8562,
         "direction": "DOWN",
         "confidence": 0.9,
-        "range_low": 65817.99,
-        "range_high": 74217.9
+        "range_low": 65426.33,
+        "range_high": 73776.26
       },
       "y30": {
         "target_date": "2026-05-15",
@@ -46,9 +46,9 @@
       }
     },
     "signal": {
-      "action": "HOLD",
-      "strength": "LOW_CONFIDENCE",
-      "reasoning": "Model confidence 59% below threshold \u2014 waiting for clearer signal"
+      "action": "SELL",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts -2.5%"
     },
     "key_drivers": [
       {
@@ -78,15 +78,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 75099.58
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:26:45Z",
+      "generated_at": "2026-05-21T13:42:55Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-16"
@@ -163,15 +163,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 77097.65
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:26:50Z",
+      "generated_at": "2026-05-21T13:43:00Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-17"
@@ -248,15 +248,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 75714.23
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:26:56Z",
+      "generated_at": "2026-05-21T13:43:06Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-18"
@@ -333,15 +333,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 73793.74
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:01Z",
+      "generated_at": "2026-05-21T13:43:12Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-19"
@@ -418,15 +418,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 75853.48
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:07Z",
+      "generated_at": "2026-05-21T13:43:18Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-20"
@@ -503,15 +503,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 76305.28
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:13Z",
+      "generated_at": "2026-05-21T13:43:23Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-21"
@@ -588,15 +588,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 78208.89
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:18Z",
+      "generated_at": "2026-05-21T13:43:29Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-22"
@@ -673,15 +673,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 78254.34
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:24Z",
+      "generated_at": "2026-05-21T13:43:34Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-23"
@@ -758,15 +758,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 77438.57
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:29Z",
+      "generated_at": "2026-05-21T13:43:40Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-24"
@@ -843,15 +843,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 77610.68
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:35Z",
+      "generated_at": "2026-05-21T13:43:46Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-25"
@@ -928,15 +928,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 78626.16
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:40Z",
+      "generated_at": "2026-05-21T13:43:51Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-26"
@@ -1013,15 +1013,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 77373.7
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:46Z",
+      "generated_at": "2026-05-21T13:43:57Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-27"
@@ -1098,15 +1098,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 76332.32
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:51Z",
+      "generated_at": "2026-05-21T13:44:02Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-28"
@@ -1183,15 +1183,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 75792.81
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:27:56Z",
+      "generated_at": "2026-05-21T13:44:09Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-29"
@@ -1268,15 +1268,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 76327.21
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:02Z",
+      "generated_at": "2026-05-21T13:44:15Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-04-30"
@@ -1353,15 +1353,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 78235.09
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:07Z",
+      "generated_at": "2026-05-21T13:44:20Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-01"
@@ -1438,15 +1438,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 78674.91
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:12Z",
+      "generated_at": "2026-05-21T13:44:25Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-02"
@@ -1523,15 +1523,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 78565.73
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:18Z",
+      "generated_at": "2026-05-21T13:44:31Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-03"
@@ -1608,15 +1608,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 79858.72
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:23Z",
+      "generated_at": "2026-05-21T13:44:37Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-04"
@@ -1693,15 +1693,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 80933.1
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:28Z",
+      "generated_at": "2026-05-21T13:44:42Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-05"
@@ -1778,15 +1778,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 81444.83
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:34Z",
+      "generated_at": "2026-05-21T13:44:48Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-06"
@@ -1863,15 +1863,15 @@
       }
     ],
     "model_health": {
-      "rolling_da_14d": 0.5,
+      "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 80034.95
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:39Z",
+      "generated_at": "2026-05-21T13:44:54Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-07"
@@ -1951,12 +1951,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 80205.47
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:45Z",
+      "generated_at": "2026-05-21T13:45:00Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-08"
@@ -2036,12 +2036,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 80697.78
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:50Z",
+      "generated_at": "2026-05-21T13:45:06Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-09"
@@ -2121,12 +2121,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 82154.4
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:28:55Z",
+      "generated_at": "2026-05-21T13:45:12Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-10"
@@ -2206,12 +2206,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 81774.05
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:01Z",
+      "generated_at": "2026-05-21T13:45:18Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-11"
@@ -2291,12 +2291,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 80483.2
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:06Z",
+      "generated_at": "2026-05-21T13:45:23Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-12"
@@ -2376,12 +2376,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 79329.71
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:11Z",
+      "generated_at": "2026-05-21T13:45:28Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-13"
@@ -2461,12 +2461,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 81077.62
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:16Z",
+      "generated_at": "2026-05-21T13:45:35Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-14"
@@ -2546,12 +2546,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 79112.25
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:22Z",
+      "generated_at": "2026-05-21T13:45:40Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-15"
@@ -2631,12 +2631,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 78154.97
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:27Z",
+      "generated_at": "2026-05-21T13:45:45Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-16"
@@ -2716,12 +2716,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 77436.87
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:33Z",
+      "generated_at": "2026-05-21T13:45:50Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-17"
@@ -2801,12 +2801,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "UP",
-    "actual_price_y1": 77006.42
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:38Z",
+      "generated_at": "2026-05-21T13:45:55Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-18"
@@ -2886,12 +2886,12 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 76833.85
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:29:43Z",
+      "generated_at": "2026-05-21T13:46:00Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-19"
@@ -2971,19 +2971,19 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": "DOWN",
-    "actual_price_y1": 77542.46
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   },
   {
     "meta": {
-      "generated_at": "2026-05-21T09:30:52Z",
+      "generated_at": "2026-05-21T13:46:05Z",
       "model_version": "unknown",
       "model_id": "xgboost",
       "data_as_of": "2026-05-20"
     },
     "current": {
-      "price": 77542.46,
-      "fng_score": -0.46,
+      "price": 76901.7,
+      "fng_score": -0.42,
       "fng_label": "Fear",
       "nlp_sentiment": 0.45,
       "nlp_status": "live"
@@ -2991,39 +2991,39 @@
     "predictions": {
       "y1": {
         "target_date": "2026-05-21",
-        "predicted_log_return": -0.003122,
-        "predicted_price": 77300.77,
-        "price_change_pct": -0.3122,
+        "predicted_log_return": -0.006392,
+        "predicted_price": 76411.71,
+        "price_change_pct": -0.6392,
         "direction": "DOWN",
-        "confidence": 0.5351,
-        "range_low": 75856.19,
-        "range_high": 78772.86
+        "confidence": 0.5712,
+        "range_low": 75389.59,
+        "range_high": 77447.69
       },
       "y7": {
         "target_date": "2026-05-27",
-        "predicted_log_return": 0.030868,
-        "predicted_price": 79973.35,
-        "price_change_pct": 3.0868,
+        "predicted_log_return": 0.040898,
+        "predicted_price": 80112.04,
+        "price_change_pct": 4.0898,
         "direction": "UP",
-        "confidence": 0.8471,
-        "range_low": 77012.23,
-        "range_high": 83048.32
+        "confidence": 0.9,
+        "range_low": 77307.93,
+        "range_high": 83017.87
       },
       "y30": {
         "target_date": "2026-06-19",
         "predicted_log_return": 0.015952,
-        "predicted_price": 78789.32,
+        "predicted_price": 78138.25,
         "price_change_pct": 1.5952,
         "direction": "UP",
-        "confidence": 0.6794,
-        "range_low": 73149.65,
-        "range_high": 84863.78
+        "confidence": 0.6777,
+        "range_low": 72582.17,
+        "range_high": 84119.65
       }
     },
     "signal": {
       "action": "HOLD",
       "strength": "LOW_CONFIDENCE",
-      "reasoning": "Model confidence 54% below threshold \u2014 waiting for clearer signal"
+      "reasoning": "Model confidence 57% below threshold \u2014 waiting for clearer signal"
     },
     "key_drivers": [
       {

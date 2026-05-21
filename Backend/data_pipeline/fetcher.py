@@ -6,9 +6,24 @@ import pandas as pd
 START_DATE = '2017-01-01'  # Matches research notebook training window
 
 
+_BINANCE_KLINES = "https://api.binance.com/api/v3/klines"
+_KLINES_COLS    = ['timestamp', 'open', 'high', 'low', 'close', 'volume',
+                   'close_time', 'quote_vol', 'trades', 'taker_buy_base',
+                   'taker_buy_quote', 'ignore']
+
+
+def _fetch_klines(symbol: str, interval: str, **params) -> list:
+    """Single page of klines from Binance REST — no ccxt market-info overhead."""
+    r = requests.get(_BINANCE_KLINES,
+                     params={"symbol": symbol, "interval": interval, **params},
+                     timeout=15)
+    r.raise_for_status()
+    return r.json()
+
+
 def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
     """
-    Fetch latest OHLCV candles from Binance.
+    Fetch latest OHLCV candles from Binance REST API (no ccxt market-load).
 
     For inference (limit < 1000):
       - Fetches last N candles only (rolling window)
@@ -16,29 +31,28 @@ def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
       - After feature engineering drops NaN: ~200-230 valid rows -> can build 30-day sequence
 
     For training/retraining (limit >= 1000):
-      - Fetches from START_DATE='2017-01-01' onwards (absolute, not rolling)
+      - Paginates from START_DATE='2017-01-01' onwards (absolute, not rolling)
       - Ensures consistent training data window across retraining cycles
     """
-    exchange = ccxt.binanceus()
+    binance_symbol = symbol.replace('/', '')  # BTC/USDT -> BTCUSDT
 
     if limit >= 1000:
-        # Training/retraining: fetch from START_DATE onwards
-        since_ms = exchange.parse8601(START_DATE + 'T00:00:00Z')
-        all_ohlcv = []
+        # Training/retraining: paginate from START_DATE onwards
+        since_ms = int(pd.Timestamp(START_DATE + 'T00:00:00Z').timestamp() * 1000)
+        all_rows = []
         while True:
-            batch = exchange.fetch_ohlcv(symbol, timeframe=timeframe, since=since_ms, limit=1000)
+            batch = _fetch_klines(binance_symbol, timeframe, startTime=since_ms, limit=1000)
             if not batch:
                 break
-            all_ohlcv.extend(batch)
+            all_rows.extend(batch)
             since_ms = batch[-1][0] + 1
-        ohlcv = all_ohlcv
+        rows = all_rows
     else:
-        # Inference: just get latest N candles
-        ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
+        rows = _fetch_klines(binance_symbol, timeframe, limit=limit)
 
-    df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+    df = pd.DataFrame(rows, columns=_KLINES_COLS)
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms').dt.normalize()
-    df.set_index('timestamp', inplace=True)
+    df = df.set_index('timestamp')[['open', 'high', 'low', 'close', 'volume']].astype(float)
 
     # Drop today's incomplete candle — it hasn't closed yet (closes at 00:00 UTC next day)
     today = pd.Timestamp.utcnow().normalize().tz_localize(None)

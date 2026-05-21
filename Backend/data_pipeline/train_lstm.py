@@ -25,7 +25,7 @@ from sklearn.decomposition import PCA
 
 from data_pipeline.fetcher import fetch_latest_crypto_data, fetch_historical_fng, START_DATE
 from data_pipeline.feature_engineering import engineer_features, TECH_FEATURES, SENTIMENT_FEATURES
-from data_pipeline.preprocessor import build_sequences
+from data_pipeline.preprocessor import build_lstm_sequences
 
 BASE_PATH   = Path(__file__).resolve().parent.parent
 MODELS_PATH = BASE_PATH / "models"
@@ -121,16 +121,18 @@ def run_lstm_training():
     print(f"      Scaler range: [{t_scaler.data_min_[0]:.4f}, {t_scaler.data_max_[0]:.4f}]"
           f"  n_samples={t_scaler.n_samples_seen_}")
 
-    # Scale targets for all three horizons with the SAME scaler
+    # Scale targets for all three horizons with the SAME scaler.
+    # Pass .values to avoid sklearn feature-name validation (fitted on 'target_y1',
+    # but we also transform 'target_y7' / 'target_y30' in the same scale space).
     train_targets_scaled = {}
     test_targets_scaled  = {}
     for target in TARGET_COLS:
-        train_targets_scaled[target] = t_scaler.transform(train_df[[target]])
-        test_targets_scaled[target]  = t_scaler.transform(test_df[[target]])
+        train_targets_scaled[target] = t_scaler.transform(train_df[[target]].values)
+        test_targets_scaled[target]  = t_scaler.transform(test_df[[target]].values)
 
     # ── 6. Build sequences ────────────────────────────────────────
-    X_train_seq, y_train_seq = build_sequences(X_train_full, train_targets_scaled, SEQUENCE_LEN)
-    X_test_seq,  y_test_seq  = build_sequences(X_test_full,  test_targets_scaled,  SEQUENCE_LEN)
+    X_train_seq, y_train_seq = build_lstm_sequences(X_train_full, train_targets_scaled, SEQUENCE_LEN)
+    X_test_seq,  y_test_seq  = build_lstm_sequences(X_test_full,  test_targets_scaled,  SEQUENCE_LEN)
     print(f"      Sequence shape: {X_train_seq.shape}  (samples, timesteps, features)")
 
     # ── 7. Train one LSTM per horizon, compare vs existing ────────

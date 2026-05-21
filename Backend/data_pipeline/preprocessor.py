@@ -91,3 +91,15 @@ def build_sequences(X_combined: np.ndarray, y_dict: dict, seq_len: int = SEQUENC
     X_flat = X_seq.reshape(len(X_seq), -1)
     y_out  = {k: v[seq_len:] for k, v in y_dict.items()}
     return X_flat, y_out
+
+
+def build_lstm_sequences(X_combined: np.ndarray, y_dict: dict, seq_len: int = SEQUENCE_LEN):
+    """
+    Build sliding-window sequences for LSTM training — keeps time dimension intact.
+    X_combined: (n, features), y_dict: {target_name: (n,1) scaled array}
+    Returns X_seq (n-seq_len, seq_len, features) and y_dict of same shape.
+    """
+    n = len(X_combined)
+    X_seq = np.array([X_combined[i:i+seq_len] for i in range(n - seq_len)])  # (n-seq_len, seq_len, features)
+    y_out = {k: v[seq_len:] for k, v in y_dict.items()}
+    return X_seq, y_out
