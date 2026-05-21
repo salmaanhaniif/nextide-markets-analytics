@@ -8,10 +8,10 @@ export interface LivePriceData {
     loading: boolean;
     lastUpdated: Date | null;
     error: boolean;
+    source: 'public-api';
 }
 
-const TICKER_URL = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT';
-const KLINES_URL = 'https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=2';
+const BINANCE_24H_API = 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT';
 
 export function useLivePrice(): LivePriceData {
     const [livePrice, setLivePrice] = useState<number | null>(null);
@@ -19,28 +19,35 @@ export function useLivePrice(): LivePriceData {
     const [loading, setLoading] = useState(true);
     const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
     const [error, setError] = useState(false);
-
-    const fetchPrevClose = useCallback(async () => {
-        try {
-            const res = await fetch(KLINES_URL);
-            // klines row: [openTime, open, high, low, close, volume, ...]
-            const rows: [number, string, string, string, string, ...unknown[]][] = await res.json();
-            if (Array.isArray(rows) && rows[0]?.[4]) {
-                setPrevClose(parseFloat(rows[0][4]));
-            }
-        } catch {
-            // non-critical — caller falls back to history price
-        }
-    }, []);
+    const [source, setSource] = useState<'public-api'>('public-api');
 
     const fetchLive = useCallback(async () => {
         try {
-            const res = await fetch(TICKER_URL);
-            const json: { price: string } = await res.json();
-            setLivePrice(parseFloat(json.price));
+            setLoading(true);
+
+            const res = await fetch(BINANCE_24H_API, {
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+            const json = await res.json();
+            const current = parseFloat(json.lastPrice);
+            const changePercent = parseFloat(json.priceChangePercent) || 0;
+
+            if (isNaN(current)) throw new Error('Invalid price data');
+
+            const prevClose = current - (current * changePercent / 100);
+
+            setLivePrice(current);
+            setPrevClose(prevClose);
             setLastUpdated(new Date());
             setError(false);
-        } catch {
+            setSource('public-api');
+
+            console.log('[useLivePrice] Fetched:', { live_price: current, prev_close: prevClose });
+        } catch (err) {
+            console.error('fetchLive error:', err);
             setError(true);
         } finally {
             setLoading(false);
@@ -48,11 +55,10 @@ export function useLivePrice(): LivePriceData {
     }, []);
 
     useEffect(() => {
-        fetchPrevClose();
         fetchLive();
         const interval = setInterval(fetchLive, 10_000);
         return () => clearInterval(interval);
-    }, [fetchPrevClose, fetchLive]);
+    }, [fetchLive]);
 
-    return { livePrice, prevClose, loading, lastUpdated, error };
+    return { livePrice, prevClose, loading, lastUpdated, error, source };
 }

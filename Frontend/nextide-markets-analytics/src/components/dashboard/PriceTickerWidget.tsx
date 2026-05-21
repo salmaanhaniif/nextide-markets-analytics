@@ -46,6 +46,14 @@ export function PriceTickerWidget({
     // Use Binance klines prev-close; fall back to history close from backend
     const prevClose = binancePrevClose ?? prevCloseOverride ?? null;
 
+    // Debug: Log price comparison
+    useEffect(() => {
+        console.log('[PriceTickerWidget] livePrice:', livePrice, 'binancePrevClose:', binancePrevClose, 'prevCloseOverride:', prevCloseOverride, 'final prevClose:', prevClose);
+        if (livePrice && prevClose) {
+            console.log(`[PriceTickerWidget] Comparison: ${livePrice} > ${prevClose} = ${livePrice > prevClose} (should be ${livePrice > prevClose ? 'GREEN' : 'RED'})`);
+        }
+    }, [livePrice, binancePrevClose, prevCloseOverride, prevClose]);
+
     // Live UTC clock — initialized client-side only to avoid hydration mismatch
     const [utcNow, setUtcNow] = useState<Date | null>(null);
     useEffect(() => {
@@ -97,13 +105,9 @@ export function PriceTickerWidget({
                             <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${error ? 'bg-red-500' : 'bg-green-500'}`} />
                         </span>
                     </div>
-                    <p className={`text-3xl font-bold tabular-nums leading-none transition-colors ${
-                        loading
-                            ? 'text-[var(--text-muted)]'
-                            : error
-                                ? 'text-[var(--color-danger)]'
-                                : 'text-[var(--color-primary)]'
-                    }`}>
+                    <p style={{
+                        color: loading ? 'var(--text-muted)' : error ? 'var(--color-danger)' : (livePrice != null && prevClose != null && livePrice > prevClose) ? 'var(--color-success)' : (livePrice != null && prevClose != null && livePrice < prevClose) ? 'var(--color-danger)' : 'var(--color-primary)',
+                    }} className="text-3xl font-bold tabular-nums leading-none transition-colors">
                         {loading ? '—' : error ? 'Error' : fmtPrice(livePrice)}
                     </p>
                     <div className="flex items-center gap-2 mt-2">

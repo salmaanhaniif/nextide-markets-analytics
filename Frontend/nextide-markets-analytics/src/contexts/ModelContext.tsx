@@ -10,12 +10,12 @@ interface ModelContextValue {
 }
 
 const ModelContext = createContext<ModelContextValue>({
-    selectedModel: 'xgboost',
+    selectedModel: 'lstm',
     setSelectedModel: () => {},
 });
 
 export function ModelProvider({ children }: { children: React.ReactNode }) {
-    const [selectedModel, setSelectedModel] = useState<ModelId>('xgboost');
+    const [selectedModel, setSelectedModel] = useState<ModelId>('lstm');
     return (
         <ModelContext.Provider value={{ selectedModel, setSelectedModel }}>
             {children}

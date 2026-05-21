@@ -93,12 +93,8 @@ function buildChartData(
         range_high: entry.predictions[horizon].range_high,
     }));
 
-    // Bridge the gap: today's actual price (data_as_of) is known but not yet in history.
-    // Guard against duplicate label (can happen with monthly aggregation).
-    const todayLabel = fmt(prediction.meta.data_as_of);
-    if (!points.length || points[points.length - 1].date !== todayLabel) {
-        points.push({ date: todayLabel, actual: prediction.current.price });
-    }
+    // Don't show today's actual price on the chart—the day hasn't closed yet (closes at 00:00 UTC).
+    // We'll only show it once it's in the history after the day closes.
 
     const h = prediction.predictions[horizon];
     points.push({
@@ -169,9 +165,9 @@ export default function DashboardPage() {
         loadData();
     }, [selectedModel, loadData]);
 
-    // Auto-refresh every 5 minutes
+    // Auto-refresh every 24 hours (data only updates once daily at 00:10 UTC)
     useEffect(() => {
-        const interval = setInterval(loadData, 5 * 60 * 1000);
+        const interval = setInterval(loadData, 24 * 60 * 60 * 1000);
         return () => clearInterval(interval);
     }, [loadData]);
 

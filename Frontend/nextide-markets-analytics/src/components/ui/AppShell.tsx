@@ -9,8 +9,8 @@ import { useModel } from '@/src/contexts/ModelContext';
 import type { ModelId } from '@/src/contexts/ModelContext';
 
 const MODELS: { id: ModelId; label: string; badge: string; available: boolean }[] = [
-    { id: 'xgboost', label: 'XGBoost', badge: 'BEST', available: true },
-    { id: 'lstm',    label: 'LSTM',    badge: '',      available: true },
+    { id: 'lstm',    label: 'LSTM',    badge: '', available: true },
+    { id: 'xgboost', label: 'XGBoost', badge: '', available: true },
 ];
 
 const SOON_MODELS = [

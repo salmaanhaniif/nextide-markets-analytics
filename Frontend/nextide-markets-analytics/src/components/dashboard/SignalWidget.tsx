@@ -203,7 +203,9 @@ export function SignalWidget({
                                     <span className={`relative inline-flex rounded-full h-2 w-2 ${error ? 'bg-red-500' : 'bg-green-500'}`} />
                                 </span>
                             </div>
-                            <p className={`text-xl font-bold tabular-nums leading-none ${loading ? 'text-[var(--text-muted)]' : error ? 'text-[var(--color-danger)]' : 'text-[var(--color-primary)]'}`}>
+                            <p style={{
+                                color: loading ? 'var(--text-muted)' : error ? 'var(--color-danger)' : (livePrice != null && prevClose != null && livePrice > prevClose) ? 'var(--color-success)' : (livePrice != null && prevClose != null && livePrice < prevClose) ? 'var(--color-danger)' : 'var(--color-primary)',
+                            }} className="text-xl font-bold tabular-nums leading-none">
                                 {loading ? '—' : error ? 'Error' : fmtPrice(livePrice)}
                             </p>
                             <div className="flex items-center gap-1.5 mt-1.5 flex-wrap">
