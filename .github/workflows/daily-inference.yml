@@ -2,7 +2,7 @@ name: Daily Bitcoin Inference
 
 on:
   schedule:
-    # Runs at 01:00 UTC daily (08:00 WIB) — after BTC daily candle closes at 00:00 UTC
+    # Runs at 00:10 UTC daily (07:10 WIB) — 10 minutes after BTC daily candle closes at 00:00 UTC
     - cron: '10 0 * * *'
   workflow_dispatch:  # Allow manual trigger from GitHub UI
 
