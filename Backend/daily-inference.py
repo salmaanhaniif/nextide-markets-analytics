@@ -215,8 +215,7 @@ def _run_xgboost(processed_df, current_close, volatility_30,
             t_scaler.inverse_transform(model.predict(xgb_input).reshape(-1, 1))[0][0])
         pred_price    = current_close * math.exp(pred_log_return)
         direction     = "UP" if pred_log_return > 0 else "DOWN"
-        actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
-        sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
+        sigma_horizon = volatility_30 * math.sqrt(horizon_days)
         confidence    = _confidence_score(pred_log_return, volatility_30)
         target_date   = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 
@@ -271,8 +270,7 @@ def _run_lstm(processed_df, current_close, volatility_30,
         pred_log_return = float(t_scaler.inverse_transform(pred_scaled.reshape(-1, 1))[0][0])
         pred_price    = current_close * math.exp(pred_log_return)
         direction     = "UP" if pred_log_return > 0 else "DOWN"
-        actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
-        sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
+        sigma_horizon = volatility_30 * math.sqrt(horizon_days)
         confidence    = _confidence_score(pred_log_return, volatility_30)
         target_date   = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 

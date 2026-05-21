@@ -35,6 +35,9 @@ jobs:
       - name: Run retraining (XGBoost)
         run: python -m data_pipeline.retrain
 
+      - name: Run retraining (LSTM)
+        run: python -m data_pipeline.train_lstm
+
       - name: Run inference with new models
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -53,6 +56,10 @@ jobs:
           git add models/target_scaler_target_y30.pkl
           git add models/feature_scaler.pkl
           git add models/pca_transformer.pkl
+          git add models/target_scaler.pkl
+          git add models/lstm_target_y1.keras
+          git add models/lstm_target_y7.keras
+          git add models/lstm_target_y30.keras
           git add models/model_metadata.json
           git add data/latest_prediction.json data/latest_prediction_lstm.json
           git add data/prediction_history.json data/prediction_history_lstm.json
