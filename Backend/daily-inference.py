@@ -204,9 +204,9 @@ def _run_xgboost(processed_df, current_close, volatility_30,
     predictions = {}
 
     for target, horizon_days, label in [
-        ("target_y1",  1,  "y1"),
-        ("target_y7",  7,  "y7"),
-        ("target_y30", 30, "y30"),
+        ("target_y1",  0,  "y1"),
+        ("target_y7",  6,  "y7"),
+        ("target_y30", 29, "y30"),
     ]:
         model    = _load_artifact(f"xgb_model_{target}.pkl")
         t_scaler = _load_artifact(f"target_scaler_{target}.pkl")
@@ -215,7 +215,8 @@ def _run_xgboost(processed_df, current_close, volatility_30,
             t_scaler.inverse_transform(model.predict(xgb_input).reshape(-1, 1))[0][0])
         pred_price    = current_close * math.exp(pred_log_return)
         direction     = "UP" if pred_log_return > 0 else "DOWN"
-        sigma_horizon = volatility_30 * math.sqrt(horizon_days)
+        actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
+        sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
         confidence    = _confidence_score(pred_log_return, volatility_30)
         target_date   = (datetime.now(timezone.utc) + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 
@@ -256,9 +257,9 @@ def _run_lstm(processed_df, current_close, volatility_30,
     predictions = {}
 
     for target, horizon_days, label in [
-        ("target_y1",  1,  "y1"),
-        ("target_y7",  7,  "y7"),
-        ("target_y30", 30, "y30"),
+        ("target_y1",  0,  "y1"),
+        ("target_y7",  6,  "y7"),
+        ("target_y30", 29, "y30"),
     ]:
         model    = load_model(str(MODELS_PATH / f"lstm_{target}.keras"), compile=False)
         t_scaler = _load_artifact(f"target_scaler_{target}.pkl")
@@ -267,7 +268,8 @@ def _run_lstm(processed_df, current_close, volatility_30,
         pred_log_return = float(t_scaler.inverse_transform(pred_scaled.reshape(-1, 1))[0][0])
         pred_price    = current_close * math.exp(pred_log_return)
         direction     = "UP" if pred_log_return > 0 else "DOWN"
-        sigma_horizon = volatility_30 * math.sqrt(horizon_days)
+        actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
+        sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
         confidence    = _confidence_score(pred_log_return, volatility_30)
         target_date   = (datetime.now(timezone.utc) + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 

@@ -10,6 +10,7 @@ import time
 import asyncio
 import feedparser
 import logging
+import requests
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -261,6 +262,9 @@ RSS_SOURCES = [
 _news_cache: dict = {"data": [], "expires": 0.0}
 _NEWS_TTL = 15 * 60  # 15 minutes
 
+_price_cache: dict = {"live_price": None, "prev_close": None, "expires": 0.0}
+_PRICE_TTL = 10  # 10 seconds — stay fresh without hammering Binance
+
 
 def _fetch_rss(limit: int) -> list[dict]:
     headlines = []
@@ -276,6 +280,48 @@ def _fetch_rss(limit: int) -> list[dict]:
         except Exception:
             continue
     return headlines[:limit]
+
+
+def _fetch_live_price() -> dict:
+    """Fetch live BTC/USDT price from Binance REST API (no CCXT dependency)."""
+    # Try Binance REST API first (free, no API key needed)
+    try:
+        res = requests.get(
+            'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT',
+            timeout=5
+        )
+        if res.status_code == 200:
+            data = res.json()
+            return {
+                "live_price": float(data['price']),
+                "prev_close": float(data['price']),  # Binance REST doesn't have prev_close
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            }
+    except Exception as e:
+        logger.warning(f"Binance REST API failed: {e}")
+
+    # Fallback to CoinGecko API
+    try:
+        res = requests.get(
+            'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true',
+            timeout=5
+        )
+        if res.status_code == 200:
+            data = res.json()
+            bitcoin = data.get('bitcoin', {})
+            if bitcoin.get('usd'):
+                current = bitcoin['usd']
+                change24h = bitcoin.get('usd_24h_change', 0) or 0
+                prev_close = current - (current * change24h / 100)
+                return {
+                    "live_price": current,
+                    "prev_close": prev_close,
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                }
+    except Exception as e:
+        logger.warning(f"CoinGecko API failed: {e}")
+
+    return None
 
 
 @app.get("/api/news")
@@ -310,6 +356,51 @@ async def get_news_headlines(limit: int = Query(default=8, ge=1, le=20)) -> list
         _news_cache["expires"] = now + _NEWS_TTL
 
     return headlines
+
+
+@app.get("/api/live-price")
+async def get_live_price() -> dict:
+    """
+    Live BTC/USDT price from Binance (server-side fetch, avoids client CORS).
+
+    Returns:
+    - live_price: Current price
+    - prev_close: Previous candle close
+    - timestamp: When fetched
+
+    Cache: 10 seconds (to avoid hammering Binance)
+    Fallback: Returns last cached value if fetch fails
+    """
+    now = time.time()
+    if _price_cache["expires"] > now and _price_cache["live_price"] is not None:
+        return {
+            "live_price": _price_cache["live_price"],
+            "prev_close": _price_cache["prev_close"],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
+
+    loop = asyncio.get_event_loop()
+    result = await loop.run_in_executor(None, _fetch_live_price)
+
+    if result:
+        _price_cache["live_price"] = result["live_price"]
+        _price_cache["prev_close"] = result["prev_close"]
+        _price_cache["expires"] = now + _PRICE_TTL
+        return result
+
+    # Fallback: return last cached value or error
+    if _price_cache["live_price"] is not None:
+        return {
+            "live_price": _price_cache["live_price"],
+            "prev_close": _price_cache["prev_close"],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
+
+    return {
+        "error": "Unable to fetch live price. Binance API may be unavailable.",
+        "live_price": None,
+        "prev_close": None,
+    }
 
 
 @app.get("/api/status")
