@@ -19,11 +19,20 @@ import {
 // GitHub raw base URL — data files are committed here by GitHub Actions daily
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/salmaanhaniif/nextide-markets-analytics/main/Backend';
 
+// In development, serve files from local Next.js API route instead of GitHub CDN
+const IS_DEV = process.env.NODE_ENV === 'development';
+const LOCAL_BASE = '/api/backend';
+
 const githubClient = axios.create({ timeout: 15000 });
 
 // Cache-bust GitHub CDN with daily granularity
 function cacheBust() {
     return new Date().toISOString().slice(0, 10);
+}
+
+function dataUrl(filePath: string): string {
+    if (IS_DEV) return `${LOCAL_BASE}/${filePath}`;
+    return `${GITHUB_RAW_BASE}/${filePath}?t=${cacheBust()}`;
 }
 
 async function withFallback<T>(label: string, fn: () => Promise<T>, fallback: T): Promise<T> {
@@ -67,11 +76,11 @@ function computeBacktest(history: HistoryEntry[], days: number = 30): BacktestRe
 
 export function fetchDailyPrediction(model: string = 'xgboost'): Promise<DailyPrediction> {
     const fallback = model === 'lstm' ? mockLstmDailyPrediction : mockDailyPrediction;
-    const file = model === 'lstm' ? 'latest_prediction_lstm.json' : 'latest_prediction.json';
+    const file = model === 'lstm' ? 'data/latest_prediction_lstm.json' : 'data/latest_prediction.json';
     return withFallback(
-        `GitHub raw: ${file}`,
+        `data: ${file}`,
         async () => {
-            const data = (await githubClient.get<DailyPrediction>(`${GITHUB_RAW_BASE}/${file}?t=${cacheBust()}`)).data;
+            const data = (await githubClient.get<DailyPrediction>(dataUrl(file))).data;
             if (!data?.meta) throw new Error('Response shape mismatch (missing meta)');
             return data;
         },
@@ -83,9 +92,9 @@ export function fetchHistory(days: number = 90, model: string = 'xgboost'): Prom
     const fallback = model === 'lstm' ? mockLstmHistory : mockHistory;
     const file = model === 'lstm' ? 'data/prediction_history_lstm.json' : 'data/prediction_history.json';
     return withFallback(
-        `GitHub raw: ${file}`,
+        `data: ${file}`,
         async () => {
-            const data = (await githubClient.get<HistoryEntry[]>(`${GITHUB_RAW_BASE}/${file}?t=${cacheBust()}`)).data;
+            const data = (await githubClient.get<HistoryEntry[]>(dataUrl(file))).data;
             if (!Array.isArray(data)) throw new Error('History response is not an array');
             return data.slice(-days);
         },
@@ -97,9 +106,9 @@ export function fetchBacktest(model: string = 'xgboost'): Promise<BacktestRespon
     const fallback = model === 'lstm' ? mockLstmBacktest : mockBacktest;
     const file = model === 'lstm' ? 'data/prediction_history_lstm.json' : 'data/prediction_history.json';
     return withFallback(
-        `GitHub raw backtest: ${file}`,
+        `data backtest: ${file}`,
         async () => {
-            const data = (await githubClient.get<HistoryEntry[]>(`${GITHUB_RAW_BASE}/${file}?t=${cacheBust()}`)).data;
+            const data = (await githubClient.get<HistoryEntry[]>(dataUrl(file))).data;
             if (!Array.isArray(data)) throw new Error('History response is not an array');
             return computeBacktest(data);
         },
@@ -109,9 +118,9 @@ export function fetchBacktest(model: string = 'xgboost'): Promise<BacktestRespon
 
 export function fetchNews(): Promise<NewsHeadline[]> {
     return withFallback(
-        `GitHub raw: data/news.json`,
+        `data: data/news.json`,
         async () => {
-            const data = (await githubClient.get<NewsHeadline[]>(`${GITHUB_RAW_BASE}/data/news.json?t=${cacheBust()}`)).data;
+            const data = (await githubClient.get<NewsHeadline[]>(dataUrl('data/news.json'))).data;
             if (!Array.isArray(data)) throw new Error('News response is not an array');
             return data;
         },
