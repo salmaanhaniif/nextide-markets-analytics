@@ -204,9 +204,9 @@ def _run_xgboost(processed_df, current_close, volatility_30,
     predictions = {}
 
     for target, horizon_days, label in [
-        ("target_y1",  0,  "y1"),
-        ("target_y7",  6,  "y7"),
-        ("target_y30", 29, "y30"),
+        ("target_y1",  1,  "y1"),
+        ("target_y7",  7,  "y7"),
+        ("target_y30", 30, "y30"),
     ]:
         model    = _load_artifact(f"xgb_model_{target}.pkl")
         t_scaler = _load_artifact(f"target_scaler_{target}.pkl")
@@ -218,7 +218,7 @@ def _run_xgboost(processed_df, current_close, volatility_30,
         actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
         sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
         confidence    = _confidence_score(pred_log_return, volatility_30)
-        target_date   = (datetime.now(timezone.utc) + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
+        target_date   = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 
         predictions[label] = {
             "target_date":          target_date,
@@ -256,13 +256,16 @@ def _run_lstm(processed_df, current_close, volatility_30,
     lstm_input  = prepare_lstm_inference_input(processed_df, seq_len=30)  # (1, 30, 16)
     predictions = {}
 
+    # LSTM was trained with the shared target_scaler.pkl (not the per-target scalers)
+    lstm_t_scaler = _load_artifact("target_scaler.pkl")
+
     for target, horizon_days, label in [
-        ("target_y1",  0,  "y1"),
-        ("target_y7",  6,  "y7"),
-        ("target_y30", 29, "y30"),
+        ("target_y1",  1,  "y1"),
+        ("target_y7",  7,  "y7"),
+        ("target_y30", 30, "y30"),
     ]:
         model    = load_model(str(MODELS_PATH / f"lstm_{target}.keras"), compile=False)
-        t_scaler = _load_artifact(f"target_scaler_{target}.pkl")
+        t_scaler = lstm_t_scaler
 
         pred_scaled     = model.predict(lstm_input, verbose=0)
         pred_log_return = float(t_scaler.inverse_transform(pred_scaled.reshape(-1, 1))[0][0])
@@ -271,7 +274,7 @@ def _run_lstm(processed_df, current_close, volatility_30,
         actual_horizon = horizon_days + 1  # Restore actual horizon for volatility calc
         sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
         confidence    = _confidence_score(pred_log_return, volatility_30)
-        target_date   = (datetime.now(timezone.utc) + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
+        target_date   = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
 
         predictions[label] = {
             "target_date":          target_date,

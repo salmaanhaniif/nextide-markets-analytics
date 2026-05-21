@@ -30,7 +30,7 @@ from daily_inference import (
     _load_artifact, _confidence_score, _generate_signal, _extract_key_drivers,
     _check_model_health, _build_result, _load_history, _save_history,
     _fng_label, HISTORY_FILE, HISTORY_LSTM_FILE, LATEST_FILE, LATEST_LSTM_FILE,
-    MODELS_PATH, DATA_PATH
+    MODELS_PATH, DATA_PATH, LSTM_KEY_DRIVERS
 )
 
 BASE_PATH = Path(__file__).resolve().parent
@@ -125,29 +125,24 @@ def backfill_date(date_str: str):
             data_as_of=data_as_of, meta=meta,
         )
 
-        # Run XGBoost inference
-        print(f"[5/5] Running XGBoost inference...")
-        xgb_input = prepare_inference_input(processed_df, seq_len=30)
-        xgb_model = _load_artifact("xgb_model_target_y1.pkl")
-        t_scaler = _load_artifact("target_scaler_target_y1.pkl")
+        HORIZONS = [("target_y1", 1, "y1"), ("target_y7", 7, "y7"), ("target_y30", 30, "y30")]
+        n_pca = meta["config"]["n_pca_components"]
+        n_sent = len(meta["features"]["sentiment_features"])
 
+        # XGBoost inference
+        print(f"[5a/5] Running XGBoost inference...")
+        xgb_input = prepare_inference_input(processed_df, seq_len=30)
         xgb_preds = {}
-        for target, horizon_days, label in [
-            ("target_y1", 0, "y1"),
-            ("target_y7", 6, "y7"),
-            ("target_y30", 29, "y30"),
-        ]:
+        xgb_model_y1 = None
+        for target, horizon_days, label in HORIZONS:
             model = _load_artifact(f"xgb_model_{target}.pkl")
             t_scaler = _load_artifact(f"target_scaler_{target}.pkl")
-
             pred_log_return = float(t_scaler.inverse_transform(model.predict(xgb_input).reshape(-1, 1))[0][0])
             pred_price = current_close * math.exp(pred_log_return)
             direction = "UP" if pred_log_return > 0 else "DOWN"
-            actual_horizon = horizon_days + 1
-            sigma_horizon = volatility_30 * math.sqrt(actual_horizon)
+            sigma_horizon = volatility_30 * math.sqrt(horizon_days)
             confidence = _confidence_score(pred_log_return, volatility_30)
             target_date = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
-
             xgb_preds[label] = {
                 "target_date": target_date,
                 "predicted_log_return": round(pred_log_return, 6),
@@ -158,27 +153,57 @@ def backfill_date(date_str: str):
                 "range_low": round(current_close * math.exp(pred_log_return - sigma_horizon), 2),
                 "range_high": round(current_close * math.exp(pred_log_return + sigma_horizon), 2),
             }
+            if label == "y1":
+                xgb_model_y1 = model
 
-        y1_return = xgb_preds["y1"]["predicted_log_return"]
-        y1_conf = xgb_preds["y1"]["confidence"]
-        xgb_signal = _generate_signal(y1_return, y1_conf, fng_today, nlp_score)
-
-        n_pca = meta["config"]["n_pca_components"]
-        n_sent = len(meta["features"]["sentiment_features"])
-        xgb_drivers = _extract_key_drivers(xgb_model, n_pca, n_sent)
-
+        xgb_signal = _generate_signal(xgb_preds["y1"]["predicted_log_return"], xgb_preds["y1"]["confidence"], fng_today, nlp_score)
+        xgb_drivers = _extract_key_drivers(xgb_model_y1, n_pca, n_sent)
         xgb_result = _build_result("xgboost", xgb_preds, xgb_signal, xgb_drivers,
                                    current_close, fng_today, nlp_score, nlp_status,
                                    data_as_of, meta, model_health)
-
-        # Save to history
-        print(f"  Saving to history...")
-        xgb_entry = {**xgb_result, "actual_direction_y1": None, "actual_price_y1": None}
         xgb_history = _load_history(HISTORY_FILE)
-        _save_history(xgb_history, xgb_entry, HISTORY_FILE)
+        _save_history(xgb_history, {**xgb_result, "actual_direction_y1": None, "actual_price_y1": None}, HISTORY_FILE)
+        print(f"  XGBoost y1: {xgb_preds['y1']['price_change_pct']:+.2f}% -> ${xgb_preds['y1']['predicted_price']:,.2f}")
+
+        # LSTM inference
+        print(f"[5b/5] Running LSTM inference...")
+        try:
+            from tensorflow.keras.models import load_model as keras_load_model
+            lstm_input = prepare_lstm_inference_input(processed_df, seq_len=30)
+            # LSTM was trained with the shared target_scaler.pkl (not the per-target scalers)
+            lstm_t_scaler = _load_artifact("target_scaler.pkl")
+            lstm_preds = {}
+            for target, horizon_days, label in HORIZONS:
+                model = keras_load_model(str(MODELS_PATH / f"lstm_{target}.keras"), compile=False)
+                t_scaler = lstm_t_scaler
+                pred_scaled = model.predict(lstm_input, verbose=0)
+                pred_log_return = float(t_scaler.inverse_transform(pred_scaled.reshape(-1, 1))[0][0])
+                pred_price = current_close * math.exp(pred_log_return)
+                direction = "UP" if pred_log_return > 0 else "DOWN"
+                sigma_horizon = volatility_30 * math.sqrt(horizon_days)
+                confidence = _confidence_score(pred_log_return, volatility_30)
+                target_date = (datetime.strptime(data_as_of, "%Y-%m-%d") + timedelta(days=horizon_days)).strftime("%Y-%m-%d")
+                lstm_preds[label] = {
+                    "target_date": target_date,
+                    "predicted_log_return": round(pred_log_return, 6),
+                    "predicted_price": round(pred_price, 2),
+                    "price_change_pct": round(pred_log_return * 100, 4),
+                    "direction": direction,
+                    "confidence": confidence,
+                    "range_low": round(current_close * math.exp(pred_log_return - sigma_horizon), 2),
+                    "range_high": round(current_close * math.exp(pred_log_return + sigma_horizon), 2),
+                }
+            lstm_signal = _generate_signal(lstm_preds["y1"]["predicted_log_return"], lstm_preds["y1"]["confidence"], fng_today, nlp_score)
+            lstm_result = _build_result("lstm", lstm_preds, lstm_signal, LSTM_KEY_DRIVERS,
+                                        current_close, fng_today, nlp_score, nlp_status,
+                                        data_as_of, meta, model_health)
+            lstm_history = _load_history(HISTORY_LSTM_FILE)
+            _save_history(lstm_history, {**lstm_result, "actual_direction_y1": None, "actual_price_y1": None}, HISTORY_LSTM_FILE)
+            print(f"  LSTM y1: {lstm_preds['y1']['price_change_pct']:+.2f}% -> ${lstm_preds['y1']['predicted_price']:,.2f}")
+        except Exception as e:
+            print(f"  [LSTM] Skipped: {e}")
 
         print(f"  [OK] Backfill complete for {date_str}")
-        print(f"  XGBoost y1: {xgb_preds['y1']['price_change_pct']:+.2f}% -> ${xgb_preds['y1']['predicted_price']:,.2f}")
         return True
 
     except Exception as e:

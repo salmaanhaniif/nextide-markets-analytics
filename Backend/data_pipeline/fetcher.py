@@ -39,6 +39,11 @@ def fetch_latest_crypto_data(symbol='BTC/USDT', timeframe='1d', limit=250):
     df = pd.DataFrame(ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms').dt.normalize()
     df.set_index('timestamp', inplace=True)
+
+    # Drop today's incomplete candle — it hasn't closed yet (closes at 00:00 UTC next day)
+    today = pd.Timestamp.utcnow().normalize().tz_localize(None)
+    df = df[df.index < today]
+
     return df
 
 

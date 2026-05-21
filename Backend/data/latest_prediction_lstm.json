@@ -1,54 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-05-21T07:31:59Z",
+    "generated_at": "2026-05-21T09:31:01Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-05-21"
-    "data_as_of": "2026-05-21"
+    "data_as_of": "2026-05-20"
   },
   "current": {
-    "price": 77596.52,
-    "fng_score": -0.42,
+    "price": 77542.46,
+    "fng_score": -0.46,
     "fng_label": "Fear",
-    "nlp_sentiment": 0.65,
+    "nlp_sentiment": 0.45,
     "nlp_status": "live"
   },
   "predictions": {
     "y1": {
       "target_date": "2026-05-21",
-      "predicted_log_return": 0.088763,
-      "predicted_price": 84799.16,
-      "price_change_pct": 8.8763,
+      "predicted_log_return": 0.003078,
+      "predicted_price": 77781.49,
+      "price_change_pct": 0.3078,
       "direction": "UP",
-      "confidence": 0.9,
-      "range_low": 83678.54,
-      "range_high": 85934.78
+      "confidence": 0.5346,
+      "range_low": 76327.93,
+      "range_high": 79262.74
     },
     "y7": {
       "target_date": "2026-05-27",
-      "predicted_log_return": 0.059893,
-      "predicted_price": 82386.0,
-      "price_change_pct": 5.9893,
-      "direction": "UP",
+      "predicted_log_return": -0.082989,
+      "predicted_price": 71367.09,
+      "price_change_pct": -8.2989,
+      "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 79536.73,
-      "range_high": 85337.33
+      "range_low": 68724.63,
+      "range_high": 74111.15
     },
     "y30": {
       "target_date": "2026-06-19",
-      "predicted_log_return": -0.190765,
-      "predicted_price": 64120.07,
-      "price_change_pct": -19.0765,
+      "predicted_log_return": -0.15842,
+      "predicted_price": 66181.84,
+      "price_change_pct": -15.842,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 59614.19,
-      "range_high": 68966.52
+      "range_low": 61444.61,
+      "range_high": 71284.3
     }
   },
   "signal": {
-    "action": "STRONG_BUY",
-    "strength": "STRONG",
-    "reasoning": "Model predicts +8.9% with bullish sentiment"
+    "action": "HOLD",
+    "strength": "LOW_CONFIDENCE",
+    "reasoning": "Model confidence 53% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
@@ -78,9 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.6429,
-    "status": "good"
-    "rolling_da_14d": 0.6429,
-    "status": "good"
+    "rolling_da_14d": null,
+    "status": "insufficient_data"
   }
 }
