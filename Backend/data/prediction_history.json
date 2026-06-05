@@ -3058,5 +3058,1110 @@
     },
     "actual_direction_y1": null,
     "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:29:26Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-22"
+    },
+    "current": {
+      "price": 76752.01,
+      "fng_score": -0.44,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-23",
+        "predicted_log_return": -0.000232,
+        "predicted_price": 76734.18,
+        "price_change_pct": -0.0232,
+        "direction": "DOWN",
+        "confidence": 0.5025,
+        "range_low": 75675.51,
+        "range_high": 77807.67
+      },
+      "y7": {
+        "target_date": "2026-05-29",
+        "predicted_log_return": 0.037799,
+        "predicted_price": 79708.7,
+        "price_change_pct": 3.7799,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 76832.07,
+        "range_high": 82693.04
+      },
+      "y30": {
+        "target_date": "2026-06-21",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 77986.16,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6722,
+        "range_low": 72272.07,
+        "range_high": 84152.02
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 50% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:29:55Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-23"
+    },
+    "current": {
+      "price": 77064.96,
+      "fng_score": -0.5,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-24",
+        "predicted_log_return": -0.000753,
+        "predicted_price": 77006.97,
+        "price_change_pct": -0.0753,
+        "direction": "DOWN",
+        "confidence": 0.5082,
+        "range_low": 75952.35,
+        "range_high": 78076.23
+      },
+      "y7": {
+        "target_date": "2026-05-30",
+        "predicted_log_return": 0.016173,
+        "predicted_price": 78321.48,
+        "price_change_pct": 1.6173,
+        "direction": "UP",
+        "confidence": 0.6759,
+        "range_low": 75515.48,
+        "range_high": 81231.74
+      },
+      "y30": {
+        "target_date": "2026-06-22",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 78304.14,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6735,
+        "range_low": 72607.7,
+        "range_high": 84447.48
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:29:59Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-24"
+    },
+    "current": {
+      "price": 77322.01,
+      "fng_score": -0.4,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-25",
+        "predicted_log_return": 0.002151,
+        "predicted_price": 77488.51,
+        "price_change_pct": 0.2151,
+        "direction": "UP",
+        "confidence": 0.5234,
+        "range_low": 76426.77,
+        "range_high": 78564.99
+      },
+      "y7": {
+        "target_date": "2026-05-31",
+        "predicted_log_return": 0.026907,
+        "predicted_price": 79430.73,
+        "price_change_pct": 2.6907,
+        "direction": "UP",
+        "confidence": 0.7925,
+        "range_low": 76583.6,
+        "range_high": 82383.7
+      },
+      "y30": {
+        "target_date": "2026-06-23",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 78565.32,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6734,
+        "range_low": 72847.15,
+        "range_high": 84732.34
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 52% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:03Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-25"
+    },
+    "current": {
+      "price": 75930.01,
+      "fng_score": -0.32,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-26",
+        "predicted_log_return": -0.009763,
+        "predicted_price": 75192.35,
+        "price_change_pct": -0.9763,
+        "direction": "DOWN",
+        "confidence": 0.6051,
+        "range_low": 74151.52,
+        "range_high": 76247.78
+      },
+      "y7": {
+        "target_date": "2026-06-01",
+        "predicted_log_return": 0.045128,
+        "predicted_price": 79435.06,
+        "price_change_pct": 4.5128,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 76558.96,
+        "range_high": 82419.2
+      },
+      "y30": {
+        "target_date": "2026-06-24",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 77150.94,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6717,
+        "range_low": 71480.0,
+        "range_high": 83271.78
+      }
+    },
+    "signal": {
+      "action": "SELL",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts -1.0%"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:07Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-26"
+    },
+    "current": {
+      "price": 74449.3,
+      "fng_score": -0.5,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-27",
+        "predicted_log_return": -0.009344,
+        "predicted_price": 73756.87,
+        "price_change_pct": -0.9344,
+        "direction": "DOWN",
+        "confidence": 0.5996,
+        "range_low": 72726.24,
+        "range_high": 74802.11
+      },
+      "y7": {
+        "target_date": "2026-06-02",
+        "predicted_log_return": 0.042684,
+        "predicted_price": 77695.86,
+        "price_change_pct": 4.2684,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 74856.36,
+        "range_high": 80643.05
+      },
+      "y30": {
+        "target_date": "2026-06-25",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 75646.42,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.67,
+        "range_low": 70035.0,
+        "range_high": 81707.45
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 60% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:11Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-27"
+    },
+    "current": {
+      "price": 73617.51,
+      "fng_score": -0.56,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-28",
+        "predicted_log_return": -0.017519,
+        "predicted_price": 72339.07,
+        "price_change_pct": -1.7519,
+        "direction": "DOWN",
+        "confidence": 0.6875,
+        "range_low": 71332.41,
+        "range_high": 73359.93
+      },
+      "y7": {
+        "target_date": "2026-06-03",
+        "predicted_log_return": 0.071988,
+        "predicted_price": 79112.49,
+        "price_change_pct": 7.1988,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 76232.99,
+        "range_high": 82100.76
+      },
+      "y30": {
+        "target_date": "2026-06-26",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 74801.25,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6707,
+        "range_low": 69274.65,
+        "range_high": 80768.76
+      }
+    },
+    "signal": {
+      "action": "SELL",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts -1.8%"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:15Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-28"
+    },
+    "current": {
+      "price": 73460.78,
+      "fng_score": -0.54,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-29",
+        "predicted_log_return": -0.012171,
+        "predicted_price": 72572.14,
+        "price_change_pct": -1.2171,
+        "direction": "DOWN",
+        "confidence": 0.6307,
+        "range_low": 71565.62,
+        "range_high": 73592.81
+      },
+      "y7": {
+        "target_date": "2026-06-04",
+        "predicted_log_return": 0.078502,
+        "predicted_price": 79460.0,
+        "price_change_pct": 7.8502,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 76577.43,
+        "range_high": 82451.08
+      },
+      "y30": {
+        "target_date": "2026-06-27",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 74642.0,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6713,
+        "range_low": 69145.07,
+        "range_high": 80575.93
+      }
+    },
+    "signal": {
+      "action": "SELL",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts -1.2%"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:20Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-29"
+    },
+    "current": {
+      "price": 73884.38,
+      "fng_score": -0.54,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-30",
+        "predicted_log_return": -0.005954,
+        "predicted_price": 73445.8,
+        "price_change_pct": -0.5954,
+        "direction": "DOWN",
+        "confidence": 0.5641,
+        "range_low": 72429.49,
+        "range_high": 74476.36
+      },
+      "y7": {
+        "target_date": "2026-06-05",
+        "predicted_log_return": 0.051361,
+        "predicted_price": 77778.32,
+        "price_change_pct": 5.1361,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 74963.14,
+        "range_high": 80699.22
+      },
+      "y30": {
+        "target_date": "2026-06-28",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 75072.41,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6717,
+        "range_low": 69556.05,
+        "range_high": 81026.28
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 56% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:24Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-30"
+    },
+    "current": {
+      "price": 73674.39,
+      "fng_score": -0.44,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-05-31",
+        "predicted_log_return": 0.0054,
+        "predicted_price": 74073.33,
+        "price_change_pct": 0.54,
+        "direction": "UP",
+        "confidence": 0.5619,
+        "range_low": 73110.91,
+        "range_high": 75048.41
+      },
+      "y7": {
+        "target_date": "2026-06-06",
+        "predicted_log_return": 0.050351,
+        "predicted_price": 77478.96,
+        "price_change_pct": 5.0351,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 74843.98,
+        "range_high": 80206.72
+      },
+      "y30": {
+        "target_date": "2026-06-29",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 74859.05,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.683,
+        "range_low": 69684.4,
+        "range_high": 80417.96
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 56% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:28Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-05-31"
+    },
+    "current": {
+      "price": 71408.9,
+      "fng_score": -0.42,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-06-01",
+        "predicted_log_return": 0.011837,
+        "predicted_price": 72259.2,
+        "price_change_pct": 1.1837,
+        "direction": "UP",
+        "confidence": 0.6266,
+        "range_low": 71252.54,
+        "range_high": 73280.08
+      },
+      "y7": {
+        "target_date": "2026-06-07",
+        "predicted_log_return": 0.048883,
+        "predicted_price": 74986.32,
+        "price_change_pct": 4.8883,
+        "direction": "UP",
+        "confidence": 0.9,
+        "range_low": 72254.02,
+        "range_high": 77821.94
+      },
+      "y30": {
+        "target_date": "2026-06-30",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 72557.13,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6706,
+        "range_low": 67190.6,
+        "range_high": 78352.29
+      }
+    },
+    "signal": {
+      "action": "BUY",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts +1.2%"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:32Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-06-01"
+    },
+    "current": {
+      "price": 66760.83,
+      "fng_score": -0.54,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-06-02",
+        "predicted_log_return": 0.002869,
+        "predicted_price": 66952.62,
+        "price_change_pct": 0.2869,
+        "direction": "UP",
+        "confidence": 0.5236,
+        "range_low": 65741.4,
+        "range_high": 68186.15
+      },
+      "y7": {
+        "target_date": "2026-06-08",
+        "predicted_log_return": 0.035236,
+        "predicted_price": 69155.14,
+        "price_change_pct": 3.5236,
+        "direction": "UP",
+        "confidence": 0.7895,
+        "range_low": 65894.23,
+        "range_high": 72577.43
+      },
+      "y30": {
+        "target_date": "2026-07-01",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 67834.32,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6311,
+        "range_low": 61379.41,
+        "range_high": 74968.05
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 52% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T13:30:37Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-06-02"
+    },
+    "current": {
+      "price": 64142.75,
+      "fng_score": -0.78,
+      "fng_label": "Extreme Fear",
+      "nlp_sentiment": 0.45,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-06-03",
+        "predicted_log_return": 0.001764,
+        "predicted_price": 64255.97,
+        "price_change_pct": 0.1764,
+        "direction": "UP",
+        "confidence": 0.514,
+        "range_low": 63057.35,
+        "range_high": 65477.37
+      },
+      "y7": {
+        "target_date": "2026-06-09",
+        "predicted_log_return": 0.022205,
+        "predicted_price": 65583.0,
+        "price_change_pct": 2.2205,
+        "direction": "UP",
+        "confidence": 0.6769,
+        "range_low": 62395.74,
+        "range_high": 68933.06
+      },
+      "y30": {
+        "target_date": "2026-07-02",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 65174.14,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6271,
+        "range_low": 58787.36,
+        "range_high": 72254.81
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-04T16:02:39Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-06-03"
+    },
+    "current": {
+      "price": 64014.3671875,
+      "fng_score": -0.78,
+      "fng_label": "Extreme Fear",
+      "nlp_sentiment": -0.5,
+      "nlp_status": "live"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-06-04",
+        "predicted_log_return": -0.004049,
+        "predicted_price": 63755.72,
+        "price_change_pct": -0.4049,
+        "direction": "DOWN",
+        "confidence": 0.5323,
+        "range_low": 62567.31,
+        "range_high": 64966.71
+      },
+      "y7": {
+        "target_date": "2026-06-10",
+        "predicted_log_return": 0.000496,
+        "predicted_price": 64046.12,
+        "price_change_pct": 0.0496,
+        "direction": "UP",
+        "confidence": 0.504,
+        "range_low": 60935.8,
+        "range_high": 67315.2
+      },
+      "y30": {
+        "target_date": "2026-07-03",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 65043.7,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6272,
+        "range_low": 58674.17,
+        "range_high": 72104.69
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 53% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": 0.5714,
+      "status": "good"
+    },
+    "actual_direction_y1": null,
+    "actual_price_y1": null
   }
 ]
