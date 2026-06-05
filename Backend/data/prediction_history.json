@@ -81,8 +81,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 75162.9
   },
   {
     "meta": {
@@ -166,8 +166,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 77117.4
   },
   {
     "meta": {
@@ -251,8 +251,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 75728.8
   },
   {
     "meta": {
@@ -336,8 +336,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 73827.6
   },
   {
     "meta": {
@@ -421,8 +421,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 75848.3
   },
   {
     "meta": {
@@ -506,8 +506,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 76351.9
   },
   {
     "meta": {
@@ -591,8 +591,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 78204.0
   },
   {
     "meta": {
@@ -676,8 +676,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 78283.6
   },
   {
     "meta": {
@@ -761,8 +761,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 77455.0
   },
   {
     "meta": {
@@ -846,8 +846,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 77648.5
   },
   {
     "meta": {
@@ -931,8 +931,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 78653.8
   },
   {
     "meta": {
@@ -1016,8 +1016,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 77374.7
   },
   {
     "meta": {
@@ -1101,8 +1101,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76331.9
   },
   {
     "meta": {
@@ -1186,8 +1186,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 75750.3
   },
   {
     "meta": {
@@ -1271,8 +1271,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76313.0
   },
   {
     "meta": {
@@ -1356,8 +1356,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 78235.3
   },
   {
     "meta": {
@@ -1441,8 +1441,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 78660.0
   },
   {
     "meta": {
@@ -1526,8 +1526,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 78547.4
   },
   {
     "meta": {
@@ -1611,8 +1611,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 79843.7
   },
   {
     "meta": {
@@ -1696,8 +1696,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 80900.8
   },
   {
     "meta": {
@@ -1781,8 +1781,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 81438.0
   },
   {
     "meta": {
@@ -1866,8 +1866,8 @@
       "rolling_da_14d": 0.6429,
       "status": "good"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 80011.5
   },
   {
     "meta": {
@@ -1951,8 +1951,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 80196.9
   },
   {
     "meta": {
@@ -2036,8 +2036,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 80670.1
   },
   {
     "meta": {
@@ -2121,8 +2121,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 82171.8
   },
   {
     "meta": {
@@ -2206,8 +2206,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 81730.5
   },
   {
     "meta": {
@@ -2291,8 +2291,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 80492.3
   },
   {
     "meta": {
@@ -2376,8 +2376,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 79292.1
   },
   {
     "meta": {
@@ -2461,8 +2461,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 81070.1
   },
   {
     "meta": {
@@ -2546,8 +2546,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 79062.5
   },
   {
     "meta": {
@@ -2631,8 +2631,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 78122.8
   },
   {
     "meta": {
@@ -2716,8 +2716,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 77410.0
   },
   {
     "meta": {
@@ -2801,8 +2801,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76946.5
   },
   {
     "meta": {
@@ -2886,8 +2886,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76756.3
   },
   {
     "meta": {
@@ -2971,8 +2971,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 77479.4
   },
   {
     "meta": {
@@ -3056,8 +3056,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 77549.7
   },
   {
     "meta": {
@@ -3141,8 +3141,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76670.1
   },
   {
     "meta": {
@@ -3226,8 +3226,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 76984.9
   },
   {
     "meta": {
@@ -3311,8 +3311,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 77265.9
   },
   {
     "meta": {
@@ -3396,8 +3396,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 75824.0
   },
   {
     "meta": {
@@ -3481,8 +3481,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 74337.1
   },
   {
     "meta": {
@@ -3566,8 +3566,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 73515.7
   },
   {
     "meta": {
@@ -3651,8 +3651,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 73370.7
   },
   {
     "meta": {
@@ -3736,8 +3736,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 73753.7
   },
   {
     "meta": {
@@ -3821,8 +3821,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 73570.0
   },
   {
     "meta": {
@@ -3906,8 +3906,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 71317.5
   },
   {
     "meta": {
@@ -3991,8 +3991,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 66669.7
   },
   {
     "meta": {
@@ -4076,8 +4076,8 @@
       "rolling_da_14d": null,
       "status": "insufficient_data"
     },
-    "actual_direction_y1": null,
-    "actual_price_y1": null
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 64035.8
   },
   {
     "meta": {
@@ -4160,6 +4160,91 @@
     "model_health": {
       "rolling_da_14d": 0.5714,
       "status": "good"
+    },
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 63814.0
+  },
+  {
+    "meta": {
+      "generated_at": "2026-06-05T01:24:18Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-06-04"
+    },
+    "current": {
+      "price": 63814.0,
+      "fng_score": -0.76,
+      "fng_label": "Extreme Fear",
+      "nlp_sentiment": 0.3143,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-06-05",
+        "predicted_log_return": 0.000366,
+        "predicted_price": 63837.37,
+        "price_change_pct": 0.0366,
+        "direction": "UP",
+        "confidence": 0.503,
+        "range_low": 62667.98,
+        "range_high": 65028.59
+      },
+      "y7": {
+        "target_date": "2026-06-11",
+        "predicted_log_return": 0.003692,
+        "predicted_price": 64050.01,
+        "price_change_pct": 0.3692,
+        "direction": "UP",
+        "confidence": 0.53,
+        "range_low": 60992.38,
+        "range_high": 67260.91
+      },
+      "y30": {
+        "target_date": "2026-07-04",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 64840.11,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6294,
+        "range_low": 58595.64,
+        "range_high": 71750.04
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 50% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": null,
+      "status": "insufficient_data"
     },
     "actual_direction_y1": null,
     "actual_price_y1": null
