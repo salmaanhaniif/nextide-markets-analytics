@@ -17,7 +17,8 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parent / "data_pipeline" / ".env")
 
-from data_pipeline.fetcher import fetch_latest_crypto_data, fetch_historical_fng
+from data_pipeline.fetcher import fetch_historical_fng
+from data_pipeline.fetcher_alt import fetch_latest_crypto_data
 from data_pipeline.feature_engineering import engineer_features
 from data_pipeline.preprocessor import prepare_inference_input, prepare_lstm_inference_input
 from data_pipeline.sentiment_analysis import get_live_nlp_sentiment

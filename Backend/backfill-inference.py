@@ -8,10 +8,11 @@ import math
 import sys
 import joblib
 import importlib.util
+import yfinance as yf
+import pandas as pd
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from dotenv import load_dotenv
-import requests
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parent / "data_pipeline" / ".env")
 
@@ -37,38 +38,22 @@ BASE_PATH = Path(__file__).resolve().parent
 MODELS_PATH = BASE_PATH / "models"
 DATA_PATH = BASE_PATH / "data"
 
-def fetch_historical_ohlcv(symbol: str = "BTCUSDT", date_str: str = None, limit: int = 250) -> list:
-    """Fetch historical OHLCV data from Binance up to and including a specific date."""
-    try:
-        # Binance klines endpoint
-        url = "https://api.binance.com/api/v3/klines"
-
-        if date_str:
-            # Fetch data up to end of target date (UTC)
-            target_date = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-            end_time = int((target_date + timedelta(days=1)).timestamp() * 1000)  # milliseconds
-
-        params = {
-            "symbol": symbol,
-            "interval": "1d",
-            "limit": limit,
-        }
-
-        if date_str:
-            params["endTime"] = end_time
-
-        res = requests.get(url, params=params, timeout=10)
-        res.raise_for_status()
-
-        data = res.json()
-        if not data:
-            print(f"  [!] No data for {date_str}")
-            return []
-
-        return data
-    except Exception as e:
-        print(f"  [E] Error fetching OHLCV for {date_str}: {e}")
-        return []
+def fetch_historical_ohlcv(date_str: str = None, limit: int = 250) -> pd.DataFrame:
+    """Fetch historical OHLCV via Yahoo Finance up to and including date_str."""
+    end_date = (datetime.strptime(date_str, "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d")
+    start_date = (datetime.strptime(date_str, "%Y-%m-%d") - timedelta(days=limit + 10)).strftime("%Y-%m-%d")
+    df = yf.download("BTC-USD", start=start_date, end=end_date, interval="1d",
+                     progress=False, auto_adjust=True)
+    if df.empty:
+        print(f"  [!] No data for {date_str}")
+        return pd.DataFrame()
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = df.columns.get_level_values(0)
+    df = df[["Open", "High", "Low", "Close", "Volume"]].rename(columns=str.lower)
+    if df.index.tz is not None:
+        df.index = df.index.tz_localize(None)
+    df.index = df.index.normalize()
+    return df.tail(limit)
 
 
 def backfill_date(date_str: str):
@@ -78,28 +63,21 @@ def backfill_date(date_str: str):
     try:
         # Fetch historical data
         print(f"[1/5] Fetching historical OHLCV for {date_str}...")
-        klines = fetch_historical_ohlcv(date_str=date_str)
-        if not klines:
+        df_ohlcv = fetch_historical_ohlcv(date_str=date_str)
+        if df_ohlcv.empty:
             print(f"  [E] No data available for {date_str}")
             return False
-
-        # Convert to DataFrame format (matching fetcher.py style)
-        import pandas as pd
-        df_ohlcv = pd.DataFrame(klines, columns=[
-            'open_time', 'open', 'high', 'low', 'close', 'volume',
-            'close_time', 'quote_volume', 'trades', 'taker_buy_base', 'taker_buy_quote', 'ignore'
-        ])
-        df_ohlcv['open_time'] = pd.to_datetime(df_ohlcv['open_time'], unit='ms').dt.normalize()
-        df_ohlcv = df_ohlcv.set_index('open_time')
-        df_ohlcv = df_ohlcv[['open', 'high', 'low', 'close', 'volume']].astype(float)
 
         # Get last 250 candles for proper feature engineering
         print(f"[2/5] Fetching FNG data...")
         fng_df = fetch_historical_fng(limit=65)
 
-        # Get NLP sentiment
-        print(f"[3/5] Getting NLP sentiment...")
-        nlp_score, nlp_status = get_live_nlp_sentiment()
+        # Get NLP sentiment (skip live API for backfill, use history fallback)
+        print(f"[3/5] Getting NLP sentiment (using fallback for backfill)...")
+        from data_pipeline.sentiment_analysis import _fallback_from_history
+        nlp_score, nlp_status = _fallback_from_history()
+        if nlp_status == "unavailable":
+            nlp_score = 0.0  # Neutral default if no history
 
         # Feature engineering
         print(f"[4/5] Engineering features...")
@@ -168,7 +146,12 @@ def backfill_date(date_str: str):
         # LSTM inference
         print(f"[5b/5] Running LSTM inference...")
         try:
+            # Lazy import TensorFlow to avoid slow startup
+            import tensorflow as tf
+            # Suppress TF warnings
+            tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
             from tensorflow.keras.models import load_model as keras_load_model
+            
             lstm_input = prepare_lstm_inference_input(processed_df, seq_len=30)
             # LSTM was trained with the shared target_scaler.pkl (not the per-target scalers)
             lstm_t_scaler = _load_artifact("target_scaler.pkl")
