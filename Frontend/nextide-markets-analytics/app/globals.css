@@ -139,3 +139,15 @@
 .animate-slide-up {
   animation: slide-up 0.5s ease-out;
 }
+
+/* Rolling number digit animation */
+@keyframes roll-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes roll-down {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+.roll-up   { animation: roll-up   0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.roll-down { animation: roll-down 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards; }

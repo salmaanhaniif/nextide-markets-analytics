@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, Clock } from 'lucide-react';
 import { useLivePrice } from '@/src/lib/useLivePrice';
+import { RollingNumber } from '@/src/components/ui/RollingNumber';
 
 function fmtPrice(n: number | null): string {
     if (n == null) return '—';
@@ -41,7 +42,7 @@ export function PriceTickerWidget({
     predictedTargetDate,
     prevCloseOverride,
 }: Props) {
-    const { livePrice, prevClose: binancePrevClose, loading, lastUpdated, error } = useLivePrice();
+    const { livePrice, prevClose: binancePrevClose, lastUpdated, error } = useLivePrice();
 
     // Use Binance klines prev-close; fall back to history close from backend
     const prevClose = binancePrevClose ?? prevCloseOverride ?? null;
@@ -105,16 +106,17 @@ export function PriceTickerWidget({
                             <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${error ? 'bg-red-500' : 'bg-green-500'}`} />
                         </span>
                     </div>
-                    <p style={{
-                        color: loading ? 'var(--text-muted)' : error ? 'var(--color-danger)' : (livePrice != null && prevClose != null && livePrice > prevClose) ? 'var(--color-success)' : (livePrice != null && prevClose != null && livePrice < prevClose) ? 'var(--color-danger)' : 'var(--color-primary)',
-                    }} className="text-3xl font-bold tabular-nums leading-none transition-colors">
-                        {loading ? '—' : error ? 'Error' : fmtPrice(livePrice)}
-                    </p>
+                    <div style={{
+                        color: (livePrice == null) ? 'var(--text-muted)' : error ? 'var(--color-danger)' : (prevClose != null && livePrice > prevClose) ? 'var(--color-success)' : (prevClose != null && livePrice < prevClose) ? 'var(--color-danger)' : 'var(--color-primary)',
+                    }} className="text-3xl font-bold leading-none transition-colors">
+                        {/* Keep RollingNumber mounted once we have any price so animation state is preserved */}
+                        <RollingNumber value={livePrice != null ? fmtPrice(livePrice) : null} />
+                    </div>
                     <div className="flex items-center gap-2 mt-2">
                         <PctChange from={prevClose} to={livePrice} />
                         <span className="text-[11px] text-[var(--text-muted)]">
                             {error
-                                ? 'Binance unreachable'
+                                ? 'price feed unavailable'
                                 : fetchedAt
                                     ? `fetched ${fetchedAt}`
                                     : 'connecting…'}
@@ -149,7 +151,7 @@ export function PriceTickerWidget({
                         <strong className="text-[var(--text-secondary)]">00:00 UTC</strong>
                         {' '}={' '}
                         <strong className="text-[var(--text-secondary)]">07:00 WIB</strong>
-                        {' '}(GMT+7). Live price updates every 10 s via Binance.
+                        {' '}(GMT+7). Live price updates every 10 s.
                     </span>
                 </div>
                 <span className="text-[11px] text-[var(--text-muted)] tabular-nums font-mono">

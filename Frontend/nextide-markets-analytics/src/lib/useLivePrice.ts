@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 export interface LivePriceData {
     livePrice: number | null;
@@ -8,10 +8,8 @@ export interface LivePriceData {
     loading: boolean;
     lastUpdated: Date | null;
     error: boolean;
-    source: 'public-api';
+    source: string;
 }
-
-const BINANCE_24H_API = 'https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT';
 
 export function useLivePrice(): LivePriceData {
     const [livePrice, setLivePrice] = useState<number | null>(null);
@@ -19,35 +17,28 @@ export function useLivePrice(): LivePriceData {
     const [loading, setLoading] = useState(true);
     const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
     const [error, setError] = useState(false);
-    const [source, setSource] = useState<'public-api'>('public-api');
+    const [source, setSource] = useState<string>('');
+
+    // After the first successful fetch we never set loading:true again —
+    // keeps the displayed price stable between polls so RollingNumber stays mounted.
+    const hasPriceRef = useRef(false);
 
     const fetchLive = useCallback(async () => {
         try {
-            setLoading(true);
-
-            const res = await fetch(BINANCE_24H_API, {
-                headers: { 'Accept': 'application/json' }
-            });
-
+            if (!hasPriceRef.current) setLoading(true);
+            const res = await fetch('/api/live-price');
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
             const json = await res.json();
-            const current = parseFloat(json.lastPrice);
-            const changePercent = parseFloat(json.priceChangePercent) || 0;
+            if (!json.price || isNaN(json.price)) throw new Error('Invalid price');
 
-            if (isNaN(current)) throw new Error('Invalid price data');
-
-            const prevClose = current - (current * changePercent / 100);
-
-            setLivePrice(current);
-            setPrevClose(prevClose);
+            hasPriceRef.current = true;
+            setLivePrice(json.price);
+            setPrevClose(json.prev_close ?? json.price);
             setLastUpdated(new Date());
+            setSource(json.source ?? 'proxy');
             setError(false);
-            setSource('public-api');
-
-            console.log('[useLivePrice] Fetched:', { live_price: current, prev_close: prevClose });
         } catch (err) {
-            console.error('fetchLive error:', err);
+            console.error('[useLivePrice] fetch error:', err);
             setError(true);
         } finally {
             setLoading(false);
