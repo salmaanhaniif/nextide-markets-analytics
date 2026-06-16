@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-06-15T05:22:36Z",
+    "generated_at": "2026-06-16T05:26:28Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-06-14"
+    "data_as_of": "2026-06-15"
   },
   "current": {
-    "price": 65715.1,
-    "fng_score": -0.64,
-    "fng_label": "Extreme Fear",
-    "nlp_sentiment": 0.208,
+    "price": 66284.3,
+    "fng_score": -0.6,
+    "fng_label": "Fear",
+    "nlp_sentiment": 0.2029,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-06-15",
-      "predicted_log_return": -0.027764,
-      "predicted_price": 63915.65,
-      "price_change_pct": -2.7764,
+      "target_date": "2026-06-16",
+      "predicted_log_return": -0.027523,
+      "predicted_price": 64484.85,
+      "price_change_pct": -2.7523,
       "direction": "DOWN",
-      "confidence": 0.689,
-      "range_low": 62522.92,
-      "range_high": 65339.41
+      "confidence": 0.6863,
+      "range_low": 63071.29,
+      "range_high": 65930.08
     },
     "y7": {
-      "target_date": "2026-06-21",
-      "predicted_log_return": -0.104652,
-      "predicted_price": 59185.5,
-      "price_change_pct": -10.4652,
+      "target_date": "2026-06-22",
+      "predicted_log_return": -0.104362,
+      "predicted_price": 59715.45,
+      "price_change_pct": -10.4362,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 55834.27,
-      "range_high": 62737.87
+      "range_low": 56314.32,
+      "range_high": 63321.98
     },
     "y30": {
-      "target_date": "2026-07-14",
-      "predicted_log_return": -0.138592,
-      "predicted_price": 57210.47,
-      "price_change_pct": -13.8592,
+      "target_date": "2026-07-15",
+      "predicted_log_return": -0.137786,
+      "predicted_price": 57752.55,
+      "price_change_pct": -13.7786,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 50707.19,
-      "range_high": 64547.8
+      "range_low": 51150.25,
+      "range_high": 65207.04
     }
   },
   "signal": {
