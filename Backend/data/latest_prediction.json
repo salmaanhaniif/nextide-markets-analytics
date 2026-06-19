@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-06-18T04:56:08Z",
+    "generated_at": "2026-06-19T05:19:36Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-06-17"
+    "data_as_of": "2026-06-18"
   },
   "current": {
-    "price": 64454.8,
-    "fng_score": -0.56,
-    "fng_label": "Fear",
-    "nlp_sentiment": 0.2042,
+    "price": 62885.6,
+    "fng_score": -0.7,
+    "fng_label": "Extreme Fear",
+    "nlp_sentiment": 0.213,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-06-18",
-      "predicted_log_return": 0.00417,
-      "predicted_price": 64724.11,
-      "price_change_pct": 0.417,
+      "target_date": "2026-06-19",
+      "predicted_log_return": 0.005664,
+      "predicted_price": 63242.8,
+      "price_change_pct": 0.5664,
       "direction": "UP",
-      "confidence": 0.5281,
-      "range_low": 63297.75,
-      "range_high": 66182.61
+      "confidence": 0.5377,
+      "range_low": 61833.71,
+      "range_high": 64684.0
     },
     "y7": {
-      "target_date": "2026-06-24",
-      "predicted_log_return": -0.016927,
-      "predicted_price": 63372.96,
-      "price_change_pct": -1.6927,
+      "target_date": "2026-06-25",
+      "predicted_log_return": -0.009454,
+      "predicted_price": 62293.86,
+      "price_change_pct": -0.9454,
       "direction": "DOWN",
-      "confidence": 0.6139,
-      "range_low": 59744.64,
-      "range_high": 67221.64
+      "confidence": 0.5629,
+      "range_low": 58688.7,
+      "range_high": 66120.48
     },
     "y30": {
-      "target_date": "2026-07-17",
+      "target_date": "2026-07-18",
       "predicted_log_return": 0.015952,
-      "predicted_price": 65491.21,
+      "predicted_price": 63896.78,
       "price_change_pct": 1.5952,
       "direction": "UP",
-      "confidence": 0.6074,
-      "range_low": 57966.28,
-      "range_high": 73992.99
+      "confidence": 0.6062,
+      "range_low": 56478.09,
+      "range_high": 72289.95
     }
   },
   "signal": {
     "action": "HOLD",
     "strength": "LOW_CONFIDENCE",
-    "reasoning": "Model confidence 53% below threshold \u2014 waiting for clearer signal"
+    "reasoning": "Model confidence 54% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
