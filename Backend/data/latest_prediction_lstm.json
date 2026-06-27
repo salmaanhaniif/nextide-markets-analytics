@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-06-26T04:26:06Z",
+    "generated_at": "2026-06-27T04:12:40Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-06-25"
+    "data_as_of": "2026-06-26"
   },
   "current": {
-    "price": 59707.1,
-    "fng_score": -0.76,
+    "price": 60009.2,
+    "fng_score": -0.74,
     "fng_label": "Extreme Fear",
-    "nlp_sentiment": 0.2085,
+    "nlp_sentiment": 0.2078,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-06-26",
-      "predicted_log_return": -0.041744,
-      "predicted_price": 57266.01,
-      "price_change_pct": -4.1744,
+      "target_date": "2026-06-27",
+      "predicted_log_return": -0.042071,
+      "predicted_price": 57536.92,
+      "price_change_pct": -4.2071,
       "direction": "DOWN",
-      "confidence": 0.7764,
-      "range_low": 55983.32,
-      "range_high": 58578.09
+      "confidence": 0.7785,
+      "range_low": 56247.79,
+      "range_high": 58855.59
     },
     "y7": {
-      "target_date": "2026-07-02",
-      "predicted_log_return": -0.09197,
-      "predicted_price": 54460.8,
-      "price_change_pct": -9.197,
+      "target_date": "2026-07-03",
+      "predicted_log_return": -0.091536,
+      "predicted_price": 54760.08,
+      "price_change_pct": -9.1536,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 51292.56,
-      "range_high": 57824.73
+      "range_low": 51573.54,
+      "range_high": 58143.5
     },
     "y30": {
-      "target_date": "2026-07-25",
-      "predicted_log_return": -0.107478,
-      "predicted_price": 53622.71,
-      "price_change_pct": -10.7478,
+      "target_date": "2026-07-26",
+      "predicted_log_return": -0.103188,
+      "predicted_price": 54125.74,
+      "price_change_pct": -10.3188,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 47365.52,
-      "range_high": 60706.5
+      "range_low": 47808.14,
+      "range_high": 61278.17
     }
   },
   "signal": {
