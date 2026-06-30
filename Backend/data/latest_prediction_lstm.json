@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-06-28T04:46:26Z",
+    "generated_at": "2026-06-30T04:21:18Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-06-27"
+    "data_as_of": "2026-06-29"
   },
   "current": {
-    "price": 59941.5,
-    "fng_score": -0.7,
+    "price": 60157.3,
+    "fng_score": -0.76,
     "fng_label": "Extreme Fear",
-    "nlp_sentiment": 0.2075,
+    "nlp_sentiment": 0.2074,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-06-28",
-      "predicted_log_return": -0.040412,
-      "predicted_price": 57567.44,
-      "price_change_pct": -4.0412,
+      "target_date": "2026-06-30",
+      "predicted_log_return": -0.040547,
+      "predicted_price": 57766.87,
+      "price_change_pct": -4.0547,
       "direction": "DOWN",
-      "confidence": 0.7674,
-      "range_low": 56276.91,
-      "range_high": 58887.57
+      "confidence": 0.7669,
+      "range_low": 56465.19,
+      "range_high": 59098.56
     },
     "y7": {
-      "target_date": "2026-07-04",
-      "predicted_log_return": -0.090957,
-      "predicted_price": 54729.98,
-      "price_change_pct": -9.0957,
+      "target_date": "2026-07-06",
+      "predicted_log_return": -0.090111,
+      "predicted_price": 54973.52,
+      "price_change_pct": -9.0111,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 51543.43,
-      "range_high": 58113.53
+      "range_low": 51756.6,
+      "range_high": 58390.38
     },
     "y30": {
-      "target_date": "2026-07-27",
-      "predicted_log_return": -0.100116,
-      "predicted_price": 54231.05,
-      "price_change_pct": -10.0116,
+      "target_date": "2026-07-29",
+      "predicted_log_return": -0.098405,
+      "predicted_price": 54519.49,
+      "price_change_pct": -9.8405,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 47897.77,
-      "range_high": 61401.74
+      "range_low": 48121.37,
+      "range_high": 61768.29
     }
   },
   "signal": {
     "action": "STRONG_SELL",
     "strength": "STRONG",
-    "reasoning": "Model predicts -4.0% with bearish sentiment"
+    "reasoning": "Model predicts -4.1% with bearish sentiment"
   },
   "key_drivers": [
     {
