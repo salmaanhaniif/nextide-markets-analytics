@@ -7731,6 +7731,91 @@
       "rolling_da_14d": 0.2857,
       "status": "alert"
     },
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 63907.0
+  },
+  {
+    "meta": {
+      "generated_at": "2026-07-18T03:21:41Z",
+      "model_version": "unknown",
+      "model_id": "xgboost",
+      "data_as_of": "2026-07-17"
+    },
+    "current": {
+      "price": 63907.0,
+      "fng_score": -0.46,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.2076,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-07-18",
+        "predicted_log_return": -0.013255,
+        "predicted_price": 63065.48,
+        "price_change_pct": -1.3255,
+        "direction": "DOWN",
+        "confidence": 0.6131,
+        "range_low": 61966.63,
+        "range_high": 64183.81
+      },
+      "y7": {
+        "target_date": "2026-07-24",
+        "predicted_log_return": -0.033327,
+        "predicted_price": 61812.25,
+        "price_change_pct": -3.3327,
+        "direction": "DOWN",
+        "confidence": 0.7844,
+        "range_low": 59003.45,
+        "range_high": 64754.76
+      },
+      "y30": {
+        "target_date": "2026-08-16",
+        "predicted_log_return": 0.015952,
+        "predicted_price": 64934.6,
+        "price_change_pct": 1.5952,
+        "direction": "UP",
+        "confidence": 0.6361,
+        "range_low": 58974.48,
+        "range_high": 71497.07
+      }
+    },
+    "signal": {
+      "action": "STRONG_SELL",
+      "strength": "STRONG",
+      "reasoning": "Model predicts -1.3% with bearish sentiment"
+    },
+    "key_drivers": [
+      {
+        "feature": "pca_components",
+        "importance": 0.6467,
+        "label": "Technical Pattern (PCA)"
+      },
+      {
+        "feature": "fng_30d_avg",
+        "importance": 0.08447,
+        "label": "Sentiment 30-Day Avg"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.07685,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.07367,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.06143,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": 0.3571,
+      "status": "alert"
+    },
     "actual_direction_y1": null,
     "actual_price_y1": null
   }
