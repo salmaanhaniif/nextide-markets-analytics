@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-07-24T03:35:29Z",
+    "generated_at": "2026-07-25T03:33:02Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-07-23"
+    "data_as_of": "2026-07-24"
   },
   "current": {
-    "price": 65050.1,
-    "fng_score": -0.38,
+    "price": 64087.8,
+    "fng_score": -0.44,
     "fng_label": "Fear",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-07-24",
-      "predicted_log_return": -0.013484,
-      "predicted_price": 64178.83,
-      "price_change_pct": -1.3484,
+      "target_date": "2026-07-25",
+      "predicted_log_return": -0.015452,
+      "predicted_price": 63105.12,
+      "price_change_pct": -1.5452,
       "direction": "DOWN",
-      "confidence": 0.6202,
-      "range_low": 63108.28,
-      "range_high": 65267.53
+      "confidence": 0.6426,
+      "range_low": 62087.59,
+      "range_high": 64139.32
     },
     "y7": {
-      "target_date": "2026-07-30",
-      "predicted_log_return": 0.009422,
-      "predicted_price": 65665.91,
-      "price_change_pct": 0.9422,
+      "target_date": "2026-07-31",
+      "predicted_log_return": 0.027185,
+      "predicted_price": 65853.95,
+      "price_change_pct": 2.7185,
       "direction": "UP",
-      "confidence": 0.584,
-      "range_low": 62807.52,
-      "range_high": 68654.39
+      "confidence": 0.7509,
+      "range_low": 63081.72,
+      "range_high": 68748.02
     },
     "y30": {
-      "target_date": "2026-08-22",
+      "target_date": "2026-08-23",
       "predicted_log_return": 0.015952,
-      "predicted_price": 66096.08,
+      "predicted_price": 65118.31,
       "price_change_pct": 1.5952,
       "direction": "UP",
-      "confidence": 0.6422,
-      "range_low": 60278.48,
-      "range_high": 72475.15
+      "confidence": 0.6472,
+      "range_low": 59571.05,
+      "range_high": 71182.13
     }
   },
   "signal": {
-    "action": "SELL",
-    "strength": "MODERATE",
-    "reasoning": "Model predicts -1.3%"
+    "action": "STRONG_SELL",
+    "strength": "STRONG",
+    "reasoning": "Model predicts -1.5% with bearish sentiment"
   },
   "key_drivers": [
     {
@@ -77,7 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.5,
+    "rolling_da_14d": 0.5714,
     "status": "good"
   }
 }
