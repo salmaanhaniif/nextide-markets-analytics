@@ -8581,6 +8581,91 @@
       "rolling_da_14d": 0.5,
       "status": "good"
     },
+    "actual_direction_y1": "DOWN",
+    "actual_price_y1": 63697.1
+  },
+  {
+    "meta": {
+      "generated_at": "2026-07-28T03:28:21Z",
+      "model_version": "unknown",
+      "model_id": "lstm",
+      "data_as_of": "2026-07-27"
+    },
+    "current": {
+      "price": 63697.1,
+      "fng_score": -0.4,
+      "fng_label": "Fear",
+      "nlp_sentiment": 0.2076,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-07-28",
+        "predicted_log_return": -0.033672,
+        "predicted_price": 61587.98,
+        "price_change_pct": -3.3672,
+        "direction": "DOWN",
+        "confidence": 0.803,
+        "range_low": 60569.89,
+        "range_high": 62623.18
+      },
+      "y7": {
+        "target_date": "2026-08-03",
+        "predicted_log_return": -0.072881,
+        "predicted_price": 59219.9,
+        "price_change_pct": -7.2881,
+        "direction": "DOWN",
+        "confidence": 0.9,
+        "range_low": 56664.97,
+        "range_high": 61890.03
+      },
+      "y30": {
+        "target_date": "2026-08-26",
+        "predicted_log_return": -0.093673,
+        "predicted_price": 58001.33,
+        "price_change_pct": -9.3673,
+        "direction": "DOWN",
+        "confidence": 0.9,
+        "range_low": 52940.42,
+        "range_high": 63546.04
+      }
+    },
+    "signal": {
+      "action": "SELL",
+      "strength": "MODERATE",
+      "reasoning": "Model predicts -3.4%"
+    },
+    "key_drivers": [
+      {
+        "feature": "technical_sequence",
+        "importance": 0.62,
+        "label": "Technical Sequence (Conv-LSTM)"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.148,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "nlp_sentiment_score",
+        "importance": 0.112,
+        "label": "News Sentiment (NLP)"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.074,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.046,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": 0.5714,
+      "status": "good"
+    },
     "actual_direction_y1": null,
     "actual_price_y1": null
   }
