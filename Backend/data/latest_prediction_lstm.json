@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-07-29T03:30:31Z",
+    "generated_at": "2026-07-30T03:18:21Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-07-28"
+    "data_as_of": "2026-07-29"
   },
   "current": {
-    "price": 63859.6,
+    "price": 63901.0,
     "fng_score": -0.42,
     "fng_label": "Fear",
     "nlp_sentiment": 0.2076,
@@ -14,40 +14,40 @@
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-07-29",
-      "predicted_log_return": -0.035872,
-      "predicted_price": 61609.42,
-      "price_change_pct": -3.5872,
+      "target_date": "2026-07-30",
+      "predicted_log_return": -0.038977,
+      "predicted_price": 61458.22,
+      "price_change_pct": -3.8977,
       "direction": "DOWN",
-      "confidence": 0.8247,
-      "range_low": 60596.96,
-      "range_high": 62638.79
+      "confidence": 0.8546,
+      "range_low": 60453.17,
+      "range_high": 62479.97
     },
     "y7": {
-      "target_date": "2026-08-04",
-      "predicted_log_return": -0.073524,
-      "predicted_price": 59332.83,
-      "price_change_pct": -7.3524,
+      "target_date": "2026-08-05",
+      "predicted_log_return": -0.074308,
+      "predicted_price": 59324.76,
+      "price_change_pct": -7.4308,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 56787.87,
-      "range_high": 61991.86
+      "range_low": 56792.39,
+      "range_high": 61970.05
     },
     "y30": {
-      "target_date": "2026-08-27",
-      "predicted_log_return": -0.09327,
-      "predicted_price": 58172.72,
-      "price_change_pct": -9.327,
+      "target_date": "2026-08-28",
+      "predicted_log_return": -0.092354,
+      "predicted_price": 58263.82,
+      "price_change_pct": -9.2354,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 53125.59,
-      "range_high": 63699.34
+      "range_low": 53232.56,
+      "range_high": 63770.61
     }
   },
   "signal": {
     "action": "STRONG_SELL",
     "strength": "STRONG",
-    "reasoning": "Model predicts -3.6% with bearish sentiment"
+    "reasoning": "Model predicts -3.9% with bearish sentiment"
   },
   "key_drivers": [
     {
