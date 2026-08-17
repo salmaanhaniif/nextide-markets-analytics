@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-08-16T01:53:25Z",
+    "generated_at": "2026-08-17T01:51:07Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-08-15"
+    "data_as_of": "2026-08-16"
   },
   "current": {
-    "price": 63024.3,
+    "price": 62819.1,
     "fng_score": -0.32,
     "fng_label": "Fear",
     "nlp_sentiment": 0.2076,
@@ -14,40 +14,40 @@
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-08-16",
-      "predicted_log_return": -0.033932,
-      "predicted_price": 60921.61,
-      "price_change_pct": -3.3932,
+      "target_date": "2026-08-17",
+      "predicted_log_return": -0.033131,
+      "predicted_price": 60771.94,
+      "price_change_pct": -3.3131,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 60224.06,
-      "range_high": 61627.23
+      "range_low": 60075.91,
+      "range_high": 61476.04
     },
     "y7": {
-      "target_date": "2026-08-22",
-      "predicted_log_return": -0.07916,
-      "predicted_price": 58227.65,
-      "price_change_pct": -7.916,
+      "target_date": "2026-08-23",
+      "predicted_log_return": -0.078745,
+      "predicted_price": 58062.14,
+      "price_change_pct": -7.8745,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 56480.32,
-      "range_high": 60029.04
+      "range_low": 56319.27,
+      "range_high": 59858.95
     },
     "y30": {
-      "target_date": "2026-09-14",
-      "predicted_log_return": -0.09628,
-      "predicted_price": 57239.31,
-      "price_change_pct": -9.628,
+      "target_date": "2026-09-15",
+      "predicted_log_return": -0.095341,
+      "predicted_price": 57106.5,
+      "price_change_pct": -9.5341,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 53740.44,
-      "range_high": 60965.97
+      "range_low": 53614.75,
+      "range_high": 60825.65
     }
   },
   "signal": {
     "action": "SELL",
     "strength": "MODERATE",
-    "reasoning": "Model predicts -3.4%"
+    "reasoning": "Model predicts -3.3%"
   },
   "key_drivers": [
     {
@@ -77,7 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.5,
+    "rolling_da_14d": 0.5714,
     "status": "good"
   }
 }
