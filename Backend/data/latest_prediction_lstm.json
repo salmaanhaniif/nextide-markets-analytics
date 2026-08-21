@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-08-20T01:46:25Z",
+    "generated_at": "2026-08-21T01:51:45Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-08-19"
+    "data_as_of": "2026-08-20"
   },
   "current": {
-    "price": 69285.0,
-    "fng_score": -0.08,
-    "fng_label": "Neutral",
+    "price": 73001.1,
+    "fng_score": 0.24,
+    "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-08-20",
-      "predicted_log_return": -0.031968,
-      "predicted_price": 67105.14,
-      "price_change_pct": -3.1968,
+      "target_date": "2026-08-21",
+      "predicted_log_return": -0.026954,
+      "predicted_price": 71059.68,
+      "price_change_pct": -2.6954,
       "direction": "DOWN",
-      "confidence": 0.7738,
-      "range_low": 65940.23,
-      "range_high": 68290.63
+      "confidence": 0.7069,
+      "range_low": 69684.87,
+      "range_high": 72461.62
     },
     "y7": {
-      "target_date": "2026-08-26",
-      "predicted_log_return": -0.078136,
-      "predicted_price": 64077.45,
-      "price_change_pct": -7.8136,
+      "target_date": "2026-08-27",
+      "predicted_log_return": -0.078964,
+      "predicted_price": 67458.35,
+      "price_change_pct": -7.8964,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 61176.32,
-      "range_high": 67116.15
+      "range_low": 64060.03,
+      "range_high": 71036.95
     },
     "y30": {
-      "target_date": "2026-09-18",
-      "predicted_log_return": -0.09746,
-      "predicted_price": 62851.13,
-      "price_change_pct": -9.746,
+      "target_date": "2026-09-19",
+      "predicted_log_return": -0.097862,
+      "predicted_price": 66195.52,
+      "price_change_pct": -9.7862,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 57102.73,
-      "range_high": 69178.19
+      "range_low": 59477.9,
+      "range_high": 73671.86
     }
   },
   "signal": {
     "action": "SELL",
     "strength": "MODERATE",
-    "reasoning": "Model predicts -3.2%"
+    "reasoning": "Model predicts -2.7%"
   },
   "key_drivers": [
     {
