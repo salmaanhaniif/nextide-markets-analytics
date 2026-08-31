@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-08-30T05:13:44Z",
+    "generated_at": "2026-08-31T05:22:02Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-08-29"
+    "data_as_of": "2026-08-30"
   },
   "current": {
-    "price": 78227.8,
-    "fng_score": 0.36,
+    "price": 77681.6,
+    "fng_score": 0.38,
     "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-08-30",
-      "predicted_log_return": 0.001599,
-      "predicted_price": 78352.97,
-      "price_change_pct": 0.1599,
+      "target_date": "2026-08-31",
+      "predicted_log_return": 0.002047,
+      "predicted_price": 77840.78,
+      "price_change_pct": 0.2047,
       "direction": "UP",
-      "confidence": 0.5104,
-      "range_low": 76568.33,
-      "range_high": 80179.21
+      "confidence": 0.5139,
+      "range_low": 76134.27,
+      "range_high": 79585.53
     },
     "y7": {
-      "target_date": "2026-09-05",
-      "predicted_log_return": -0.079823,
-      "predicted_price": 72226.14,
-      "price_change_pct": -7.9823,
+      "target_date": "2026-09-06",
+      "predicted_log_return": -0.080284,
+      "predicted_price": 71688.82,
+      "price_change_pct": -8.0284,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 67954.82,
-      "range_high": 76765.93
+      "range_low": 67605.32,
+      "range_high": 76018.97
     },
     "y30": {
-      "target_date": "2026-09-28",
-      "predicted_log_return": -0.119646,
-      "predicted_price": 69406.37,
-      "price_change_pct": -11.9646,
+      "target_date": "2026-09-29",
+      "predicted_log_return": -0.12288,
+      "predicted_price": 68699.23,
+      "price_change_pct": -12.288,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 61177.63,
-      "range_high": 78741.92
+      "range_low": 60844.71,
+      "range_high": 77567.7
     }
   },
   "signal": {
@@ -77,7 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.7857,
+    "rolling_da_14d": 0.7143,
     "status": "good"
   }
 }
