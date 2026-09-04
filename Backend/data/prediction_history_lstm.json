@@ -11811,6 +11811,91 @@
       "rolling_da_14d": 0.5714,
       "status": "good"
     },
+    "actual_direction_y1": "UP",
+    "actual_price_y1": 81276.1
+  },
+  {
+    "meta": {
+      "generated_at": "2026-09-04T04:20:21Z",
+      "model_version": "unknown",
+      "model_id": "lstm",
+      "data_as_of": "2026-09-03"
+    },
+    "current": {
+      "price": 81276.1,
+      "fng_score": 0.3,
+      "fng_label": "Greed",
+      "nlp_sentiment": 0.2076,
+      "nlp_status": "fallback_7d_avg"
+    },
+    "predictions": {
+      "y1": {
+        "target_date": "2026-09-04",
+        "predicted_log_return": 0.0004,
+        "predicted_price": 81308.59,
+        "price_change_pct": 0.04,
+        "direction": "UP",
+        "confidence": 0.5025,
+        "range_low": 79392.06,
+        "range_high": 83271.38
+      },
+      "y7": {
+        "target_date": "2026-09-10",
+        "predicted_log_return": -0.083398,
+        "predicted_price": 74772.79,
+        "price_change_pct": -8.3398,
+        "direction": "DOWN",
+        "confidence": 0.9,
+        "range_low": 70199.72,
+        "range_high": 79643.77
+      },
+      "y30": {
+        "target_date": "2026-10-03",
+        "predicted_log_return": -0.127582,
+        "predicted_price": 71540.96,
+        "price_change_pct": -12.7582,
+        "direction": "DOWN",
+        "confidence": 0.9,
+        "range_low": 62778.99,
+        "range_high": 81525.82
+      }
+    },
+    "signal": {
+      "action": "HOLD",
+      "strength": "LOW_CONFIDENCE",
+      "reasoning": "Model confidence 50% below threshold \u2014 waiting for clearer signal"
+    },
+    "key_drivers": [
+      {
+        "feature": "technical_sequence",
+        "importance": 0.62,
+        "label": "Technical Sequence (Conv-LSTM)"
+      },
+      {
+        "feature": "fng_score",
+        "importance": 0.148,
+        "label": "Fear & Greed Score"
+      },
+      {
+        "feature": "nlp_sentiment_score",
+        "importance": 0.112,
+        "label": "News Sentiment (NLP)"
+      },
+      {
+        "feature": "fng_7d_avg",
+        "importance": 0.074,
+        "label": "Sentiment 7-Day Avg"
+      },
+      {
+        "feature": "fng_momentum",
+        "importance": 0.046,
+        "label": "Sentiment Momentum"
+      }
+    ],
+    "model_health": {
+      "rolling_da_14d": 0.5,
+      "status": "good"
+    },
     "actual_direction_y1": null,
     "actual_price_y1": null
   }
