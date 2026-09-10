@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-09-09T04:29:26Z",
+    "generated_at": "2026-09-10T04:27:53Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-09-08"
+    "data_as_of": "2026-09-09"
   },
   "current": {
-    "price": 78449.6,
-    "fng_score": 0.38,
+    "price": 78288.6,
+    "fng_score": 0.32,
     "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-09-09",
-      "predicted_log_return": -0.005216,
-      "predicted_price": 78041.49,
-      "price_change_pct": -0.5216,
+      "target_date": "2026-09-10",
+      "predicted_log_return": -0.005325,
+      "predicted_price": 77872.8,
+      "price_change_pct": -0.5325,
       "direction": "DOWN",
-      "confidence": 0.5316,
-      "range_low": 76135.05,
-      "range_high": 79995.67
+      "confidence": 0.5326,
+      "range_low": 75990.28,
+      "range_high": 79801.96
     },
     "y7": {
-      "target_date": "2026-09-15",
-      "predicted_log_return": -0.087845,
-      "predicted_price": 71852.24,
-      "price_change_pct": -8.7845,
+      "target_date": "2026-09-16",
+      "predicted_log_return": -0.088884,
+      "predicted_price": 71630.32,
+      "price_change_pct": -8.8884,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 67301.15,
-      "range_high": 76711.08
+      "range_low": 67139.56,
+      "range_high": 76421.45
     },
     "y30": {
-      "target_date": "2026-10-08",
-      "predicted_log_return": -0.132941,
-      "predicted_price": 68683.95,
-      "price_change_pct": -13.2941,
+      "target_date": "2026-10-09",
+      "predicted_log_return": -0.133049,
+      "predicted_price": 68535.56,
+      "price_change_pct": -13.3049,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 59982.53,
-      "range_high": 78647.64
+      "range_low": 59938.43,
+      "range_high": 78365.79
     }
   },
   "signal": {
