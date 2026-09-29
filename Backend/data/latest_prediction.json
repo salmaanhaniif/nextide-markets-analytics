@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T05:13:04Z",
+    "generated_at": "2026-09-29T05:35:23Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-09-27"
+    "data_as_of": "2026-09-28"
   },
   "current": {
-    "price": 84444.2,
-    "fng_score": 0.4,
+    "price": 83462.7,
+    "fng_score": 0.48,
     "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-09-28",
-      "predicted_log_return": -0.022486,
-      "predicted_price": 82566.55,
-      "price_change_pct": -2.2486,
-      "direction": "DOWN",
-      "confidence": 0.6555,
-      "range_low": 80794.45,
-      "range_high": 84377.51
+      "target_date": "2026-09-29",
+      "predicted_log_return": 0.003036,
+      "predicted_price": 83716.49,
+      "price_change_pct": 0.3036,
+      "direction": "UP",
+      "confidence": 0.5208,
+      "range_low": 81907.18,
+      "range_high": 85565.77
     },
     "y7": {
-      "target_date": "2026-10-04",
-      "predicted_log_return": -0.038311,
-      "predicted_price": 81270.22,
-      "price_change_pct": -3.8311,
+      "target_date": "2026-10-05",
+      "predicted_log_return": -0.04654,
+      "predicted_price": 79667.36,
+      "price_change_pct": -4.654,
       "direction": "DOWN",
-      "confidence": 0.7649,
-      "range_low": 76736.44,
-      "range_high": 86071.87
+      "confidence": 0.8195,
+      "range_low": 75192.54,
+      "range_high": 84408.48
     },
     "y30": {
-      "target_date": "2026-10-27",
-      "predicted_log_return": 0.01945,
-      "predicted_price": 86102.75,
-      "price_change_pct": 1.945,
+      "target_date": "2026-10-28",
+      "predicted_log_return": 0.021234,
+      "predicted_price": 85253.93,
+      "price_change_pct": 2.1234,
       "direction": "UP",
-      "confidence": 0.6345,
-      "range_low": 76455.28,
-      "range_high": 96967.59
+      "confidence": 0.6458,
+      "range_low": 75638.12,
+      "range_high": 96092.18
     }
   },
   "signal": {
-    "action": "SELL",
-    "strength": "MODERATE",
-    "reasoning": "Model predicts -2.2%"
+    "action": "HOLD",
+    "strength": "LOW_CONFIDENCE",
+    "reasoning": "Model confidence 52% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
@@ -77,7 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.5714,
+    "rolling_da_14d": 0.6429,
     "status": "good"
   }
 }
