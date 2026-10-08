@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-10-07T05:45:18Z",
+    "generated_at": "2026-10-08T05:52:09Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-10-06"
+    "data_as_of": "2026-10-07"
   },
   "current": {
-    "price": 85542.1,
-    "fng_score": 0.46,
+    "price": 83276.1,
+    "fng_score": 0.42,
     "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-10-07",
-      "predicted_log_return": -0.001124,
-      "predicted_price": 85446.01,
-      "price_change_pct": -0.1124,
-      "direction": "DOWN",
-      "confidence": 0.5085,
-      "range_low": 83777.71,
-      "range_high": 87147.53
+      "target_date": "2026-10-08",
+      "predicted_log_return": 0.004646,
+      "predicted_price": 83663.9,
+      "price_change_pct": 0.4646,
+      "direction": "UP",
+      "confidence": 0.5346,
+      "range_low": 81993.52,
+      "range_high": 85368.31
     },
     "y7": {
-      "target_date": "2026-10-13",
-      "predicted_log_return": -0.014639,
-      "predicted_price": 84298.97,
-      "price_change_pct": -1.4639,
+      "target_date": "2026-10-14",
+      "predicted_log_return": -0.002618,
+      "predicted_price": 83058.36,
+      "price_change_pct": -0.2618,
       "direction": "DOWN",
-      "confidence": 0.6114,
-      "range_low": 80013.99,
-      "range_high": 88813.43
+      "confidence": 0.5195,
+      "range_low": 78742.71,
+      "range_high": 87610.54
     },
     "y30": {
-      "target_date": "2026-11-05",
+      "target_date": "2026-11-06",
       "predicted_log_return": 0.021234,
-      "predicted_price": 87377.96,
+      "predicted_price": 85063.32,
       "price_change_pct": 2.1234,
       "direction": "UP",
-      "confidence": 0.6615,
-      "range_low": 78432.99,
-      "range_high": 97343.06
+      "confidence": 0.6579,
+      "range_low": 76167.5,
+      "range_high": 94998.12
     }
   },
   "signal": {
     "action": "HOLD",
     "strength": "LOW_CONFIDENCE",
-    "reasoning": "Model confidence 51% below threshold \u2014 waiting for clearer signal"
+    "reasoning": "Model confidence 53% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
