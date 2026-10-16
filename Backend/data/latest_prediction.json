@@ -1,47 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-10-15T04:25:35Z",
+    "generated_at": "2026-10-16T04:20:44Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-10-14"
+    "data_as_of": "2026-10-15"
   },
   "current": {
-    "price": 81576.4,
-    "fng_score": 0.24,
-    "fng_label": "Greed",
+    "price": 82133.7,
+    "fng_score": 0.06,
+    "fng_label": "Neutral",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-10-15",
-      "predicted_log_return": -0.002668,
-      "predicted_price": 81359.02,
-      "price_change_pct": -0.2668,
+      "target_date": "2026-10-16",
+      "predicted_log_return": -0.002396,
+      "predicted_price": 81937.1,
+      "price_change_pct": -0.2396,
       "direction": "DOWN",
-      "confidence": 0.5192,
-      "range_low": 79683.11,
-      "range_high": 83070.18
+      "confidence": 0.5182,
+      "range_low": 80336.33,
+      "range_high": 83569.77
     },
     "y7": {
-      "target_date": "2026-10-21",
-      "predicted_log_return": -0.00553,
-      "predicted_price": 81126.51,
-      "price_change_pct": -0.553,
-      "direction": "DOWN",
-      "confidence": 0.5399,
-      "range_low": 76779.75,
-      "range_high": 85719.34
+      "target_date": "2026-10-22",
+      "predicted_log_return": 0.015417,
+      "predicted_price": 83409.73,
+      "price_change_pct": 1.5417,
+      "direction": "UP",
+      "confidence": 0.6172,
+      "range_low": 79167.39,
+      "range_high": 87879.4
     },
     "y30": {
-      "target_date": "2026-11-13",
+      "target_date": "2026-11-14",
       "predicted_log_return": 0.021234,
-      "predicted_price": 83327.15,
+      "predicted_price": 83896.41,
       "price_change_pct": 2.1234,
       "direction": "UP",
-      "confidence": 0.653,
-      "range_low": 74349.07,
-      "range_high": 93389.38
+      "confidence": 0.6614,
+      "range_low": 75302.82,
+      "range_high": 93470.7
     }
   },
   "signal": {
