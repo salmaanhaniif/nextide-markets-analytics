@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-10-22T04:30:02Z",
+    "generated_at": "2026-10-23T04:35:14Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-10-21"
+    "data_as_of": "2026-10-22"
   },
   "current": {
-    "price": 84022.5,
-    "fng_score": 0.26,
+    "price": 81315.9,
+    "fng_score": 0.36,
     "fng_label": "Greed",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-10-22",
-      "predicted_log_return": -0.010638,
-      "predicted_price": 83133.38,
-      "price_change_pct": -1.0638,
+      "target_date": "2026-10-23",
+      "predicted_log_return": -0.009644,
+      "predicted_price": 80535.46,
+      "price_change_pct": -0.9644,
       "direction": "DOWN",
-      "confidence": 0.63,
-      "range_low": 82119.08,
-      "range_high": 84160.2
+      "confidence": 0.6066,
+      "range_low": 79450.18,
+      "range_high": 81635.57
     },
     "y7": {
-      "target_date": "2026-10-28",
-      "predicted_log_return": -0.091192,
-      "predicted_price": 76699.29,
-      "price_change_pct": -9.1192,
+      "target_date": "2026-10-29",
+      "predicted_log_return": -0.090429,
+      "predicted_price": 74285.24,
+      "price_change_pct": -9.0429,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 74248.21,
-      "range_high": 79231.28
+      "range_low": 71665.99,
+      "range_high": 77000.23
     },
     "y30": {
-      "target_date": "2026-11-20",
-      "predicted_log_return": -0.072476,
-      "predicted_price": 78148.33,
-      "price_change_pct": -7.2476,
+      "target_date": "2026-11-21",
+      "predicted_log_return": -0.068357,
+      "predicted_price": 75943.11,
+      "price_change_pct": -6.8357,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 73066.59,
-      "range_high": 83583.51
+      "range_low": 70504.22,
+      "range_high": 81801.58
     }
   },
   "signal": {
     "action": "SELL",
     "strength": "MODERATE",
-    "reasoning": "Model predicts -1.1%"
+    "reasoning": "Model predicts -1.0%"
   },
   "key_drivers": [
     {
