@@ -1,53 +1,53 @@
 {
   "meta": {
-    "generated_at": "2026-10-28T05:26:05Z",
+    "generated_at": "2026-10-29T05:35:30Z",
     "model_version": "unknown",
     "model_id": "lstm",
-    "data_as_of": "2026-10-27"
+    "data_as_of": "2026-10-28"
   },
   "current": {
-    "price": 80800.9,
-    "fng_score": -0.04,
+    "price": 81287.1,
+    "fng_score": 0.02,
     "fng_label": "Neutral",
     "nlp_sentiment": 0.2076,
     "nlp_status": "fallback_7d_avg"
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-10-28",
-      "predicted_log_return": -0.009615,
-      "predicted_price": 80027.69,
-      "price_change_pct": -0.9615,
+      "target_date": "2026-10-29",
+      "predicted_log_return": -0.008448,
+      "predicted_price": 80603.25,
+      "price_change_pct": -0.8448,
       "direction": "DOWN",
-      "confidence": 0.6086,
-      "range_low": 78972.34,
-      "range_high": 81097.14
+      "confidence": 0.596,
+      "range_low": 79546.44,
+      "range_high": 81674.1
     },
     "y7": {
-      "target_date": "2026-11-03",
-      "predicted_log_return": -0.0879,
-      "predicted_price": 74001.71,
-      "price_change_pct": -8.79,
+      "target_date": "2026-11-04",
+      "predicted_log_return": -0.087242,
+      "predicted_price": 74496.0,
+      "price_change_pct": -8.7242,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 71447.72,
-      "range_high": 76647.0
+      "range_low": 71939.6,
+      "range_high": 77143.24
     },
     "y30": {
-      "target_date": "2026-11-26",
-      "predicted_log_return": -0.050003,
-      "predicted_price": 76859.99,
-      "price_change_pct": -5.0003,
+      "target_date": "2026-11-27",
+      "predicted_log_return": -0.048635,
+      "predicted_price": 77428.29,
+      "price_change_pct": -4.8635,
       "direction": "DOWN",
       "confidence": 0.9,
-      "range_low": 71469.84,
-      "range_high": 82656.67
+      "range_low": 72028.65,
+      "range_high": 83232.72
     }
   },
   "signal": {
-    "action": "SELL",
-    "strength": "MODERATE",
-    "reasoning": "Model predicts -1.0%"
+    "action": "HOLD",
+    "strength": "LOW_CONFIDENCE",
+    "reasoning": "Model confidence 60% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
