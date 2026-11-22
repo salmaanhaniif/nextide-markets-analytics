@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-11-21T06:55:42Z",
+    "generated_at": "2026-11-22T06:31:31Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-11-20"
+    "data_as_of": "2026-11-21"
   },
   "current": {
-    "price": 58806.3,
+    "price": 60088.6,
     "fng_score": -0.76,
     "fng_label": "Extreme Fear",
     "nlp_sentiment": 0.2076,
@@ -14,34 +14,34 @@
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-11-21",
-      "predicted_log_return": -0.000898,
-      "predicted_price": 58753.53,
-      "price_change_pct": -0.0898,
+      "target_date": "2026-11-22",
+      "predicted_log_return": -0.00173,
+      "predicted_price": 59984.72,
+      "price_change_pct": -0.173,
       "direction": "DOWN",
-      "confidence": 0.5056,
-      "range_low": 57368.68,
-      "range_high": 60171.81
+      "confidence": 0.5107,
+      "range_low": 58546.22,
+      "range_high": 61458.57
     },
     "y7": {
-      "target_date": "2026-11-27",
-      "predicted_log_return": 0.003327,
-      "predicted_price": 59002.27,
-      "price_change_pct": 0.3327,
+      "target_date": "2026-11-28",
+      "predicted_log_return": 0.017249,
+      "predicted_price": 61134.09,
+      "price_change_pct": 1.7249,
       "direction": "UP",
-      "confidence": 0.5209,
-      "range_low": 55393.78,
-      "range_high": 62845.83
+      "confidence": 0.6066,
+      "range_low": 57331.39,
+      "range_high": 65189.01
     },
     "y30": {
-      "target_date": "2026-12-20",
+      "target_date": "2026-12-21",
       "predicted_log_return": 0.021234,
-      "predicted_price": 60068.37,
+      "predicted_price": 61378.19,
       "price_change_pct": 2.1234,
       "direction": "UP",
-      "confidence": 0.6335,
-      "range_low": 52711.63,
-      "range_high": 68451.85
+      "confidence": 0.6312,
+      "range_low": 53737.11,
+      "range_high": 70105.78
     }
   },
   "signal": {
@@ -77,7 +77,7 @@
     }
   ],
   "model_health": {
-    "rolling_da_14d": 0.5714,
+    "rolling_da_14d": 0.5,
     "status": "good"
   }
 }
