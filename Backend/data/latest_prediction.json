@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-11-24T09:42:55Z",
+    "generated_at": "2026-11-25T08:15:34Z",
     "model_version": "unknown",
     "model_id": "xgboost",
-    "data_as_of": "2026-11-23"
+    "data_as_of": "2026-11-24"
   },
   "current": {
-    "price": 61214.3,
+    "price": 59741.2,
     "fng_score": -0.78,
     "fng_label": "Extreme Fear",
     "nlp_sentiment": 0.2076,
@@ -14,40 +14,40 @@
   },
   "predictions": {
     "y1": {
-      "target_date": "2026-11-24",
-      "predicted_log_return": 0.007869,
-      "predicted_price": 61697.9,
-      "price_change_pct": 0.7869,
+      "target_date": "2026-11-25",
+      "predicted_log_return": 0.000225,
+      "predicted_price": 59754.66,
+      "price_change_pct": 0.0225,
       "direction": "UP",
-      "confidence": 0.5475,
-      "range_low": 60185.16,
-      "range_high": 63248.66
+      "confidence": 0.5014,
+      "range_low": 58280.66,
+      "range_high": 61265.93
     },
     "y7": {
-      "target_date": "2026-11-30",
-      "predicted_log_return": 0.026705,
-      "predicted_price": 62871.02,
-      "price_change_pct": 2.6705,
+      "target_date": "2026-12-01",
+      "predicted_log_return": 0.020428,
+      "predicted_price": 60974.14,
+      "price_change_pct": 2.0428,
       "direction": "UP",
-      "confidence": 0.6614,
-      "range_low": 58874.45,
-      "range_high": 67138.9
+      "confidence": 0.6227,
+      "range_low": 57075.07,
+      "range_high": 65139.57
     },
     "y30": {
-      "target_date": "2026-12-23",
+      "target_date": "2026-12-24",
       "predicted_log_return": 0.021234,
-      "predicted_price": 62528.05,
+      "predicted_price": 61023.33,
       "price_change_pct": 2.1234,
       "direction": "UP",
-      "confidence": 0.6283,
-      "range_low": 54578.95,
-      "range_high": 71634.87
+      "confidence": 0.6275,
+      "range_low": 53220.99,
+      "range_high": 69969.52
     }
   },
   "signal": {
     "action": "HOLD",
     "strength": "LOW_CONFIDENCE",
-    "reasoning": "Model confidence 55% below threshold \u2014 waiting for clearer signal"
+    "reasoning": "Model confidence 50% below threshold \u2014 waiting for clearer signal"
   },
   "key_drivers": [
     {
